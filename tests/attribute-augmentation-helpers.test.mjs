@@ -302,6 +302,7 @@ test("setValue uses an absolute nonnegative value and activates only positive va
     const actor = new FakeActor();
     await AttributeAugmentationHelper.setValue(actor, "strength", 3);
     await AttributeAugmentationHelper.setValue(actor, "strength", 3);
+    assert.equal(actor.items.filter(item => item.flags?.worldofdarkness?.attributeAugmentation).length, 3);
     const item = actor.items.find(item => item.flags?.worldofdarkness?.attributeAugmentation === "strength");
     assert.equal(item.system.value, 3);
     assert.equal(item.system.isactive, true);
@@ -314,6 +315,7 @@ test("changeValue uses the fresh effective value and clamps at zero", async () =
     const AttributeAugmentationHelper = await helper();
     const actor = new FakeActor({ items: [makeItem("dexterity", 2, false)] });
     await AttributeAugmentationHelper.changeValue(actor, "dexterity", 1);
+    assert.equal(actor.items.filter(candidate => candidate.flags?.worldofdarkness?.attributeAugmentation).length, 3);
     let item = actor.items.find(candidate => candidate.flags?.worldofdarkness?.attributeAugmentation === "dexterity");
     assert.equal(item.system.value, 1);
     assert.equal(item.system.isactive, true);
@@ -339,6 +341,48 @@ test("cleanup remains available after Blood Pool loss without creating missing i
         assert.equal(actor.items.length, count);
         assert.equal(actor.items.some(item => item.flags?.worldofdarkness?.attributeAugmentation === "stamina"), false);
     }
+});
+
+test("eligible cleanup never creates missing Bonuses", async () => {
+    const AttributeAugmentationHelper = await helper();
+    const operations = [
+        ["reset", actor => AttributeAugmentationHelper.reset(actor), 0],
+        ["clear", actor => AttributeAugmentationHelper.setValue(actor, "strength", 0), 0],
+        ["reduce", actor => AttributeAugmentationHelper.changeValue(actor, "strength", -1), 1],
+        ["zero delta", actor => AttributeAugmentationHelper.changeValue(actor, "strength", 0), 2]
+    ];
+    for (const seeded of [false, true]) {
+        for (const [name, operation, expected] of operations) {
+            const actor = new FakeActor({
+                id: `eligible-cleanup-${seeded}-${name}`,
+                items: seeded ? [makeItem("strength", 2, true)] : []
+            });
+            await operation(actor);
+            assert.equal(actor.calls.create, 0, `${name} with ${seeded ? "one" : "zero"} managed items`);
+            const managed = actor.items.filter(item => item.flags?.worldofdarkness?.attributeAugmentation);
+            assert.equal(managed.length, seeded ? 1 : 0);
+            if (seeded) assert.equal(managed[0].system.value, expected);
+        }
+    }
+});
+
+test("eligibility loss during in-flight cleanup does not create Bonuses", async () => {
+    const AttributeAugmentationHelper = await helper();
+    const actor = new FakeActor({ items: [makeItem("strength", 2, true)] });
+    const original = actor.toObject.bind(actor);
+    let hidden = false;
+    actor.toObject = () => {
+        const snapshot = original();
+        if (!hidden) {
+            hidden = true;
+            actor.items.find(item => item.type === "Advantage").system.settings.isvisible = false;
+        }
+        return snapshot;
+    };
+    await AttributeAugmentationHelper.reset(actor);
+    assert.equal(actor.calls.create, 0);
+    assert.equal(actor.items.find(item => item._id === "item-strength").system.value, 0);
+    assert.deepEqual(AttributeAugmentationHelper.read(actor).missing, ["dexterity", "stamina"]);
 });
 
 test("ineligible Actor cannot increase or activate a managed bonus", async () => {
@@ -602,6 +646,19 @@ test("unknown marker is not adopted, repaired, or removed", async () => {
     assert.equal(actor.items.length, 5);
 });
 
+test("array marker is not coerced into a managed attribute", async () => {
+    const AttributeAugmentationHelper = await helper();
+    const odd = makeItem("strength", 1, true, { _id: "array-marker" });
+    odd.flags.worldofdarkness.attributeAugmentation = ["strength"];
+    const actor = new FakeActor({ items: [odd] });
+    const state = AttributeAugmentationHelper.read(actor);
+    assert.ok(state.missing.includes("strength"));
+    assert.deepEqual(state.conflicts, []);
+    await AttributeAugmentationHelper.ensure(actor);
+    assert.deepEqual(actor.items.find(item => item._id === "array-marker"), odd);
+    assert.equal(actor.items.filter(item => item.flags?.worldofdarkness?.attributeAugmentation === "strength").length, 1);
+});
+
 test("no-op set, reset, and ensure avoid extra persistent writes", async () => {
     const AttributeAugmentationHelper = await helper();
     const actor = new FakeActor();
@@ -716,13 +773,59 @@ test("actor persistence failure is surfaced and a later no-op retries totals", a
     await AttributeAugmentationHelper.ensure(actor);
     actor.failActorUpdate = true;
     await assert.rejects(AttributeAugmentationHelper.setValue(actor, "dexterity", 2), error =>
-        error.code === "PERSISTENCE_FAILED");
+        error.code === "TOTALS_PERSISTENCE_FAILED" && error.itemsApplied === true);
     assert.equal(actor.system.attributes.dexterity.total, 5);
     assert.equal(AttributeAugmentationHelper.read(actor).attributes.dexterity.effectiveValue, 2);
     actor.failActorUpdate = false;
     await AttributeAugmentationHelper.ensure(actor);
     assert.equal(actor.system.attributes.dexterity.total, 7);
     assert.equal(actor.system.initiative.total, 9);
+});
+
+test("relative increment reports partial persistence and recalculation does not increment again", async () => {
+    const AttributeAugmentationHelper = await helper();
+    const actor = new FakeActor({ items: [makeItem("strength"), makeItem("dexterity"), makeItem("stamina")] });
+    actor.failActorUpdate = true;
+    await assert.rejects(AttributeAugmentationHelper.changeValue(actor, "strength", 1), error =>
+        error.code === "TOTALS_PERSISTENCE_FAILED" && error.itemsApplied === true);
+    assert.equal(actor.items.find(item => item._id === "item-strength").system.value, 1);
+    assert.equal(actor.system.attributes.strength.total, 3);
+    actor.failActorUpdate = false;
+    await AttributeAugmentationHelper.ensure(actor);
+    assert.equal(actor.items.find(item => item._id === "item-strength").system.value, 1);
+    assert.equal(actor.system.attributes.strength.total, 4);
+});
+
+test("Actor totals failure after no Item write reports itemsApplied false", async () => {
+    const AttributeAugmentationHelper = await helper();
+    const actor = new FakeActor({ items: [makeItem("strength"), makeItem("dexterity"), makeItem("stamina")] });
+    actor.system.attributes.strength.total = -1;
+    actor.failActorUpdate = true;
+    await assert.rejects(AttributeAugmentationHelper.ensure(actor), error =>
+        error.code === "TOTALS_PERSISTENCE_FAILED" && error.itemsApplied === false);
+    assert.equal(actor.calls.create, 0);
+    assert.equal(actor.calls.updateItems, 0);
+});
+
+test("Item persistence failure stays distinct and reports uncertain application", async () => {
+    const AttributeAugmentationHelper = await helper();
+    const actor = new FakeActor({ items: [makeItem("strength"), makeItem("dexterity"), makeItem("stamina")] });
+    actor.updateEmbeddedDocuments = async () => { throw new Error("Item update failed"); };
+    await assert.rejects(AttributeAugmentationHelper.changeValue(actor, "strength", 1), error =>
+        error.code === "PERSISTENCE_FAILED" && error.itemsApplied === null);
+    assert.equal(actor.system.attributes.strength.total, 3);
+});
+
+test("verified creation followed by a failed Item update reports itemsApplied true", async () => {
+    const AttributeAugmentationHelper = await helper();
+    const actor = new FakeActor({ items: [makeItem("strength")] });
+    actor.updateEmbeddedDocuments = async () => { throw new Error("Item update failed"); };
+    await assert.rejects(AttributeAugmentationHelper.setValue(actor, "strength", 2), error =>
+        error.code === "PERSISTENCE_FAILED" && error.itemsApplied === true);
+    assert.equal(actor.calls.create, 1);
+    assert.equal(actor.items.filter(item => item.flags?.worldofdarkness?.attributeAugmentation).length, 3);
+    assert.equal(actor.items.find(item => item._id === "item-strength").system.value, 0);
+    assert.equal(actor.system.attributes.strength.total, 3);
 });
 
 test("ensure repairs stale totals after an external bonus edit without an item write", async () => {

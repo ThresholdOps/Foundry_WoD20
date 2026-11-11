@@ -30,6 +30,12 @@ Status: prepared for later execution in an isolated, disposable world. This chec
 - [ ] Simulate a failure between Item and Actor persistence. Confirm the error remains visible and a later mutating operation recalculates Actor totals from current items.
 - [ ] Reload the browser and restart the isolated world. Confirm embedded Bonus values, Actor totals, roll pool, movement and Soak; record any derived value that does not survive preparation or restart.
 
+## Caller contract after an error
+
+`AttributeAugmentationError.itemsApplied` reports local observation: `true` means at least one managed Item write passed its postcondition, `false` means no Item write was attempted, and `null` means an attempted Item write could not be verified. `TOTALS_PERSISTENCE_FAILED` identifies an Actor totals update failure; the Item state may already have changed. These checks do not prove durable server storage or atomicity across clients.
+
+After a partial-persistence error, reread the current Actor and managed Bonus values. Never automatically retry a relative increment or decrement without inspecting the actual state. A later explicit `ensure()` can recalculate stale Actor totals when the Actor is eligible.
+
 ## Known calculation boundaries
 
 - [ ] Equipped Armor: compare one-argument `calculateTotals(snapshot)` with actual Actor totals, including Dexterity penalty and Soak. The upstream calculation looks up `game.actors.get(snapshot._id)` for Armor.

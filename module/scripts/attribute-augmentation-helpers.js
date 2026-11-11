@@ -20,13 +20,17 @@ function requireUnchanged(actor, before) {
     }
 }
 
+// itemsApplied: true = at least one Item change verified locally; false = no Item write attempted;
+// null = an Item write was attempted but its result is uncertain. After a partial
+// failure, reread Actor and managed Items before retrying any relative change.
 export class AttributeAugmentationError extends Error {
-    constructor(code, message, { conflicts = [], warnings = [], cause } = {}) {
+    constructor(code, message, { conflicts = [], warnings = [], cause, itemsApplied = false } = {}) {
         super(message);
         this.name = "AttributeAugmentationError";
         this.code = code;
         this.conflicts = conflicts;
         this.warnings = warnings;
+        this.itemsApplied = itemsApplied;
         if (cause) this.cause = cause;
     }
 }
@@ -91,7 +95,7 @@ function inspect(actor) {
     const groups = Object.fromEntries(ATTRIBUTES.map(attribute => [attribute, []]));
     for (const item of actor.items) {
         const marker = markerOf(item);
-        if (Object.hasOwn(groups, marker)) groups[marker].push(item);
+        if (typeof marker === "string" && Object.hasOwn(groups, marker)) groups[marker].push(item);
     }
     const canonical = {};
     const missing = [];
@@ -252,7 +256,7 @@ async function persistTotals(actor) {
         try {
             await actor.update(changes);
         } catch (cause) {
-            throw new AttributeAugmentationError("PERSISTENCE_FAILED", "Augment Attributes Actor totals could not be persisted", { cause });
+            throw new AttributeAugmentationError("TOTALS_PERSISTENCE_FAILED", "Augment Attributes Actor totals could not be persisted", { cause });
         }
         for (const [path, expected] of Object.entries(changes)) {
             if (getPath(actor, path) !== expected) {
@@ -289,11 +293,13 @@ async function perform(actor, request) {
 
     const updates = itemUpdates(scan, desired);
     const beforeItems = new Map(Object.values(scan.canonical).map(item => [item._id, fingerprint(item)]));
-    const creations = await Promise.all((eligibility ? [] : scan.missing).map(attribute =>
+    const creations = await Promise.all((needsEligibility ? scan.missing : []).map(attribute =>
         createItemData(attribute, desired[attribute] ?? 0)
     ));
     await calculateSafeTotals(projectedActor(actor, updates, creations));
 
+    let itemWriteAttempted = false;
+    let itemsApplied = false;
     try {
         requireOwnerPC(actor);
         if (needsEligibility) {
@@ -302,6 +308,7 @@ async function perform(actor, request) {
         }
         requireUnchanged(actor, beforeItems);
         if (creations.length) {
+            itemWriteAttempted = true;
             await actor.createEmbeddedDocuments("Item", creations);
             requireUnchanged(actor, beforeItems);
             for (const data of creations) {
@@ -313,9 +320,11 @@ async function perform(actor, request) {
                     throw new AttributeAugmentationError("NOT_APPLIED", `Augment Attributes ${attribute} creation did not apply`);
                 }
             }
+            itemsApplied = true;
         }
         if (updates.length) {
             requireUnchanged(actor, beforeItems);
+            itemWriteAttempted = true;
             await actor.updateEmbeddedDocuments("Item", updates);
             for (const update of updates) {
                 const item = findItem(actor, update._id);
@@ -326,12 +335,24 @@ async function perform(actor, request) {
                     throw new AttributeAugmentationError("NOT_APPLIED", `Augment Attributes ${update._id} update did not apply`);
                 }
             }
+            itemsApplied = true;
         }
     } catch (cause) {
-        if (cause instanceof AttributeAugmentationError) throw cause;
-        throw new AttributeAugmentationError("PERSISTENCE_FAILED", "Augment Attributes item changes could not be persisted", { cause });
+        const applied = itemsApplied ? true : itemWriteAttempted ? null : false;
+        if (cause instanceof AttributeAugmentationError) {
+            cause.itemsApplied = applied;
+            throw cause;
+        }
+        throw new AttributeAugmentationError("PERSISTENCE_FAILED", "Augment Attributes item changes could not be persisted", {
+            cause, itemsApplied: applied
+        });
     }
-    await persistTotals(actor);
+    try {
+        await persistTotals(actor);
+    } catch (cause) {
+        if (cause instanceof AttributeAugmentationError) cause.itemsApplied = itemsApplied;
+        throw cause;
+    }
     return AttributeAugmentationHelper.read(actor);
 }
 
