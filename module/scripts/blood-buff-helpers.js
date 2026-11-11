@@ -3,9 +3,19 @@ import { calculateTotals } from "./totals.js";
 
 const ATTRIBUTES = ["strength", "dexterity", "stamina"];
 const queues = new Map();
-const pendingTotals = new Set();
 const validValue = value => typeof value === "number" && Number.isSafeInteger(value) && value >= 0;
+const validExistingVersion = value => typeof value === "string" &&
+    /^\d+(?:\.\d+){0,2}(?:[-+ ]?[A-Za-z][A-Za-z0-9.-]*)?$/.test(value);
 const markerOf = item => item?.flags?.worldofdarkness?.bloodBuff;
+const isStandaloneManaged = (item, attribute) => {
+    const system = item.system;
+    return markerOf(item) === attribute && item.type === "Bonus" &&
+        system?.type === "attribute_buff" && system.settingtype === attribute &&
+        system.parentid === "" && Array.isArray(system.bonuslist) && system.bonuslist.length === 0 &&
+        validValue(system.value) && typeof system.isactive === "boolean";
+};
+const isCleanDuplicate = (item, attribute) =>
+    isStandaloneManaged(item, attribute) && item.system.value === 0 && item.system.isactive === false;
 
 export class BloodBuffError extends Error {
     constructor(code, message, { conflicts = [], warnings = [], cause } = {}) {
@@ -69,6 +79,31 @@ function enqueue(actor, task) {
     return operation;
 }
 
+function repairRequirements(item, attribute) {
+    const system = item.system ?? {};
+    const fields = {};
+    const warnings = [];
+    const repair = (field, expected) => {
+        if (system[field] === expected) return;
+        fields["system." + field] = expected;
+        warnings.push({ code: "REPAIR_REQUIRED", attribute, itemId: item._id, field });
+    };
+    repair("type", "attribute_buff");
+    repair("settingtype", attribute);
+    repair("parentid", "");
+    repair("isremovable", false);
+    if (!validValue(system.value)) {
+        warnings.push({ code: "REPAIR_REQUIRED", attribute, itemId: item._id, field: "value" });
+        if (system.isactive !== false) {
+            warnings.push({ code: "REPAIR_REQUIRED", attribute, itemId: item._id, field: "isactive" });
+        }
+    }
+    if (!validExistingVersion(system.version)) {
+        warnings.push({ code: "INVALID_VERSION", attribute, itemId: item._id, field: "version" });
+    }
+    return { fields, warnings };
+}
+
 function inspect(actor) {
     const groups = Object.fromEntries(ATTRIBUTES.map(attribute => [attribute, []]));
     for (const item of actor.items) {
@@ -80,7 +115,7 @@ function inspect(actor) {
     const missing = [];
     const conflicts = [];
     const warnings = [];
-    const updates = new Map();
+    const repairs = new Map();
     const duplicateIds = [];
 
     for (const attribute of ATTRIBUTES) {
@@ -101,7 +136,7 @@ function inspect(actor) {
             }
         }
         for (const item of group.slice(1)) {
-            if (item.type === "Bonus" && item.system?.value === 0) {
+            if (isCleanDuplicate(item, attribute)) {
                 duplicateIds.push(item._id);
                 warnings.push({ code: "DUPLICATE_ZERO", attribute, itemId: item._id });
             } else {
@@ -116,22 +151,9 @@ function inspect(actor) {
             conflicts.push({ code: "INVALID_ACTIVE_STATE", attribute, itemId: item._id });
             continue;
         }
-        const update = { _id: item._id };
-        const repair = (field, actual, expected) => {
-            if (actual === expected) return;
-            update["system." + field] = expected;
-            warnings.push({ code: "REPAIR_REQUIRED", attribute, itemId: item._id, field });
-        };
-        repair("type", system.type, "attribute_buff");
-        repair("settingtype", system.settingtype, attribute);
-        repair("parentid", system.parentid, "");
-        repair("version", system.version, game.system.version);
-        repair("isremovable", system.isremovable, false);
-        if (!validValue(system.value)) {
-            repair("value", system.value, 0);
-            repair("isactive", system.isactive, false);
-        }
-        if (Object.keys(update).length > 1) updates.set(item._id, update);
+        const requirements = repairRequirements(item, attribute);
+        if (Object.keys(requirements.fields).length) repairs.set(item._id, requirements.fields);
+        warnings.push(...requirements.warnings);
     }
 
     const attributes = {};
@@ -145,7 +167,63 @@ function inspect(actor) {
             isactive: active
         };
     }
-    return { canonical, missing, conflicts, warnings, updates, duplicateIds, attributes };
+    return { groups, canonical, missing, conflicts, warnings, repairs, duplicateIds, attributes };
+}
+
+function targetValues(scan, request) {
+    const desired = {};
+    if (request.kind === "set") desired[request.attribute] = request.value;
+    if (request.kind === "change") {
+        desired[request.attribute] = Math.max(0, scan.attributes[request.attribute].effectiveValue + request.value);
+        requireNumber(desired[request.attribute], true);
+    }
+    if (request.kind === "reset") {
+        for (const attribute of ATTRIBUTES) desired[attribute] = 0;
+    }
+    return desired;
+}
+
+function buildUpdates(scan, desired, reset) {
+    const updates = new Map();
+    for (const attribute of ATTRIBUTES) {
+        const items = reset ? scan.groups[attribute] : [scan.canonical[attribute]];
+        for (const item of items) {
+            if (!item) continue;
+            const system = item.system ?? {};
+            const update = { _id: item._id, ...(scan.repairs.get(item._id) ?? {}) };
+            const requested = Object.hasOwn(desired, attribute);
+            const value = requested ? desired[attribute] : validValue(system.value) ? system.value : 0;
+            const active = requested ? value > 0 : validValue(system.value) ? system.isactive : false;
+            if (system.value !== value) update["system.value"] = value;
+            if (system.isactive !== active) update["system.isactive"] = active;
+            if (Object.keys(update).length > 1) updates.set(item._id, update);
+        }
+    }
+    return updates;
+}
+
+function resetDuplicatePlan(scan) {
+    const recoverable = new Set();
+    const unsafe = [];
+    const duplicateIds = [...scan.duplicateIds];
+    const warnings = [];
+    for (const attribute of ATTRIBUTES) {
+        const group = scan.groups[attribute];
+        if (group.length < 2) continue;
+        if (!group.every(item => isStandaloneManaged(item, attribute))) {
+            unsafe.push({ code: "UNSAFE_RESET_DUPLICATE", attribute });
+            continue;
+        }
+        recoverable.add(attribute);
+        for (const item of group.slice(1)) {
+            if (duplicateIds.includes(item._id)) continue;
+            duplicateIds.push(item._id);
+            warnings.push({ code: "RESET_DUPLICATE", attribute, itemId: item._id });
+        }
+    }
+    const conflicts = scan.conflicts.filter(conflict =>
+        conflict.code !== "BLOCKING_DUPLICATE" || !recoverable.has(conflict.attribute));
+    return { conflicts: [...conflicts, ...unsafe], duplicateIds, warnings };
 }
 
 function addIfChanged(updates, path, before, after) {
@@ -156,7 +234,7 @@ async function persistTotals(actor) {
     try {
         const snapshot = foundry.utils.duplicate(actor);
         const calculated = await calculateTotals(snapshot);
-        const changes = { "system.settings.isupdated": false };
+        const changes = {};
 
         for (const [attribute, value] of Object.entries(calculated.system.attributes)) {
             addIfChanged(changes, "system.attributes." + attribute + ".total",
@@ -177,10 +255,10 @@ async function persistTotals(actor) {
                 actor.system.initiative?.[field], calculated.system.initiative?.[field]);
         }
 
-        await actor.update(changes);
-        // Future UI callers await the mutation. An already-open actor sheet is refreshed here.
-        if (actor.sheet?.rendered) await actor.sheet.render(true);
-        pendingTotals.delete(actor.uuid);
+        if (Object.keys(changes).length) {
+            addIfChanged(changes, "system.settings.isupdated", actor.system.settings.isupdated, false);
+            await actor.update(changes);
+        }
     } catch (cause) {
         throw new BloodBuffError("PERSISTENCE_FAILED", "Blood Buff totals could not be persisted", { cause });
     }
@@ -201,51 +279,48 @@ async function perform(actor, request) {
     if (request.kind === "change") requireNumber(request.value, false);
 
     const scan = inspect(actor);
-    if (scan.conflicts.length) {
+    const resetPlan = request.kind === "reset" ? resetDuplicatePlan(scan) : null;
+    const conflicts = resetPlan?.conflicts ?? scan.conflicts;
+    if (conflicts.length) {
         throw new BloodBuffError("CONFLICT", "Blood Buff items contain a blocking conflict", {
-            conflicts: scan.conflicts, warnings: scan.warnings
+            conflicts, warnings: scan.warnings
         });
     }
 
-    const desired = {};
-    if (request.kind === "set") desired[request.attribute] = request.value;
-    if (request.kind === "change") {
-        desired[request.attribute] = Math.max(0, scan.attributes[request.attribute].effectiveValue + request.value);
-        requireNumber(desired[request.attribute], true);
-    }
-    if (request.kind === "reset") {
-        for (const attribute of ATTRIBUTES) desired[attribute] = 0;
-    }
-
-    const updates = scan.updates;
-    for (const [attribute, value] of Object.entries(desired)) {
-        const item = scan.canonical[attribute];
-        if (!item) continue;
-        const update = updates.get(item._id) ?? { _id: item._id };
-        if (item.system.value !== value) update["system.value"] = value;
-        if (item.system.isactive !== (value > 0)) update["system.isactive"] = value > 0;
-        if (Object.keys(update).length > 1) updates.set(item._id, update);
-    }
+    const desired = targetValues(scan, request);
+    const updates = buildUpdates(scan, desired, request.kind === "reset");
+    const duplicateIds = resetPlan?.duplicateIds ?? scan.duplicateIds;
+    const warnings = [...scan.warnings, ...(resetPlan?.warnings ?? [])];
 
     const missingItems = await Promise.all(scan.missing.map(attribute =>
         createItemData(attribute, desired[attribute] ?? 0)
     ));
-    const hasWrites = missingItems.length > 0 || updates.size > 0 || scan.duplicateIds.length > 0;
-    if (hasWrites) pendingTotals.add(actor.uuid);
     try {
         if (missingItems.length) await actor.createEmbeddedDocuments("Item", missingItems);
         if (updates.size) await actor.updateEmbeddedDocuments("Item", [...updates.values()]);
-        if (scan.duplicateIds.length) await actor.deleteEmbeddedDocuments("Item", scan.duplicateIds);
+        if (duplicateIds.length) {
+            const originalAttributes = new Map(ATTRIBUTES.flatMap(attribute =>
+                scan.groups[attribute].slice(1).map(item => [item._id, attribute])
+            ));
+            for (const id of duplicateIds) {
+                const item = [...actor.items].find(candidate => candidate._id === id);
+                if (!item || !isCleanDuplicate(item, originalAttributes.get(id))) {
+                    throw new Error("A redundant Blood Buff item is no longer safe to delete");
+                }
+            }
+            await actor.deleteEmbeddedDocuments("Item", duplicateIds);
+        }
     } catch (cause) {
         throw new BloodBuffError("PERSISTENCE_FAILED", "Blood Buff item changes could not be persisted", {
-            warnings: scan.warnings, cause
+            warnings, cause
         });
     }
-    if (hasWrites || pendingTotals.has(actor.uuid)) await persistTotals(actor);
+    await persistTotals(actor);
 
-    const appliedWarnings = scan.warnings.map(warning => ({
+    const appliedWarnings = warnings.filter(warning => warning.code !== "REPAIR_REQUIRED" ||
+        Object.hasOwn(updates.get(warning.itemId) ?? {}, "system." + warning.field)).map(warning => ({
         ...warning,
-        code: warning.code === "DUPLICATE_ZERO" ? "DUPLICATE_REMOVED"
+        code: warning.code === "DUPLICATE_ZERO" || warning.code === "RESET_DUPLICATE" ? "DUPLICATE_REMOVED"
             : warning.code === "REPAIR_REQUIRED" ? "CANONICAL_REPAIRED" : warning.code
     }));
     return { ...BloodBuffHelper.read(actor), warnings: appliedWarnings };

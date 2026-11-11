@@ -181,6 +181,14 @@ test("read reports missing items without writing", async () => {
     assert.deepEqual(actor.calls, { create: 0, updateItems: 0, delete: 0, updateActor: 0, render: 0 });
 });
 
+test("read and mutations reject invalid actors", async () => {
+    const BloodBuffHelper = await helper();
+    for (const actor of [null, {}, { uuid: "", items: [] }]) {
+        assert.throws(() => BloodBuffHelper.read(actor), error => error.code === "INVALID_ACTOR");
+        assert.throws(() => BloodBuffHelper.ensure(actor), error => error.code === "INVALID_ACTOR");
+    }
+});
+
 test("repeated and concurrent ensure creates no duplicate items", async () => {
     const BloodBuffHelper = await helper();
     const actor = new FakeActor();
@@ -327,7 +335,7 @@ test("canonical repair restores required fields, zeros invalid value, and warns"
     const actor = new FakeActor({ items: [makeItem("strength", -2, true, {
         system: {
             type: "attribute_diff", settingtype: "dexterity", parentid: "foreign",
-            version: "old", isremovable: true
+            version: "6.0.0", isremovable: true
         }
     })] });
     const result = await BloodBuffHelper.ensure(actor);
@@ -335,11 +343,60 @@ test("canonical repair restores required fields, zeros invalid value, and warns"
     assert.equal(item.system.type, "attribute_buff");
     assert.equal(item.system.settingtype, "strength");
     assert.equal(item.system.parentid, "");
-    assert.equal(item.system.version, "7.3.2");
+    assert.equal(item.system.version, "6.0.0");
     assert.equal(item.system.isremovable, false);
     assert.equal(item.system.value, 0);
     assert.equal(item.system.isactive, false);
     assert.ok(result.warnings.length >= 1);
+});
+
+test("setValue overrides an invalid stored value repair and activates its target", async () => {
+    const BloodBuffHelper = await helper();
+    const actor = new FakeActor({ items: [makeItem("strength", -2, true)] });
+    const result = await BloodBuffHelper.setValue(actor, "strength", 3);
+    const item = actor.items.find(candidate => candidate.flags?.worldofdarkness?.bloodBuff === "strength");
+    assert.equal(item.system.value, 3);
+    assert.equal(item.system.isactive, true);
+    assert.equal(BloodBuffHelper.read(actor).attributes.strength.effectiveValue, 3);
+    assert.equal(actor.system.attributes.strength.total, 6);
+    assert.equal(result.warnings.some(warning => warning.code === "CANONICAL_REPAIRED" && warning.field === "isactive"), false);
+});
+
+test("system version drift does not rewrite healthy existing bonus items", async () => {
+    const BloodBuffHelper = await helper();
+    const actor = new FakeActor({ items: [
+        makeItem("strength"), makeItem("dexterity"), makeItem("stamina")
+    ] });
+    const oldVersion = game.system.version;
+    game.system.version = "8.0.0";
+    try {
+        const result = await BloodBuffHelper.ensure(actor);
+        assert.equal(actor.calls.updateItems, 0);
+        assert.ok(actor.items.filter(item => item.type === "Bonus").every(item => item.system.version === "7.3.2"));
+        assert.equal(result.warnings.some(warning => warning.field === "version"), false);
+        assert.equal(result.warnings.some(warning => warning.code === "INVALID_VERSION"), false);
+    } finally {
+        game.system.version = oldVersion;
+    }
+});
+
+test("an invalid existing version is reported without a silent upgrade", async () => {
+    const BloodBuffHelper = await helper();
+    const actor = new FakeActor({ items: [makeItem("strength", 0, false, { system: { version: null } })] });
+    const result = await BloodBuffHelper.ensure(actor);
+    const item = actor.items.find(candidate => candidate.flags?.worldofdarkness?.bloodBuff === "strength");
+    assert.equal(item.system.version, null);
+    assert.ok(result.warnings.some(warning => warning.code === "INVALID_VERSION" && warning.attribute === "strength"));
+    assert.equal(actor.calls.updateItems, 0);
+});
+
+test("a non-version string is reported without changing it", async () => {
+    const BloodBuffHelper = await helper();
+    const actor = new FakeActor({ items: [makeItem("strength", 0, false, { system: { version: "old" } })] });
+    const result = await BloodBuffHelper.ensure(actor);
+    assert.equal(actor.items.find(item => item.flags?.worldofdarkness?.bloodBuff === "strength").system.version, "old");
+    assert.ok(result.warnings.some(warning => warning.code === "INVALID_VERSION" && warning.attribute === "strength"));
+    assert.equal(actor.calls.updateItems, 0);
 });
 
 test("zero duplicate is removed after deterministic canonical selection", async () => {
@@ -352,6 +409,117 @@ test("zero duplicate is removed after deterministic canonical selection", async 
     assert.deepEqual(actor.items.filter(item => item.flags?.worldofdarkness?.bloodBuff === "strength").map(item => item._id), ["a"]);
     assert.equal(actor.items.find(item => item._id === "a").system.value, 2);
     assert.ok(result.warnings.some(warning => warning.code === "DUPLICATE_REMOVED"));
+});
+
+test("unsafe zero duplicates block cleanup without discarding other effects", async () => {
+    const BloodBuffHelper = await helper();
+    const cases = [
+        { name: "wrong bonus type", system: { type: "initiative_buff" } },
+        { name: "wrong attribute target", system: { settingtype: "dexterity" } },
+        { name: "active zero", active: true },
+        { name: "foreign nested effect", system: { bonuslist: [
+            { type: "soak_buff", settingtype: "all", value: 2, isactive: true }
+        ] } },
+        { name: "foreign parent", system: { parentid: "foreign" } },
+        { name: "missing bonuslist", system: { bonuslist: undefined } }
+    ];
+    for (const entry of cases) {
+        const duplicate = makeItem("strength", 0, entry.active ?? false, {
+            _id: "z", system: entry.system
+        });
+        const actor = new FakeActor({ id: entry.name, items: [
+            makeItem("strength", 1, true, { _id: "a" }), duplicate
+        ] });
+        const before = copy(actor.items);
+        await assert.rejects(BloodBuffHelper.ensure(actor), error =>
+            error.code === "CONFLICT" && error.conflicts.some(conflict => conflict.code === "BLOCKING_DUPLICATE"), entry.name);
+        assert.deepEqual(actor.items, before, entry.name);
+        assert.deepEqual(actor.calls, { create: 0, updateItems: 0, delete: 0, updateActor: 0, render: 0 }, entry.name);
+    }
+});
+
+test("reset recovers both canonical orderings of a zero and nonzero duplicate", async () => {
+    const BloodBuffHelper = await helper();
+    for (const [canonicalValue, redundantValue] of [[0, 2], [2, 0]]) {
+        const actor = new FakeActor({ id: `reset-${canonicalValue}-${redundantValue}`, items: [
+            makeItem("strength", canonicalValue, canonicalValue > 0, { _id: "a" }),
+            makeItem("strength", redundantValue, redundantValue > 0, { _id: "z" })
+        ] });
+        actor.system.attributes.strength.total = 5;
+        const result = await BloodBuffHelper.reset(actor);
+        const strength = actor.items.filter(item => item.flags?.worldofdarkness?.bloodBuff === "strength");
+        assert.deepEqual(strength.map(item => item._id), ["a"]);
+        assert.equal(strength[0].system.value, 0);
+        assert.equal(strength[0].system.isactive, false);
+        assert.equal(actor.system.attributes.strength.total, 3);
+        assert.equal(actor.calls.delete, 1);
+        assert.ok(result.warnings.some(warning => warning.code === "DUPLICATE_REMOVED"));
+    }
+});
+
+test("nonzero duplicate remains a conflict for ensure, setValue, and changeValue", async () => {
+    const BloodBuffHelper = await helper();
+    for (const operation of [
+        actor => BloodBuffHelper.ensure(actor),
+        actor => BloodBuffHelper.setValue(actor, "strength", 3),
+        actor => BloodBuffHelper.changeValue(actor, "strength", 1)
+    ]) {
+        const actor = new FakeActor({ items: [
+            makeItem("strength", 0, false, { _id: "a" }),
+            makeItem("strength", 2, true, { _id: "z" })
+        ] });
+        const before = copy(actor.items);
+        await assert.rejects(operation(actor), error => error.code === "CONFLICT");
+        assert.deepEqual(actor.items, before);
+        assert.deepEqual(actor.calls, { create: 0, updateItems: 0, delete: 0, updateActor: 0, render: 0 });
+    }
+});
+
+test("reset rejects unsafe duplicate groups before any item or actor write", async () => {
+    const BloodBuffHelper = await helper();
+    const cases = [
+        { name: "foreign effect", duplicate: { system: { bonuslist: [
+            { type: "soak_buff", settingtype: "all", value: 2, isactive: true }
+        ] } } },
+        { name: "wrong type", duplicate: { system: { type: "attribute_diff" } } },
+        { name: "wrong settingtype", duplicate: { system: { settingtype: "dexterity" } } },
+        { name: "foreign parent", duplicate: { system: { parentid: "other" } } },
+        { name: "invalid value", value: -1 },
+        { name: "invalid active", active: "yes" },
+        { name: "wrong document type", duplicate: { type: "Trait" } },
+        { name: "unsafe canonical", value: 0, active: false, canonical: { system: { bonuslist: [
+            { type: "soak_buff", settingtype: "all", value: 2, isactive: true }
+        ] } } }
+    ];
+    for (const entry of cases) {
+        const actor = new FakeActor({ id: entry.name, items: [
+            makeItem("strength", 0, false, { _id: "a", ...entry.canonical }),
+            makeItem("strength", entry.value ?? 2, entry.active ?? true, { _id: "z", ...entry.duplicate })
+        ] });
+        const before = copy(actor.items);
+        await assert.rejects(BloodBuffHelper.reset(actor), error => error.code === "CONFLICT", entry.name);
+        assert.deepEqual(actor.items, before, entry.name);
+        assert.deepEqual(actor.calls, { create: 0, updateItems: 0, delete: 0, updateActor: 0, render: 0 }, entry.name);
+    }
+});
+
+test("a duplicate changed after inspection is not deleted", async () => {
+    const BloodBuffHelper = await helper();
+    const actor = new FakeActor({ items: [
+        makeItem("strength", 1, true, { _id: "a" }),
+        makeItem("strength", 0, false, { _id: "z" })
+    ] });
+    const create = actor.createEmbeddedDocuments.bind(actor);
+    actor.createEmbeddedDocuments = async (type, documents) => {
+        const result = await create(type, documents);
+        const changed = actor.items.find(item => item._id === "z");
+        changed.flags.worldofdarkness.bloodBuff = "dexterity";
+        changed.system.settingtype = "dexterity";
+        return result;
+    };
+    await assert.rejects(BloodBuffHelper.ensure(actor), error => error.code === "PERSISTENCE_FAILED");
+    assert.ok(actor.items.some(item => item._id === "z"));
+    assert.equal(actor.calls.delete, 0);
 });
 
 test("nonzero or invalid duplicate blocks all writes", async () => {
@@ -387,7 +555,7 @@ test("unknown marker is not adopted, repaired, or removed", async () => {
     assert.equal(actor.items.length, 5);
 });
 
-test("no-op set, reset, and ensure avoid extra writes and recalculation", async () => {
+test("no-op set, reset, and ensure avoid extra persistent writes", async () => {
     const BloodBuffHelper = await helper();
     const actor = new FakeActor();
     await BloodBuffHelper.ensure(actor);
@@ -432,15 +600,26 @@ test("a rejected operation does not poison the actor queue", async () => {
 test("item mutations recalculate and persist actual attribute and initiative totals", async () => {
     const BloodBuffHelper = await helper();
     const actor = new FakeActor();
-    actor.sheet.rendered = true;
     await BloodBuffHelper.setValue(actor, "dexterity", 2);
     assert.equal(actor.system.attributes.dexterity.total, 7);
     assert.equal(actor.system.initiative.total, 9);
     assert.ok(actor.calls.updateActor > 0);
-    assert.ok(actor.calls.render > 0);
     await BloodBuffHelper.setValue(actor, "dexterity", 3);
     assert.equal(actor.system.attributes.dexterity.total, 8);
     assert.equal(actor.system.initiative.total, 10);
+});
+
+test("render failure after actor persistence cannot turn a successful set into a failure", async () => {
+    const BloodBuffHelper = await helper();
+    const actor = new FakeActor();
+    actor.sheet.rendered = true;
+    actor.sheet.render = () => { throw new Error("render failed"); };
+    await BloodBuffHelper.setValue(actor, "dexterity", 2);
+    assert.equal(actor.system.attributes.dexterity.total, 7);
+    assert.equal(actor.system.initiative.total, 9);
+    await BloodBuffHelper.setValue(actor, "dexterity", 2);
+    assert.equal(actor.system.attributes.dexterity.total, 7);
+    assert.equal(actor.items.find(item => item.flags?.worldofdarkness?.bloodBuff === "dexterity").system.value, 2);
 });
 
 test("actual calculateTotals ignores an inactive stored +2", async () => {
@@ -449,6 +628,19 @@ test("actual calculateTotals ignores an inactive stored +2", async () => {
     const calculated = await calculateTotals(actor.toObject());
     assert.equal(calculated.system.attributes.dexterity.total, 5);
     assert.equal(calculated.system.initiative.total, 7);
+});
+
+test("Stamina Blood Buff propagates to persisted soak totals", async () => {
+    const BloodBuffHelper = await helper();
+    const actor = new FakeActor();
+    await BloodBuffHelper.setValue(actor, "stamina", 2);
+    assert.equal(actor.system.attributes.stamina.total, 5);
+    assert.deepEqual(actor.system.soak, { bashing: 5, lethal: 5, aggravated: 0 });
+    const item = actor.items.find(candidate => candidate.flags?.worldofdarkness?.bloodBuff === "stamina");
+    item.system.value = 4;
+    await BloodBuffHelper.ensure(actor);
+    assert.equal(actor.system.attributes.stamina.total, 7);
+    assert.deepEqual(actor.system.soak, { bashing: 7, lethal: 7, aggravated: 0 });
 });
 
 test("actor persistence failure is surfaced and a later no-op retries totals", async () => {
@@ -461,9 +653,66 @@ test("actor persistence failure is surfaced and a later no-op retries totals", a
     assert.equal(actor.system.attributes.dexterity.total, 5);
     assert.equal(BloodBuffHelper.read(actor).attributes.dexterity.effectiveValue, 2);
     actor.failActorUpdate = false;
-    await BloodBuffHelper.setValue(actor, "dexterity", 2);
+    await BloodBuffHelper.ensure(actor);
     assert.equal(actor.system.attributes.dexterity.total, 7);
     assert.equal(actor.system.initiative.total, 9);
+});
+
+test("ensure repairs stale totals after an external bonus edit without an item write", async () => {
+    const BloodBuffHelper = await helper();
+    const actor = new FakeActor();
+    await BloodBuffHelper.setValue(actor, "dexterity", 2);
+    const item = actor.items.find(candidate => candidate.flags?.worldofdarkness?.bloodBuff === "dexterity");
+    item.system.value = 4;
+    actor.calls = { create: 0, updateItems: 0, delete: 0, updateActor: 0, render: 0 };
+    await BloodBuffHelper.ensure(actor);
+    assert.equal(actor.system.attributes.dexterity.total, 9);
+    assert.equal(actor.system.initiative.total, 11);
+    assert.equal(actor.calls.updateItems, 0);
+    assert.equal(actor.calls.updateActor, 1);
+});
+
+test("same-value set repairs stale totals after an external bonus edit", async () => {
+    const BloodBuffHelper = await helper();
+    const actor = new FakeActor();
+    await BloodBuffHelper.setValue(actor, "dexterity", 2);
+    const item = actor.items.find(candidate => candidate.flags?.worldofdarkness?.bloodBuff === "dexterity");
+    item.system.value = 4;
+    actor.calls = { create: 0, updateItems: 0, delete: 0, updateActor: 0, render: 0 };
+    await BloodBuffHelper.setValue(actor, "dexterity", 4);
+    assert.equal(actor.system.attributes.dexterity.total, 9);
+    assert.equal(actor.system.initiative.total, 11);
+    assert.equal(actor.calls.updateItems, 0);
+    assert.equal(actor.calls.updateActor, 1);
+});
+
+test("ensure with current totals performs no persistent writes", async () => {
+    const BloodBuffHelper = await helper();
+    const actor = new FakeActor();
+    await BloodBuffHelper.setValue(actor, "dexterity", 2);
+    actor.calls = { create: 0, updateItems: 0, delete: 0, updateActor: 0, render: 0 };
+    await BloodBuffHelper.ensure(actor);
+    assert.equal(actor.system.attributes.dexterity.total, 7);
+    assert.deepEqual(actor.calls, { create: 0, updateItems: 0, delete: 0, updateActor: 0, render: 0 });
+});
+
+test("no-item-write changeValue and reset still repair stale actor totals", async () => {
+    const BloodBuffHelper = await helper();
+    for (const operation of [
+        actor => BloodBuffHelper.changeValue(actor, "dexterity", 0),
+        actor => BloodBuffHelper.reset(actor)
+    ]) {
+        const actor = new FakeActor();
+        await BloodBuffHelper.ensure(actor);
+        actor.system.attributes.dexterity.total = 99;
+        actor.system.initiative.total = 101;
+        actor.calls = { create: 0, updateItems: 0, delete: 0, updateActor: 0, render: 0 };
+        await operation(actor);
+        assert.equal(actor.system.attributes.dexterity.total, 5);
+        assert.equal(actor.system.initiative.total, 7);
+        assert.equal(actor.calls.updateItems, 0);
+        assert.equal(actor.calls.updateActor, 1);
+    }
 });
 
 test("read reports planned repairs and duplicates without claiming they were applied", async () => {
