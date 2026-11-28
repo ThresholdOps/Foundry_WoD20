@@ -58,4 +58,6 @@ ACCEPTED dotyczy ustaleń tego zadania. OPEN nie jest decyzją maintenera.
 | DEC-011 OPEN | Czy Augment Attributes ma być dostępne dla Ananasi (Blood Pool zamiast Rage) i Ghoula | warunek to obecność przewagi `bloodpool` (CAP-001, d01-capability-catalog.md); decyzja zasad, nie kodu |
 | DEC-010 OPEN | Wysokie pokolenia: pojemność krwi kontra jej dozwolone zastosowania | #973. Nie sprowadzać do arbitralnego max ani do uniwersalnego resource engine |
 
+**Iteracja 2:** DEC-011 OPEN (wyżej); DEC-012–014 PROPOSED w [d07-roadmap.md](d07-roadmap.md).
+
 Jawnych sprzeczności źródeł nie należy dopowiadać. Wersja historyczna „WP2 bez fixed ID” i obecny kod fixed ID oznaczają zmianę w czasie, nie CONFLICT. Otwarte issue #1366 i potwierdzenie wydania funkcji są różnymi informacjami o stanie; nie dowodzą automatycznie kompletności ani braku implementacji.

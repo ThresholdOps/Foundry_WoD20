@@ -8,6 +8,8 @@ Punkt odniesienia: `32e360a6953d41685bc605ba2cc68e9998b2f9b8` / Foundry V14. Odc
 | [D00 — weryfikacja, iteracja 2](d00-verification.md) | sprawdzenie mapy Charona, compendia, FND-001–009 |
 | [D01 — capability i katalog Splatów, iteracja 2](d01-capability-catalog.md) | jak PC i legacy rozpoznają możliwości; 46 profili Splatów |
 | [D02 — semantyka zasobów, iteracja 2](d02-resource-semantics.md) | Blood Pool, Rage, Gnosis, WP, Quintessence…; SOT-001–009 |
+| [D05 — wpływ ustaleń na backlog, iteracja 2](d05-impact-update.md) | miejsca zmiany dla #973, #1068/#1290, #1173, #1488, #1394; FND-017 |
+| [D07 — Roadmap i Candidate PR Backlog v1](d07-roadmap.md) | PR-001–008, pytania Q-01–Q-09 do Johana |
 | [Katalog Splatów z compendium](data/splat-pack-catalog.json) | 115 Splatów: game/era/variant, przewagi, formy, moce |
 | [Katalog funkcjonalny](functional-catalog.md) | Game, Era, Splat, typy i capabilities |
 | [Model danych i źródła prawdy](data-model.md) | semantyka pól, zapis i odbiorcy wartości |

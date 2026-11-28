@@ -3139,6 +3139,15 @@
       "issues": [
         1446
       ]
+    },
+    {
+      "id": "FND-017",
+      "status": "VERIFIED",
+      "basis": "static import scan",
+      "summary": "module/dialogs/dialog-weapon.js and module/scripts/import-helpers.js are not imported anywhere",
+      "evidence": [
+        "module/scripts/action-helpers.js:16 imports only DialogWeaponV2"
+      ]
     }
   ],
   "source_of_truth": [
@@ -3196,5 +3205,71 @@
       "source": "settings.variantsheet (look), settings.splat (rules)",
       "document": "d02-resource-semantics.md"
     }
+  ],
+  "candidate_prs": [
+    {
+      "id": "PR-001",
+      "issues": [],
+      "size": "S",
+      "decision": "Q-01"
+    },
+    {
+      "id": "PR-002",
+      "issues": [
+        1068,
+        1290
+      ],
+      "size": "S-M",
+      "decision": "Q-02"
+    },
+    {
+      "id": "PR-003",
+      "issues": [
+        1488
+      ],
+      "size": "M",
+      "decision": "Q-03"
+    },
+    {
+      "id": "PR-004",
+      "issues": [
+        1173
+      ],
+      "size": "S",
+      "decision": "Q-04"
+    },
+    {
+      "id": "PR-005",
+      "issues": [
+        1394
+      ],
+      "size": "S-M",
+      "decision": "setting scope"
+    },
+    {
+      "id": "PR-006",
+      "issues": [
+        973
+      ],
+      "size": "S",
+      "decision": "Q-05"
+    },
+    {
+      "id": "PR-007",
+      "issues": [],
+      "size": "S",
+      "decision": "Q-06"
+    },
+    {
+      "id": "PR-008",
+      "issues": [],
+      "size": "M",
+      "decision": "Q-07"
+    }
+  ],
+  "decisions_proposed": [
+    "DEC-012",
+    "DEC-013",
+    "DEC-014"
   ]
 }

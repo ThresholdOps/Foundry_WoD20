@@ -9,9 +9,9 @@
 | D02 Słownik semantyczny, źródła prawdy i przepływ zapisu | PARTIAL (iteracja 2: semantyka zasobów) | data-model.md, d02-resource-semantics.md, catalog.json. Dowody: DAT-001–020; SOT-001–009; katalog 15 zasobów z paku; FND-014–016 | field-level writers/consumers dla Bonus, zdrowia i soak. Otwarte: GAP-002 (reszta), GAP-004 |
 | D03 Komponenty, interfejsy, rozszerzenia i Foundry | PARTIAL | components.md, discovery.json. Dowody: CMP-001–020; IF-001–014; EXT-001–007; 245 importów | pełne zależności wywołań/globali/template oraz kontrakty platformy. Otwarte: GAP-009, GAP-010, GAP-008 |
 | D04 20 wymaganych scenariuszy + reset Splat | PARTIAL | execution-flows.md, discovery.json. Dowody: SCN-001–021; PROBE-001; diagram augmentacji | pełne branchy, kolejność/hooki/error i potwierdzenie istotnych scenariuszy. Otwarte: GAP-002, GAP-003, GAP-004, GAP-005 |
-| D05 Pełny odczyt v8.x i pierwsza traceability | PARTIAL | issues-v8.md, discovery.json. Dowody: API page1=32,page2=0,counter=32; 23/23 komentarze; 14 typowanych relacji; 5 wstępnych pakietów | każdy brak i zakres implementacji potwierdzony trasą; brakujące wymagania doprecyzowane. Otwarte: GAP-006, GAP-002, GAP-008 |
+| D05 Pełny odczyt v8.x i pierwsza traceability | PARTIAL (iteracja 2: miejsca zmiany) | issues-v8.md, d05-impact-update.md, discovery.json. Dowody: 32 issues / 23 komentarze (Charon); miejsca zmiany zweryfikowane dla 8 zgłoszeń; 5 nowych relacji; FND-017 | odświeżenie snapshotu; brakujące wymagania #1446/#1447/#1161/#1218. Otwarte: GAP-006, GAP-012 |
 | D06 Strategia i pierwsza rzeczywista weryfikacja | PARTIAL | testing.md, checks/reproduce-splat-replacement.mjs. Dowody: 191 logic PASS; 7 static PASS; PROBE-001 functional FAIL | odpowiedni pełny zestaw i runtime/multi-client/migracja z zapisanym dowodem. Otwarte: GAP-003, GAP-004, GAP-009 |
-| D07 Końcowa Development Roadmap i Candidate PR Backlog | NOT_STARTED | roadmap.md zawiera kolejność rozpoznania, nie końcowy projekt. Dowody: wstępne PKG z D05 | ocena wartości, zakresu, kosztu testów i ryzyka każdego niezależnego kandydata po domknięciu wiedzy. Otwarte: DEC-004–010, bramki NEXT-001–007 |
+| D07 Development Roadmap i Candidate PR Backlog | DRAFT v1 (iteracja 2) | d07-roadmap.md. Dowody: PR-001–008 ocenione w 11 wymiarach; Q-01–Q-09; DEC-012–014 PROPOSED | zatwierdzenie kolejności przez Mandora; odpowiedzi Johana; ręczny odbiór Foundry dla każdego PR |
 
 Pełne rekordy faz z wejściami/wyjściami/kryteriami/dowodami są w discovery.json. COMPLETE D00 oznacza wykonanie inwentaryzacji i rejestru luk w zidentyfikowanym zakresie, nie ukończenie rozpoznania systemu ani odczyt każdego prywatnego archiwum.
 
@@ -25,6 +25,7 @@ Pełne rekordy faz z wejściami/wyjściami/kryteriami/dowodami są w discovery.j
 - D01: PC wyprowadza capability z Itemów przy każdym przygotowaniu danych, legacy ma flagi ustawiane przy tworzeniu. Katalog 115 Splatów w 46 profilach (d01-capability-catalog.md).
 - FND-010–012: przygotowanie danych PC jest asynchroniczne i niezaczekane, zapisuje Itemy, a obliczenia pochodne pomija dla nie-właścicieli.
 - D02: pojemność Blood Pool, Paradox, Essence Pool i Willpower (5th) jest wyliczana i zapisywana przy każdym przygotowaniu; premia do `max` nie przetrwa (FND-014, RSK-017). Ten sam `system.id` dla różnych zasobów (FND-015).
+- D05/D07: miejsca zmiany dla 8 zgłoszeń, martwe moduły `dialog-weapon.js` i `import-helpers.js` (FND-017), Candidate PR Backlog PR-001–008 i pytania do Johana.
 - Ograniczenie: brak dostępu do API GitHub upstream w tej sesji, snapshot v8.x nieodświeżony (GAP-012).
 
 ## Co zmieniło się względem v0.1
@@ -39,4 +40,7 @@ Pełne rekordy faz z wejściami/wyjściami/kryteriami/dowodami są w discovery.j
 Po pomyślnych próbach Node środowisko terminalowe ponownie stało się niedostępne. Zebrane wyniki pozostają ważne dla wykonanych prób. Nie ma odbioru Foundry, UI, compendiów ani wielu klientów. Trwały zapis dokumentacji jest kontynuowany przez repozytorium.
 
 ## Następny konkretny odbiór
+Iteracja 2: decyzja Mandora o PR-001 i wysłanie Q-01–Q-09 do Johana; równolegle runtime NEXT-002 (Splat w Foundry).
+
+Poprzednio (Charon):
 NEXT-001/002: pełny snapshot i kontrole wydania; następnie instalacja/wymiana/reset Splat w Foundry, z kontrolą usuwanych Itemów i anulowania. Nie rozpoczynać implementacji #941 jako skutku samego istnienia resetu.
