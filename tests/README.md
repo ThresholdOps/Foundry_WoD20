@@ -41,6 +41,7 @@ Keep the quotes around the glob. Without them the shell may not expand the patte
 | `attribute-augmentation-helpers.test.mjs` | `module/scripts/attribute-augmentation-helpers.js`: reading, creating and updating the managed Bonus items, conflict detection, error codes, and the interaction with the real `calculateTotals`. |
 | `attribute-augmentation-popup.test.mjs` | `module/ui/attribute-augmentation-popup.js`: who sees the icon, popup lifecycle, refresh on document hooks, error and notice messages, and the splat class on the window. |
 | `bio-visibility.test.mjs` | `module/scripts/bio-visibility.js`: the viewer type (GM, owner, limited, observers), and per-field Bio visibility where a missing flag means visible. |
+| `drop-splat.test.mjs` | `DropHelper.DropSplatToActor`: replacing an existing Splat after confirmation, cancelling the replacement, and dropping on an actor without a Splat. |
 
 Not covered: full sheets and dialogs in a running Foundry instance. Those still need to be checked by hand.
 

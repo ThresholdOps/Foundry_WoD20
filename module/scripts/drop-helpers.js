@@ -565,11 +565,10 @@ export default class DropHelper {
                 return false;
             }
 
-            const itemsToDelete = actor.items.filter(i => i.type === droppedItem.type);
-            idsToDelete = itemsToDelete.map(i => i.id);
+            const splatIdsToDelete = actor.items.filter(i => i.type === droppedItem.type).map(i => i.id);
 
-            if (idsToDelete.length > 0) {
-                await this.actor.deleteEmbeddedDocuments("Item", idsToDelete);
+            if (splatIdsToDelete.length > 0) {
+                await actor.deleteEmbeddedDocuments("Item", splatIdsToDelete);
             }
         }
 
