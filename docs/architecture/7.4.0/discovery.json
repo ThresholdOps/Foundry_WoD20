@@ -3093,6 +3093,108 @@
         "module/actor/data/wod-actor-base.js:499-575",
         "d01-capability-catalog.md"
       ]
+    },
+    {
+      "id": "FND-014",
+      "status": "VERIFIED",
+      "basis": "code",
+      "summary": "Capacity of bloodpool, paradox, essencepool and willpower (5th) is recomputed and persisted on every preparation; manual or bonus changes to max are overwritten",
+      "evidence": [
+        "module/actor/data/wod-actor-base.js:286-330",
+        "module/actor/data/wod-actor-base.js:398-418",
+        "module/actor/data/wod-actor-base.js:425-436",
+        "module/actor/data/wod-actor-base.js:1120-1186",
+        "module/actor/data/wod-actor-base.js:1666-1716"
+      ],
+      "risks": [
+        "RSK-017"
+      ],
+      "issues": [
+        973,
+        1447
+      ]
+    },
+    {
+      "id": "FND-015",
+      "status": "VERIFIED",
+      "basis": "data+code",
+      "effect_status": "INFERRED",
+      "summary": "Same system.id used for different advantages (faith x4, conviction x2); system.advantages keyed by slug ?? id ?? name",
+      "evidence": [
+        "packs/advantages",
+        "module/actor/data/wod-actor-base.js:265"
+      ],
+      "risks": [
+        "RSK-016"
+      ]
+    },
+    {
+      "id": "FND-016",
+      "status": "VERIFIED",
+      "basis": "code",
+      "summary": "Advantage.roll depends on world setting rollSettings when both permanent and temporary are used",
+      "evidence": [
+        "module/items/data/wod-item-base.js:291-303"
+      ],
+      "issues": [
+        1446
+      ]
+    }
+  ],
+  "source_of_truth": [
+    {
+      "id": "SOT-001",
+      "value": "bloodpool capacity (PC)",
+      "source": "bio.splatfields.generation",
+      "document": "d02-resource-semantics.md"
+    },
+    {
+      "id": "SOT-002",
+      "value": "bloodpool state",
+      "source": "Advantage[bloodpool].temporary",
+      "document": "d02-resource-semantics.md"
+    },
+    {
+      "id": "SOT-003",
+      "value": "paradox capacity",
+      "source": "Advantage[quintessence].max",
+      "document": "d02-resource-semantics.md"
+    },
+    {
+      "id": "SOT-004",
+      "value": "willpower permanent (5th)",
+      "source": "attributes.composure+resolve",
+      "document": "d02-resource-semantics.md"
+    },
+    {
+      "id": "SOT-005",
+      "value": "essence pool",
+      "source": "variant + Advantage[essence].permanent",
+      "document": "d02-resource-semantics.md"
+    },
+    {
+      "id": "SOT-006",
+      "value": "advantage roll value",
+      "source": "permanent/temporary + flags + world rollSettings",
+      "document": "d02-resource-semantics.md"
+    },
+    {
+      "id": "SOT-007",
+      "value": "PC capability",
+      "source": "visible embedded Items",
+      "document": "d02-resource-semantics.md"
+    },
+    {
+      "id": "SOT-008",
+      "value": "PC system.abilities/advantages",
+      "source": "embedded Items",
+      "document": "d02-resource-semantics.md"
+    },
+    {
+      "id": "SOT-009",
+      "value": "line/look",
+      "source": "settings.variantsheet (look), settings.splat (rules)",
+      "document": "d02-resource-semantics.md"
     }
   ]
 }

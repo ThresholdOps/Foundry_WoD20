@@ -38,6 +38,8 @@ Identyfikatory są stabilne. Status wiedzy nie jest statusem realizacji ani test
 | RSK-012 MEDIUM / INFERRED | Warunki `splat == <linia>` pomijają Savage Age i inne `id` spoza słownika | FND-003, FND-006. Każda zmiana warunkowana linią testowana także na Garou Savage Age (REG-015) |
 | RSK-014 MEDIUM / INFERRED | Przygotowanie danych wysyła zapisy Itemów na każdym kliencie z niezgodnym `max` | FND-011, `wod-actor-base.js:591-593`. Testy multi-client dla zmian `max`, generacji i Essence |
 | RSK-015 MEDIUM / INFERRED | Observer/Limited nie liczą danych pochodnych; ich widok różni się od widoku właściciela | FND-012, `wod-actor-base.js:55-57`. REG-009 porównuje ruch i rany między rolami |
+| RSK-016 MEDIUM / VERIFIED (data), INFERRED (skutek) | Kilka przewag o tym samym `system.id` (`faith` ×4, `conviction` ×2) nadpisuje się w `system.advantages` hybrydy | FND-015, `wod-actor-base.js:265`. Test hybrydy z dwiema przewagami o jednym `id` |
+| RSK-017 HIGH / VERIFIED | Premie do `max` Blood Pool, Paradox, Essence Pool i Willpower (5th) zostaną nadpisane przez normalizację | FND-014. Każdy projekt #1447/#973 zmienia normalizację, nie samo pole |
 | RSK-013 MEDIUM / HYPOTHESIS | `actor.update(duplicate(actor))` z nieaktualną tablicą `items` może nadpisać zmiany Itemów | FND-009, `drop-helpers.js:638/819`, `:847/1009`. REG-008 z obserwacją Itemów po instalacji |
 
 ## Architecture Decision Register
