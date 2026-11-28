@@ -5,7 +5,7 @@
 | Faza | Stan | Zakres / wyniki | Co potrzebne do odbioru |
 | --- | --- | --- | --- |
 | D00 Inwentaryzacja zidentyfikowanych materiałów i luk | COMPLETE (iteracja 2: zweryfikowana) | knowledge-inventory.md, d00-verification.md, gaps-risks-decisions.md. Dowody: tag/main SHA; 206/206 npm test; PROBE-001, PROBE-002; CHK-SPLAT-REF 4840/4840; 14/14 VER | zarejestrowane źródła, wersje, granice dowodu, obszary brakujące i plan uzupełnienia. Otwarte: GAP-007, GAP-012 |
-| D01 Game/Era/Splat, typy, capabilities i schematy | PARTIAL | functional-catalog.md, catalog.json. Dowody: 13 Actor types; 16 Item types; 6 eras; 47 variant keys; 6 modeli | pełny katalog rzeczywistych szablonów/form i powiązań oraz sprawdzone warunki. Otwarte: GAP-001, GAP-010 |
+| D01 Game/Era/Splat, typy, capabilities i schematy | PARTIAL (iteracja 2: rozpoznawanie capability i katalog compendium) | functional-catalog.md, d01-capability-catalog.md, catalog.json, data/splat-pack-catalog.json. Dowody: 13 Actor types; 16 Item types; 6 eras; 115 Splatów / 46 profili; 2 modele capability (legacy flagi vs PC z Itemów) | pełne powiązanie flag has* z konsumentami; import paków w Foundry. Otwarte: GAP-001 (reszta), GAP-010, GAP-011, GAP-013, GAP-014 |
 | D02 Słownik semantyczny, źródła prawdy i przepływ zapisu | PARTIAL | data-model.md, catalog.json. Dowody: DAT-001–020; macierz zapisów; łańcuch atrybut→odbiorcy | field-level sources/writers/consumers i lifecycle całego zakresu D02. Otwarte: GAP-002, GAP-004 |
 | D03 Komponenty, interfejsy, rozszerzenia i Foundry | PARTIAL | components.md, discovery.json. Dowody: CMP-001–020; IF-001–014; EXT-001–007; 245 importów | pełne zależności wywołań/globali/template oraz kontrakty platformy. Otwarte: GAP-009, GAP-010, GAP-008 |
 | D04 20 wymaganych scenariuszy + reset Splat | PARTIAL | execution-flows.md, discovery.json. Dowody: SCN-001–021; PROBE-001; diagram augmentacji | pełne branchy, kolejność/hooki/error i potwierdzenie istotnych scenariuszy. Otwarte: GAP-002, GAP-003, GAP-004, GAP-005 |
@@ -22,6 +22,8 @@ Pełne rekordy faz z wejściami/wyjściami/kryteriami/dowodami są w discovery.j
 - Odczytano compendia systemu z LevelDB: 115 Splatów, 4840 odwołań UUID, 0 zerwanych (FND-005, częściowo GAP-001).
 - Savage Age zapisuje `settings.splat` spoza `CONFIG.splat` (FND-003, GAP-011, REG-015).
 - Przy instalacji wygrywa źródło z compendium, nie kopia w Splacie (FND-004).
+- D01: PC wyprowadza capability z Itemów przy każdym przygotowaniu danych, legacy ma flagi ustawiane przy tworzeniu. Katalog 115 Splatów w 46 profilach (d01-capability-catalog.md).
+- FND-010–012: przygotowanie danych PC jest asynchroniczne i niezaczekane, zapisuje Itemy, a obliczenia pochodne pomija dla nie-właścicieli.
 - Ograniczenie: brak dostępu do API GitHub upstream w tej sesji, snapshot v8.x nieodświeżony (GAP-012).
 
 ## Co zmieniło się względem v0.1

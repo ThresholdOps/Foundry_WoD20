@@ -16,6 +16,7 @@ Identyfikatory są stabilne. Status wiedzy nie jest statusem realizacji ani test
 | GAP-010 Szczegółowe dowody zakresu każdego komponentu dla każdej linii / D01, D03 | Warunki są rozproszone; główne ścieżki to nie cała implementacja | Powiązać warunki has*/id/variant z konsumentami i testami |
 | GAP-011 `settings.splat` spoza słownika (Savage Age) / D01, D03, D06 | 9 Splatów z compendium ma `id` spoza `CONFIG.splat`; konsumenci porównują z nazwą linii (FND-003) | Pełna lista konsumentów `splat`/`game`; decyzja maintenera, czy epoka ma być kodowana w `id`; REG-015 |
 | GAP-012 Aktualność snapshotu v8.x / D05 | Iteracja 2 nie miała dostępu do API GitHub upstream | Ponowny odczyt stron milestone i komentarzy; porównanie `updated_at` z discovery.json |
+| GAP-014 Widoczny skutek asynchronicznego przygotowania danych / D01, D04, D06 | `prepareData`/`prepareDerivedData` nie są czekane przez platformę (FND-010) | Test Foundry: zmiana przewagi lub atrybutu i stan karty w tym samym renderze |
 | GAP-013 PC Creature / Spirit bez Splata w compendium / D01, D05 | Klucze są w `CONFIG.splat`, w pakach brak definicji (FND-007) | Ustalić z użytkownikami/maintenerem, jak budowane są takie postacie; przypisać #1218 do PC albo legacy |
 
 **Adnotacje iteracji 2 (28.11.2026):** GAP-001 częściowo zamknięta: paki systemu odczytane statycznie, 4840/4840 odwołań UUID rozwiązanych ([d00-verification.md](d00-verification.md), FND-005). GAP-009 częściowo zamknięta: pełne `npm test` 206/206 PASS; walidacja Mermaid nadal otwarta.
@@ -35,6 +36,8 @@ Identyfikatory są stabilne. Status wiedzy nie jest statusem realizacji ani test
 | RSK-010 HIGH / VERIFIED | Naprawa RSK-001 samego `ReferenceError` ujawni kolejny wyjątek na `this.actor` | PROBE-002, `drop-helpers.js:572`. PKG-001 obejmuje obie linie; test liczy faktyczne usunięcia |
 | RSK-011 LOW / VERIFIED (code), HYPOTHESIS (intencja) | `abilities.defaultmaxvalue` nadpisywane limitem mocy; `powers.defaultmaxvalue` nieustawiane | `drop-helpers.js:770`. Dziś niewidoczne (115 × 5/5/5); własne Splaty z innymi limitami |
 | RSK-012 MEDIUM / INFERRED | Warunki `splat == <linia>` pomijają Savage Age i inne `id` spoza słownika | FND-003, FND-006. Każda zmiana warunkowana linią testowana także na Garou Savage Age (REG-015) |
+| RSK-014 MEDIUM / INFERRED | Przygotowanie danych wysyła zapisy Itemów na każdym kliencie z niezgodnym `max` | FND-011, `wod-actor-base.js:591-593`. Testy multi-client dla zmian `max`, generacji i Essence |
+| RSK-015 MEDIUM / INFERRED | Observer/Limited nie liczą danych pochodnych; ich widok różni się od widoku właściciela | FND-012, `wod-actor-base.js:55-57`. REG-009 porównuje ruch i rany między rolami |
 | RSK-013 MEDIUM / HYPOTHESIS | `actor.update(duplicate(actor))` z nieaktualną tablicą `items` może nadpisać zmiany Itemów | FND-009, `drop-helpers.js:638/819`, `:847/1009`. REG-008 z obserwacją Itemów po instalacji |
 
 ## Architecture Decision Register
@@ -50,6 +53,7 @@ ACCEPTED dotyczy ustaleń tego zadania. OPEN nie jest decyzją maintenera.
 | DEC-007 OPEN | Co oznacza bonus wartości Advantage | #1447 bez treści. permanent, temporary, max i roll nie są zamienne |
 | DEC-008 OPEN | Widoczność: prezentacja czy ograniczenie dostępnych danych | #1240/#1352; częściowo #1506. Zgodność z kontraktami Foundry wymaga weryfikacji |
 | DEC-009 OPEN | Reroll: opcje historyczne kontra aktualne dane i ponawianie kosztu | #1481; DiceRoller wydaje Willpower. Nie ponawiać skutków ubocznych bez ustalenia semantyki |
+| DEC-011 OPEN | Czy Augment Attributes ma być dostępne dla Ananasi (Blood Pool zamiast Rage) i Ghoula | warunek to obecność przewagi `bloodpool` (CAP-001, d01-capability-catalog.md); decyzja zasad, nie kodu |
 | DEC-010 OPEN | Wysokie pokolenia: pojemność krwi kontra jej dozwolone zastosowania | #973. Nie sprowadzać do arbitralnego max ani do uniwersalnego resource engine |
 
 Jawnych sprzeczności źródeł nie należy dopowiadać. Wersja historyczna „WP2 bez fixed ID” i obecny kod fixed ID oznaczają zmianę w czasie, nie CONFLICT. Otwarte issue #1366 i potwierdzenie wydania funkcji są różnymi informacjami o stanie; nie dowodzą automatycznie kompletności ani braku implementacji.

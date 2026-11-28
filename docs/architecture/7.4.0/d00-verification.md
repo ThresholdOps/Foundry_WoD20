@@ -6,7 +6,7 @@ Data: 28 listopada 2026. Autor iteracji: Moros. Wejście: dokumentacja Charona, 
 Dokumentacja Charona jest **wiarygodnym punktem wyjścia**: 14 z 14 sprawdzonych wyrywkowo twierdzeń potwierdza się w kodzie lub danych. Nie znalazłem sprzeczności (CONFLICT). Znalazłem natomiast cztery rzeczy, których mapa nie zawierała, a które zmieniają zakres przyszłych PR-ów:
 
 1. **Wymiana Splata ma dwa błędy, nie jeden** (FND-001). Po usunięciu `ReferenceError` z PROBE-001 ta sama gałąź pada na `this.actor` w metodzie statycznej. PKG-001 musi obejmować obie linie.
-2. **Savage Age zapisuje `settings.splat` spoza słownika `CONFIG.worldofdarkness.splat`** (FND-003). 9 z 115 Splatów z compendium. Gałęzie kodu zależne od `splat == "werewolf"` lub `"changingbreed"` ich nie obejmują.
+2. **Savage Age zapisuje `settings.splat` spoza słownika `CONFIG.worldofdarkness.splat`** (FND-003). 9 z 115 Splatów z compendium. Gałęzie kodu, które porównują `settings.splat` z nazwą linii, ich nie obejmują. Karta wybiera wygląd przez `variantsheet`, więc wygląda poprawnie.
 3. **Przy instalacji Splata wygrywa przedmiot źródłowy z compendium, nie kopia osadzona w Splacie** (FND-004). Splat w praktyce jest listą odwołań z kilkoma polami nadpisującymi.
 4. **GAP-001 da się w dużej części zamknąć bez Foundry**, bo compendia są w repozytorium jako LevelDB (FND-005). Wyciągnąłem katalog 115 Splatów i sprawdziłem 4840 odwołań UUID: 0 zerwanych.
 
@@ -63,8 +63,9 @@ Nie weryfikowałem ponownie odczytu 32 zgłoszeń v8.x: w tej sesji API GitHub d
 
 ### FND-003 — Savage Age poza słownikiem `CONFIG.splat`
 - **Fakt (VERIFIED data + code):** instalacja zapisuje `settings.splat = droppedItem.system.settings.id` (`drop-helpers.js:811`). Dziewięć Splatów z folderu „Savage Age” ma `id` spoza `CONFIG.worldofdarkness.splat`: `bilai` (Garou), `anupabael`, `apis`, `ceilican`, `grondir`, `khara`, `naghaluu`, `saksomaknami`, `wlewa`. Żadna z tych wartości nie występuje w `module/` ani `templates/`.
-- **Konsumenci porównujący z nazwą linii (VERIFIED code):** makra Frenzy i Shapechange (`templates/actor/parts/macro_icons.hbs:6`, `:20`), ruch Glabro/Crinos (`combat-helpers.js:93`), klasy CSS karty (`hooks.js:110-185`), listy Breed/Auspice/Tribe (`select-helpers.js:929`), atrybuty form (`stats_attributes.hbs:34`).
-- **Wniosek (INFERRED, runtime NOT TESTED):** Garou z Savage Age nie dostaje przycisku Frenzy/Shapechange ani korekty ruchu Glabro/Crinos, a jego karta nie dostaje klasy `werewolf`. Zmiana warunkowana `splat == werewolf` nie obejmie tej epoki. Typ kości w `roll-dice.js:19-20` dostanie `bilai`.
+- **Konsumenci, którzy czytają `settings.splat` wprost (VERIFIED code):** makra Frenzy i Shapechange (`templates/actor/parts/macro_icons.hbs:6`, `:20`), ruch Glabro/Crinos (`combat-helpers.js:93`), listy Breed/Auspice/Tribe Fera (`select-helpers.js:929`), atrybuty form (`stats_attributes.hbs:34`), nazwy rang (`wod-actor-base.js:1915`), kolor kości (`roll-dice.js:19-20`, gdzie `splat` ma pierwszeństwo przed `variantsheet`).
+- **Konsumenci, których to nie dotyczy (VERIFIED code):** karta PC, klasy CSS i ikony zakładek idą przez `getSplat` (`pc-actor-sheet.js:993-1007`) z kolejnością `variantsheet → splat → game → typ aktora`. Savage Age ma poprawne `variantsheet` (`werewolf` albo `changingbreed`), więc wygląd karty jest zgodny z linią.
+- **Wniosek (INFERRED, runtime NOT TESTED):** Garou z Savage Age ma kartę wilkołaka, ale nie dostaje przycisków Frenzy i Shapechange, korekty skoku Glabro/Crinos ani nazw rang. Fera z Savage Age nie dostają list Breed/Auspice/Tribe Fera. Zmiana warunkowana `settings.splat == "werewolf"` nie obejmie tej epoki.
 - **Konsekwencja:** Era nie jest niezależnym wymiarem od Splat. W tej epoce identyfikator Splata koduje jednocześnie linię i epokę. Do D01 i D06 wchodzi przypadek testowy „Garou Savage Age” (REG-015).
 
 ### FND-004 — przy instalacji źródło z compendium wygrywa z kopią w Splacie

@@ -47,7 +47,7 @@ Wszystkie poniższe pozycje mają status NOT TESTED; dostęp do środowiska jest
 | REG-012 | CAP-004/CAP-011 | hybryda Mage+Ghoul, custom Ability i custom Splat; dodatnia capability i jej brak |
 | REG-013 | CAP-008 | wszystkie 6 kluczy epok oraz krótkie/pełne wartości; poprawny fallback i brak zmiany zapisanej semantyki |
 | REG-014 | wszystkie wspólne ścieżki | PC dla każdej wykrytej rodziny i reprezentatywne legacy; zakres rozszerzać według warunków, nie tylko etykiet |
-| REG-015 | SCN-002/007/012/016 | Garou Savage Age (`settings.splat = bilai`) obok Werewolf modern: makra Frenzy/Shapechange, ruch Glabro/Crinos, klasa CSS, listy Breed/Auspice/Tribe, typ kości (FND-003) |
+| REG-015 | SCN-002/007/012/016 | Garou Savage Age (`settings.splat = bilai`) i Fera Savage Age obok Werewolf modern: makra Frenzy/Shapechange, skok Glabro/Crinos, nazwy rang, listy Breed/Auspice/Tribe, kolor kości; wygląd karty jako kontrola pozytywna (FND-003) |
 
 ## Strategia warstw
 Unit sprawdza obliczenia i kategorie. Integracja powinna łączyć realne funkcje reguł z reprezentatywnymi modelami; atrapy nie mogą udawać gwarancji serwera. Runtime potwierdza modele, uprawnienia, hooki i kolejność. UI potwierdza widoczny wynik po renderze. Migracja korzysta wyłącznie z kopii świata. Multi-client mierzy oba żądania, wynik zapisu i odświeżenie. Cross-splat łączy warianty posiadające capability z przypadkiem, który jej nie ma.

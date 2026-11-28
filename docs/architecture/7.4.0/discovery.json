@@ -2949,8 +2949,10 @@
         "templates/actor/parts/macro_icons.hbs:6",
         "templates/actor/parts/macro_icons.hbs:20",
         "module/scripts/combat-helpers.js:93",
-        "module/hooks.js:110-185",
         "module/scripts/select-helpers.js:929",
+        "templates/actor/parts/stats_attributes.hbs:34",
+        "module/actor/data/wod-actor-base.js:1915",
+        "module/scripts/roll-dice.js:19-20",
         "data/splat-pack-catalog.json"
       ],
       "gaps": [
@@ -2961,6 +2963,10 @@
       ],
       "tests": [
         "REG-015"
+      ],
+      "not_affected": [
+        "module/actor/template/pc-actor-sheet.js:993-1007 getSplat (variantsheet first)",
+        "module/hooks.js:463-489"
       ]
     },
     {
@@ -3030,6 +3036,62 @@
       ],
       "risks": [
         "RSK-013"
+      ]
+    },
+    {
+      "id": "FND-010",
+      "status": "VERIFIED",
+      "basis": "code",
+      "effect_status": "HYPOTHESIS",
+      "summary": "prepareData calls async _prepareCharacterData without await; prepareDerivedData is async; has* flags and system.advantages set after first await (line 199)",
+      "evidence": [
+        "module/actor/data/wod-actor-base.js:30-44",
+        "module/actor/data/wod-actor-base.js:46-67",
+        "module/actor/data/wod-actor-base.js:199"
+      ],
+      "gaps": [
+        "GAP-014"
+      ],
+      "risks": [
+        "RSK-003"
+      ]
+    },
+    {
+      "id": "FND-011",
+      "status": "VERIFIED",
+      "basis": "code",
+      "effect_status": "INFERRED",
+      "summary": "_prepareCharacterData issues un-awaited updateEmbeddedDocuments for max normalisation and essence sync, without permission check",
+      "evidence": [
+        "module/actor/data/wod-actor-base.js:591-593"
+      ],
+      "risks": [
+        "RSK-014"
+      ]
+    },
+    {
+      "id": "FND-012",
+      "status": "VERIFIED",
+      "basis": "code",
+      "effect_status": "INFERRED",
+      "summary": "prepareDerivedData returns early for permission < 3; observers do not compute movement or wound levels",
+      "evidence": [
+        "module/actor/data/wod-actor-base.js:55-57"
+      ],
+      "risks": [
+        "RSK-015"
+      ]
+    },
+    {
+      "id": "FND-013",
+      "status": "VERIFIED",
+      "basis": "code+data",
+      "summary": "Two capability models: legacy flags set by CreateHelper at creation; PC capabilities derived from embedded Items on each preparation",
+      "evidence": [
+        "module/scripts/create-helpers.js",
+        "module/actor/data/wod-actor-base.js:257-284",
+        "module/actor/data/wod-actor-base.js:499-575",
+        "d01-capability-catalog.md"
       ]
     }
   ]
