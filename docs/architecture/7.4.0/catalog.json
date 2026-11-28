@@ -1,0 +1,3775 @@
+{
+  "schema_version": 1,
+  "source_version": "7.4.0",
+  "method": "Execute defineSchema with descriptor-only field stubs; NOT Foundry validation or document preparation. Run only against trusted source.",
+  "config": {
+    "sheettype": {
+      "mortal": "Mortal",
+      "werewolf": "Werewolf",
+      "mage": "Mage",
+      "vampire": "Vampire",
+      "changeling": "Changeling",
+      "hunter": "Hunter",
+      "demon": "Demon",
+      "wraith": "Wraith",
+      "mummy": "Mummy",
+      "exalted": "Exalted",
+      "creature": "Creature",
+      "changingbreed": "Changing Breed",
+      "spirit": "Spirit"
+    },
+    "splat": {
+      "vampire": "vampire",
+      "werewolf": "werewolf",
+      "mage": "mage",
+      "changeling": "changeling",
+      "hunter": "hunter",
+      "demon": "demon",
+      "wraith": "wraith",
+      "mummy": "mummy",
+      "exalted": "exalted",
+      "mortal": "mortal",
+      "creature": "creature",
+      "changingbreed": "changingbreed",
+      "spirit": "spirit"
+    },
+    "era": {
+      "modern": "wod.era.modern",
+      "victorian": "wod.era.victorian",
+      "darkages": "wod.era.darkages",
+      "classical": "wod.era.classical",
+      "livinggods": "wod.era.livinggods",
+      "savage": "wod.era.savage"
+    },
+    "variant": {
+      "vampire": {
+        "kindredeast": "wod.bio.vampire.kindredeast"
+      },
+      "changeling": {
+        "dauntain": "wod.bio.changeling.dauntain",
+        "thallain": "wod.bio.changeling.thallain",
+        "nunnehi": "wod.bio.changeling.nunnehi",
+        "menehune": "wod.bio.changeling.menehune",
+        "inanimae": "wod.bio.changeling.inanimae",
+        "darkkin": "wod.bio.changeling.darkkin"
+      },
+      "wraith": {
+        "shadow": "wod.bio.wraith.shadow"
+      },
+      "exalted": {
+        "solar": "wod.bio.exalted.solar",
+        "lunar": "wod.bio.exalted.lunar",
+        "dragon": "wod.bio.exalted.dragon",
+        "sidereal": "wod.bio.exalted.sidereal",
+        "abyssal": "wod.bio.exalted.abyssal",
+        "infernal": "wod.bio.exalted.infernal",
+        "alchemical": "wod.bio.exalted.alchemical",
+        "liminal": "wod.bio.exalted.liminal"
+      },
+      "changingbreed": {
+        "Ajaba": "wod.bio.feraname.ajaba",
+        "Ananasi": "wod.bio.feraname.ananasi",
+        "Bastet": "wod.bio.feraname.bastet",
+        "Corax": "wod.bio.feraname.corax",
+        "Gurahl": "wod.bio.feraname.gurahl",
+        "Kitsune": "wod.bio.feraname.kitsune",
+        "Mokole": "wod.bio.feraname.mokole",
+        "Nagah": "wod.bio.feraname.nagah",
+        "Nuwisha": "wod.bio.feraname.nuwisha",
+        "Ratkin": "wod.bio.feraname.ratkin",
+        "Rokea": "wod.bio.feraname.rokea",
+        "Apis": "wod.bio.feraname.apis",
+        "Camazotz": "wod.bio.feraname.camazotz",
+        "Grondr": "wod.bio.feraname.grondr"
+      },
+      "mortal": {
+        "orpheus": "wod.bio.mortal.orpheus",
+        "sorcerer": "wod.bio.mortal.sorcerer",
+        "autumnpeople": "wod.bio.mortal.autumnpeople",
+        "enchanted": "wod.bio.mortal.enchanted",
+        "ghoul": "wod.bio.mortal.ghoul",
+        "kinfolk": "wod.bio.mortal.kinfolk",
+        "truefaith": "wod.bio.mortal.truefaith"
+      },
+      "creature": {
+        "chimera": "wod.bio.creature.chimera",
+        "familiar": "wod.bio.creature.familiar",
+        "construct": "wod.bio.creature.construct",
+        "spirit": "wod.bio.creature.spirit",
+        "warwolves": "wod.bio.creature.warwolves",
+        "anurana": "wod.bio.creature.anurana",
+        "samsa": "wod.bio.creature.samsa",
+        "kerasi": "wod.bio.creature.kerasi",
+        "yeren": "wod.bio.creature.yeren",
+        "earthbound": "wod.bio.creature.earthbound"
+      }
+    },
+    "bonus": {
+      "attribute_buff": "wod.labels.bonus.attributebonus",
+      "attribute_dice_buff": "wod.labels.bonus.attributedicebonus",
+      "attribute_diff": "wod.labels.bonus.attributediff",
+      "attribute_auto_buff": "wod.labels.bonus.attributesucc",
+      "ability_buff": "wod.labels.bonus.abilitybonus",
+      "ability_diff": "wod.labels.bonus.abilitydiff",
+      "soak_buff": "wod.labels.bonus.soakbonus",
+      "soak_diff": "wod.labels.bonus.soakdiffbonus",
+      "health_buff": "wod.labels.bonus.healthbuff",
+      "initiative_buff": "wod.labels.bonus.initbonus",
+      "movement_buff": "wod.labels.bonus.movebonus",
+      "attribute_fixed_value": "wod.labels.bonus.attributefixedvalue",
+      "attack_buff": "wod.labels.bonus.attackbuff",
+      "attack_diff": "wod.labels.bonus.attackdiff",
+      "frenzy_buff": "wod.labels.bonus.frenzybuff",
+      "frenzy_diff": "wod.labels.bonus.frenzydiff"
+    }
+  },
+  "actor_types": [
+    "PC",
+    "Changeling",
+    "Changing Breed",
+    "Creature",
+    "Demon",
+    "Exalted",
+    "Hunter",
+    "Mage",
+    "Mortal",
+    "Mummy",
+    "Vampire",
+    "Wraith",
+    "Werewolf"
+  ],
+  "item_types": [
+    "Splat",
+    "Ability",
+    "Advantage",
+    "Sphere",
+    "Realm",
+    "Armor",
+    "Bonus",
+    "Experience",
+    "Feature",
+    "Fetish",
+    "Item",
+    "Melee Weapon",
+    "Ranged Weapon",
+    "Power",
+    "Rote",
+    "Trait"
+  ],
+  "models": {
+    "ActorPC": {
+      "path": "module/actor/datamodel/pc-actor-datamodel.js",
+      "schema": {
+        "settings": {
+          "kind": "SchemaField",
+          "fields": {
+            "iscreated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isupdated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isshapecreated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "usechimerical": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "usesplatfont": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "haswillpower": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasgnosis": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasvirtue": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasrenown": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasquintessence": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasdisciplines": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hascombinationdisciplines": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasrituals": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasgifts": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasrites": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasshapes": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasapocalypticforms": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasspheres": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasrotes": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasresonances": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasnuminas": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasrealms": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "haslores": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasedges": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasarcanois": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "haspassions": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasfetters": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hashorrors": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasstains": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hashekau": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "hasexaltedcharms": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "version": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "era": {
+              "kind": "StringField",
+              "options": {
+                "initial": "wod.era.modern",
+                "nullable": false
+              }
+            },
+            "splat": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "game": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "variant": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "variantsheet": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "dicesetting": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "attributes": {
+              "kind": "SchemaField",
+              "fields": {
+                "defaultmaxvalue": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5
+                  }
+                }
+              }
+            },
+            "abilities": {
+              "kind": "SchemaField",
+              "fields": {
+                "defaultmaxvalue": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5
+                  }
+                }
+              }
+            },
+            "powers": {
+              "kind": "SchemaField",
+              "fields": {
+                "defaultmaxvalue": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5
+                  }
+                }
+              }
+            },
+            "soak": {
+              "kind": "SchemaField",
+              "fields": {
+                "bashing": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bonus": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0
+                      }
+                    },
+                    "isrollable": {
+                      "kind": "BooleanField",
+                      "options": {
+                        "initial": true
+                      }
+                    }
+                  }
+                },
+                "lethal": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bonus": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0
+                      }
+                    },
+                    "isrollable": {
+                      "kind": "BooleanField",
+                      "options": {
+                        "initial": true
+                      }
+                    }
+                  }
+                },
+                "aggravated": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bonus": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0
+                      }
+                    },
+                    "isrollable": {
+                      "kind": "BooleanField",
+                      "options": {
+                        "initial": true
+                      }
+                    }
+                  }
+                },
+                "chimerical": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bashing": {
+                      "kind": "SchemaField",
+                      "fields": {
+                        "bonus": {
+                          "kind": "NumberField",
+                          "options": {
+                            "required": true,
+                            "nullable": false,
+                            "integer": true,
+                            "initial": 0
+                          }
+                        },
+                        "isrollable": {
+                          "kind": "BooleanField",
+                          "options": {
+                            "initial": true
+                          }
+                        }
+                      }
+                    },
+                    "lethal": {
+                      "kind": "SchemaField",
+                      "fields": {
+                        "bonus": {
+                          "kind": "NumberField",
+                          "options": {
+                            "required": true,
+                            "nullable": false,
+                            "integer": true,
+                            "initial": 0
+                          }
+                        },
+                        "isrollable": {
+                          "kind": "BooleanField",
+                          "options": {
+                            "initial": true
+                          }
+                        }
+                      }
+                    },
+                    "aggravated": {
+                      "kind": "SchemaField",
+                      "fields": {
+                        "bonus": {
+                          "kind": "NumberField",
+                          "options": {
+                            "required": true,
+                            "nullable": false,
+                            "integer": true,
+                            "initial": 0
+                          }
+                        },
+                        "isrollable": {
+                          "kind": "BooleanField",
+                          "options": {
+                            "initial": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "traits": {
+          "kind": "SchemaField",
+          "fields": {
+            "health": {
+              "kind": "SchemaField",
+              "fields": {
+                "totalhealthlevels": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "value": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 7
+                      }
+                    },
+                    "max": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 7
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "bio": {
+          "kind": "SchemaField",
+          "fields": {
+            "worldanvil": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "name": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "nature": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "demeanor": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "derangement": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "concept": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "splatfields": {
+              "kind": "ObjectField",
+              "options": {
+                "initial": {},
+                "nullable": false
+              }
+            },
+            "visibility": {
+              "kind": "ObjectField",
+              "options": {
+                "initial": {},
+                "nullable": false
+              }
+            },
+            "appearance": {
+              "kind": "HTMLField"
+            },
+            "background": {
+              "kind": "HTMLField"
+            },
+            "notes": {
+              "kind": "HTMLField"
+            },
+            "roleplaytip": {
+              "kind": "HTMLField"
+            }
+          }
+        },
+        "attributes": {
+          "kind": "SchemaField",
+          "fields": {
+            "strength": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "physical",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.strength",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "",
+                    "nullable": false
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "dexterity": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "physical",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.dexterity",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 2
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "stamina": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "physical",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.stamina",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 3
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "charisma": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "social",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.charisma",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 4
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "manipulation": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "social",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.manipulation",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "appearance": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "social",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.appearance",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 6
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "composure": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "social",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.composure",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 7
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "perception": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "mental",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.perception",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 8
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "intelligence": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "mental",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.intelligence",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 9
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "wits": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "mental",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.wits",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 10
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "resolve": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "bonus": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1
+                  }
+                },
+                "max": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5,
+                    "min": 0
+                  }
+                },
+                "type": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "mental",
+                    "nullable": false
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "initial": "wod.attributes.resolve",
+                    "nullable": false
+                  }
+                },
+                "speciality": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "sort": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 11
+                  }
+                },
+                "isvisible": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                },
+                "isfavorited": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "soak": {
+          "kind": "SchemaField",
+          "fields": {
+            "bashing": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            },
+            "lethal": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            },
+            "aggravated": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            },
+            "chimerical": {
+              "kind": "SchemaField",
+              "fields": {
+                "bashing": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "lethal": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "aggravated": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "health": {
+          "kind": "SchemaField",
+          "fields": {
+            "damage": {
+              "kind": "SchemaField",
+              "fields": {
+                "bashing": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "lethal": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "aggravated": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "woundlevel": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "woundpenalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "chimerical": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bashing": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    },
+                    "lethal": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    },
+                    "aggravated": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    }
+                  }
+                },
+                "corpus": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bashing": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    },
+                    "lethal": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    },
+                    "aggravated": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "bruised": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.bruised"
+                  }
+                }
+              }
+            },
+            "hurt": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -1
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.hurt"
+                  }
+                }
+              }
+            },
+            "injured": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -1
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.injured"
+                  }
+                }
+              }
+            },
+            "wounded": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -2
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.wounded"
+                  }
+                }
+              }
+            },
+            "mauled": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -2
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.mauled"
+                  }
+                }
+              }
+            },
+            "crippled": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -5
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.crippled"
+                  }
+                }
+              }
+            },
+            "incapacitated": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -99
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.incapacitated"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "initiative": {
+          "kind": "SchemaField",
+          "fields": {
+            "base": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            },
+            "bonus": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            },
+            "total": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            }
+          }
+        },
+        "conditions": {
+          "kind": "SchemaField",
+          "fields": {
+            "isignoringpain": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isstunned": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isfrenzy": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            }
+          }
+        },
+        "movement": {
+          "kind": "SchemaField",
+          "fields": {
+            "walk": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "isactive": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                }
+              }
+            },
+            "jog": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "isactive": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                }
+              }
+            },
+            "run": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "isactive": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                }
+              }
+            },
+            "fly": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "isactive": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": false
+                  }
+                }
+              }
+            },
+            "vjump": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "isactive": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                }
+              }
+            },
+            "hjump": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "isactive": {
+                  "kind": "BooleanField",
+                  "options": {
+                    "initial": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "gear": {
+          "kind": "SchemaField",
+          "fields": {
+            "notes": {
+              "kind": "HTMLField"
+            },
+            "money": {
+              "kind": "SchemaField",
+              "fields": {
+                "carried": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "bank": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                }
+              }
+            }
+          }
+        },
+        "favoriterolls": {
+          "kind": "ArrayField",
+          "element": {
+            "kind": "ObjectField",
+            "options": {
+              "initial": {},
+              "nullable": false
+            }
+          }
+        }
+      }
+    },
+    "Ability": {
+      "path": "module/items/datamodel/ability-item-datamodel.js",
+      "schema": {
+        "settings": {
+          "kind": "SchemaField",
+          "fields": {
+            "iscreated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isupdated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isactive": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isvisible": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "isremovable": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "version": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "order": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            },
+            "itemuuid": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "alwaysspeciality": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isfavorited": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "ismeleeweapon": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "israngedeweapon": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "ispower": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            }
+          }
+        },
+        "id": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "reference": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "type": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": "wod.abilities.ability"
+          }
+        },
+        "label": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "value": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "bonus": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0
+          }
+        },
+        "total": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "max": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 5,
+            "min": 0
+          }
+        },
+        "speciality": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "description": {
+          "kind": "HTMLField"
+        }
+      }
+    },
+    "Advantage": {
+      "path": "module/items/datamodel/advantage-item-datamodel.js",
+      "schema": {
+        "settings": {
+          "kind": "SchemaField",
+          "fields": {
+            "iscreated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isupdated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isactive": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isvisible": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "isremovable": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "version": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "order": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            },
+            "itemuuid": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "usepermanent": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "usetemporary": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "useroll": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "usebothrolls": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "highertemporary": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            }
+          }
+        },
+        "id": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "reference": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "type": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": "wod.advantages.advantages"
+          }
+        },
+        "group": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "label": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "permanent": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "temporary": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "max": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 10,
+            "min": 0
+          }
+        },
+        "roll": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "perturn": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "bearing": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0
+          }
+        },
+        "bearingtext": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "imbalance": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "description": {
+          "kind": "HTMLField"
+        }
+      }
+    },
+    "Sphere": {
+      "path": "module/items/datamodel/sphere-item-datamodel.js",
+      "schema": {
+        "settings": {
+          "kind": "SchemaField",
+          "fields": {
+            "iscreated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isupdated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isactive": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isvisible": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "isremovable": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "version": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "order": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            },
+            "itemuuid": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "istechnocracy": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            }
+          }
+        },
+        "id": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "reference": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "label": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "value": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "max": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 5,
+            "min": 0
+          }
+        },
+        "speciality": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "description": {
+          "kind": "HTMLField"
+        }
+      }
+    },
+    "Realm": {
+      "path": "module/items/datamodel/realm-item-datamodel.js",
+      "schema": {
+        "settings": {
+          "kind": "SchemaField",
+          "fields": {
+            "iscreated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isupdated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isactive": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isvisible": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "isremovable": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "version": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "order": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            },
+            "itemuuid": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "isaffinity": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            }
+          }
+        },
+        "id": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "reference": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "label": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "value": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 0,
+            "min": 0
+          }
+        },
+        "max": {
+          "kind": "NumberField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "integer": true,
+            "initial": 5,
+            "min": 0
+          }
+        },
+        "speciality": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "description": {
+          "kind": "HTMLField"
+        }
+      }
+    },
+    "Splat": {
+      "path": "module/items/datamodel/spalt-item-datamodel.js",
+      "schema": {
+        "settings": {
+          "kind": "SchemaField",
+          "fields": {
+            "iscreated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isupdated": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isactive": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "isvisible": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "isremovable": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": true
+              }
+            },
+            "version": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "order": {
+              "kind": "NumberField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "integer": true,
+                "initial": 0,
+                "min": 0
+              }
+            },
+            "id": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "game": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "era": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "variant": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": "general"
+              }
+            },
+            "variantsheet": {
+              "kind": "StringField",
+              "options": {
+                "required": true,
+                "nullable": false,
+                "initial": ""
+              }
+            },
+            "usechimerical": {
+              "kind": "BooleanField",
+              "options": {
+                "initial": false
+              }
+            },
+            "attributes": {
+              "kind": "SchemaField",
+              "fields": {
+                "defaultmaxvalue": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5
+                  }
+                }
+              }
+            },
+            "abilities": {
+              "kind": "SchemaField",
+              "fields": {
+                "defaultmaxvalue": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5
+                  }
+                }
+              }
+            },
+            "powers": {
+              "kind": "SchemaField",
+              "fields": {
+                "defaultmaxvalue": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 5
+                  }
+                }
+              }
+            },
+            "soak": {
+              "kind": "SchemaField",
+              "fields": {
+                "bashing": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bonus": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0
+                      }
+                    },
+                    "isrollable": {
+                      "kind": "BooleanField",
+                      "options": {
+                        "initial": true
+                      }
+                    }
+                  }
+                },
+                "lethal": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bonus": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0
+                      }
+                    },
+                    "isrollable": {
+                      "kind": "BooleanField",
+                      "options": {
+                        "initial": false
+                      }
+                    }
+                  }
+                },
+                "aggravated": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bonus": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0
+                      }
+                    },
+                    "isrollable": {
+                      "kind": "BooleanField",
+                      "options": {
+                        "initial": false
+                      }
+                    }
+                  }
+                },
+                "chimerical": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bashing": {
+                      "kind": "SchemaField",
+                      "fields": {
+                        "bonus": {
+                          "kind": "NumberField",
+                          "options": {
+                            "required": true,
+                            "nullable": false,
+                            "integer": true,
+                            "initial": 0
+                          }
+                        },
+                        "isrollable": {
+                          "kind": "BooleanField",
+                          "options": {
+                            "initial": false
+                          }
+                        }
+                      }
+                    },
+                    "lethal": {
+                      "kind": "SchemaField",
+                      "fields": {
+                        "bonus": {
+                          "kind": "NumberField",
+                          "options": {
+                            "required": true,
+                            "nullable": false,
+                            "integer": true,
+                            "initial": 0
+                          }
+                        },
+                        "isrollable": {
+                          "kind": "BooleanField",
+                          "options": {
+                            "initial": false
+                          }
+                        }
+                      }
+                    },
+                    "aggravated": {
+                      "kind": "SchemaField",
+                      "fields": {
+                        "bonus": {
+                          "kind": "NumberField",
+                          "options": {
+                            "required": true,
+                            "nullable": false,
+                            "integer": true,
+                            "initial": 0
+                          }
+                        },
+                        "isrollable": {
+                          "kind": "BooleanField",
+                          "options": {
+                            "initial": false
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "reference": {
+          "kind": "StringField",
+          "options": {
+            "required": true,
+            "nullable": false,
+            "initial": ""
+          }
+        },
+        "description": {
+          "kind": "HTMLField"
+        },
+        "bio": {
+          "kind": "ArrayField",
+          "element": {
+            "kind": "ObjectField",
+            "options": {
+              "initial": {},
+              "nullable": false
+            }
+          }
+        },
+        "abilities": {
+          "kind": "ArrayField",
+          "element": {
+            "kind": "ObjectField",
+            "options": {
+              "initial": {},
+              "nullable": false
+            }
+          }
+        },
+        "advantages": {
+          "kind": "ArrayField",
+          "element": {
+            "kind": "ObjectField",
+            "options": {
+              "initial": {},
+              "nullable": false
+            }
+          }
+        },
+        "features": {
+          "kind": "ArrayField",
+          "element": {
+            "kind": "ObjectField",
+            "options": {
+              "initial": {},
+              "nullable": false
+            }
+          }
+        },
+        "powers": {
+          "kind": "ArrayField",
+          "element": {
+            "kind": "ObjectField",
+            "options": {
+              "initial": {},
+              "nullable": false
+            }
+          }
+        },
+        "health": {
+          "kind": "SchemaField",
+          "fields": {
+            "damage": {
+              "kind": "SchemaField",
+              "fields": {
+                "bashing": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "lethal": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "aggravated": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0,
+                    "min": 0
+                  }
+                },
+                "woundlevel": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": ""
+                  }
+                },
+                "woundpenalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "chimerical": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bashing": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    },
+                    "lethal": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    },
+                    "aggravated": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    }
+                  }
+                },
+                "corpus": {
+                  "kind": "SchemaField",
+                  "fields": {
+                    "bashing": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    },
+                    "lethal": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    },
+                    "aggravated": {
+                      "kind": "NumberField",
+                      "options": {
+                        "required": true,
+                        "nullable": false,
+                        "integer": true,
+                        "initial": 0,
+                        "min": 0
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "bruised": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 0
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.bruised"
+                  }
+                }
+              }
+            },
+            "hurt": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -1
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.hurt"
+                  }
+                }
+              }
+            },
+            "injured": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -1
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.injured"
+                  }
+                }
+              }
+            },
+            "wounded": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -2
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.wounded"
+                  }
+                }
+              }
+            },
+            "mauled": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -2
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.mauled"
+                  }
+                }
+              }
+            },
+            "crippled": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -5
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.crippled"
+                  }
+                }
+              }
+            },
+            "incapacitated": {
+              "kind": "SchemaField",
+              "fields": {
+                "value": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "total": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": 1,
+                    "min": 0
+                  }
+                },
+                "penalty": {
+                  "kind": "NumberField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "integer": true,
+                    "initial": -99
+                  }
+                },
+                "label": {
+                  "kind": "StringField",
+                  "options": {
+                    "required": true,
+                    "nullable": false,
+                    "initial": "wod.health.incapacitated"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "source_commit": "32e360a6953d41685bc605ba2cc68e9998b2f9b8",
+  "created_date": "2026-11-28"
+}

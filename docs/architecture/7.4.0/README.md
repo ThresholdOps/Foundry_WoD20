@@ -1,5 +1,7 @@
 # WoD20 7.4.0 — mapa architektury v0.1
 
+> Zachowany dokument pierwszego etapu. Aktualny punkt wejścia: [Architecture Discovery Index](INDEX.md), a bieżące wyniki testów i stan faz: [Discovery Status](discovery-status.md). Poniższy brak wyniku testów dotyczy chwili przygotowania v0.1; później wykonano 198 wybranych testów.
+
 Status: pierwsza mapa oparta na analizie statycznej kodu. Data: 28 listopada 2026.
 Cel: ustalanie miejsca zmiany, jej odbiorców i zakresu regresji między liniami gry.
 

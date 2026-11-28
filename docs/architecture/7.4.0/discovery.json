@@ -1,0 +1,2904 @@
+{
+  "schema_version": 1,
+  "baseline": {
+    "repository": "JohanFalt/Foundry_WoD20",
+    "tag": "v7.4.0",
+    "commit": "32e360a6953d41685bc605ba2cc68e9998b2f9b8",
+    "foundry": "14",
+    "snapshot_date": "2026-11-28"
+  },
+  "knowledge_statuses": [
+    "VERIFIED",
+    "INFERRED",
+    "HYPOTHESIS",
+    "UNKNOWN",
+    "OUTDATED",
+    "CONFLICT"
+  ],
+  "test_statuses": [
+    "PASS",
+    "FAIL",
+    "N/A",
+    "NOT TESTED",
+    "BLOCKED"
+  ],
+  "phases": [
+    {
+      "id": "D00",
+      "status": "COMPLETE",
+      "scope": "Inwentaryzacja zidentyfikowanych materiałów i luk",
+      "inputs": [
+        "załączony prompt",
+        "README v0.1 i inventory.json",
+        "źródła i testy 7.4.0",
+        "historyczne materiały #941/#1366"
+      ],
+      "outputs": [
+        "knowledge-inventory.md",
+        "gaps-risks-decisions.md"
+      ],
+      "acceptance": "zarejestrowane źródła, wersje, granice dowodu, obszary brakujące i plan uzupełnienia",
+      "evidence": [
+        "tag/main SHA",
+        "125 zgodnych blobów",
+        "198 wybranych testów",
+        "PROBE-001"
+      ],
+      "open": [
+        "GAP-007: ZIP historyczny nieużyty jako bieżący dowód"
+      ]
+    },
+    {
+      "id": "D01",
+      "status": "PARTIAL",
+      "scope": "Game/Era/Splat, typy, capabilities i schematy",
+      "inputs": [
+        "config",
+        "template.json",
+        "modele i warunki kodu"
+      ],
+      "outputs": [
+        "functional-catalog.md",
+        "catalog.json"
+      ],
+      "acceptance": "pełny katalog rzeczywistych szablonów/form i powiązań oraz sprawdzone warunki",
+      "evidence": [
+        "13 Actor types",
+        "16 Item types",
+        "6 eras",
+        "47 variant keys",
+        "6 modeli"
+      ],
+      "open": [
+        "GAP-001",
+        "GAP-010"
+      ]
+    },
+    {
+      "id": "D02",
+      "status": "PARTIAL",
+      "scope": "Słownik semantyczny, źródła prawdy i przepływ zapisu",
+      "inputs": [
+        "modele",
+        "totals/Bonus/Combat/health",
+        "akcje i dokumenty"
+      ],
+      "outputs": [
+        "data-model.md",
+        "catalog.json"
+      ],
+      "acceptance": "field-level sources/writers/consumers i lifecycle całego zakresu D02",
+      "evidence": [
+        "DAT-001–020",
+        "macierz zapisów",
+        "łańcuch atrybut→odbiorcy"
+      ],
+      "open": [
+        "GAP-002",
+        "GAP-004"
+      ]
+    },
+    {
+      "id": "D03",
+      "status": "PARTIAL",
+      "scope": "Komponenty, interfejsy, rozszerzenia i Foundry",
+      "inputs": [
+        "graf importów",
+        "rejestracja i klasy",
+        "helpery, dialogi, hooki"
+      ],
+      "outputs": [
+        "components.md",
+        "discovery.json"
+      ],
+      "acceptance": "pełne zależności wywołań/globali/template oraz kontrakty platformy",
+      "evidence": [
+        "CMP-001–020",
+        "IF-001–014",
+        "EXT-001–007",
+        "245 importów"
+      ],
+      "open": [
+        "GAP-009",
+        "GAP-010",
+        "GAP-008"
+      ]
+    },
+    {
+      "id": "D04",
+      "status": "PARTIAL",
+      "scope": "20 wymaganych scenariuszy + reset Splat",
+      "inputs": [
+        "akcje",
+        "dokumenty",
+        "kalkulatory",
+        "dialogi"
+      ],
+      "outputs": [
+        "execution-flows.md",
+        "discovery.json"
+      ],
+      "acceptance": "pełne branchy, kolejność/hooki/error i potwierdzenie istotnych scenariuszy",
+      "evidence": [
+        "SCN-001–021",
+        "PROBE-001",
+        "diagram augmentacji"
+      ],
+      "open": [
+        "GAP-002",
+        "GAP-003",
+        "GAP-004",
+        "GAP-005"
+      ]
+    },
+    {
+      "id": "D05",
+      "status": "PARTIAL",
+      "scope": "Pełny odczyt v8.x i pierwsza traceability",
+      "inputs": [
+        "32 issue",
+        "23 komentarze",
+        "#1366/#1506 i komentarze",
+        "komponenty"
+      ],
+      "outputs": [
+        "issues-v8.md",
+        "discovery.json"
+      ],
+      "acceptance": "każdy brak i zakres implementacji potwierdzony trasą; brakujące wymagania doprecyzowane",
+      "evidence": [
+        "API page1=32,page2=0,counter=32",
+        "23/23 komentarze",
+        "14 typowanych relacji",
+        "5 wstępnych pakietów"
+      ],
+      "open": [
+        "GAP-006",
+        "GAP-002",
+        "GAP-008"
+      ]
+    },
+    {
+      "id": "D06",
+      "status": "PARTIAL",
+      "scope": "Strategia i pierwsza rzeczywista weryfikacja",
+      "inputs": [
+        "istniejące testy",
+        "scenariusze i ryzyka"
+      ],
+      "outputs": [
+        "testing.md",
+        "checks/reproduce-splat-replacement.mjs"
+      ],
+      "acceptance": "odpowiedni pełny zestaw i runtime/multi-client/migracja z zapisanym dowodem",
+      "evidence": [
+        "191 logic PASS",
+        "7 static PASS",
+        "PROBE-001 functional FAIL"
+      ],
+      "open": [
+        "GAP-003",
+        "GAP-004",
+        "GAP-009"
+      ]
+    },
+    {
+      "id": "D07",
+      "status": "NOT_STARTED",
+      "scope": "Końcowa Development Roadmap i Candidate PR Backlog",
+      "inputs": [
+        "domknięte D01–D06",
+        "decyzje maintenera"
+      ],
+      "outputs": [
+        "roadmap.md zawiera kolejność rozpoznania, nie końcowy projekt"
+      ],
+      "acceptance": "ocena wartości, zakresu, kosztu testów i ryzyka każdego niezależnego kandydata po domknięciu wiedzy",
+      "evidence": [
+        "wstępne PKG z D05"
+      ],
+      "open": [
+        "DEC-004–010",
+        "bramki NEXT-001–007"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "CMP-001",
+      "name": "Bootstrap",
+      "responsibility": "Rejestracja i inicjalizacja; migracja dla GM",
+      "inputs": "CONFIG, settings, modele i karty",
+      "consumers": "dokumenty i UI",
+      "classification": "GENERIC",
+      "limitation": "Zależność od globalnego cyklu Foundry",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "wod.js",
+          "symbol": "init / ready",
+          "line": 70,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/wod.js#L70"
+        }
+      ]
+    },
+    {
+      "id": "CMP-002",
+      "name": "WoDActor",
+      "responsibility": "Cykl życia aktora; rozgałęzienia PC/legacy",
+      "inputs": "Actor.system; Itemy; uprawnienia",
+      "consumers": "karty, tokeny, API",
+      "classification": "GENERIC",
+      "limitation": "Asynchroniczne przygotowanie i wielokrotne miejsca aktualizacji",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/actor/data/wod-actor-base.js",
+          "symbol": "WoDActor.prepareData / prepareDerivedData / _onUpdate",
+          "line": 31,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/actor/data/wod-actor-base.js#L31"
+        }
+      ]
+    },
+    {
+      "id": "CMP-003",
+      "name": "WoDItem",
+      "responsibility": "Normalizacja Item i wartości przewag",
+      "inputs": "Item.system; rodzic; era",
+      "consumers": "aktor, karty, rzuty",
+      "classification": "GENERIC",
+      "limitation": "Obliczenia zależą także od pól przekazanych w updateData",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/items/data/wod-item-base.js",
+          "symbol": "WoDItem._preCreate / _preUpdate",
+          "line": 17,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/items/data/wod-item-base.js#L17"
+        }
+      ]
+    },
+    {
+      "id": "CMP-004",
+      "name": "PC sheet",
+      "responsibility": "Kontekst i akcje karty PC",
+      "inputs": "Actor; Itemy; CONFIG; użytkownik",
+      "consumers": "DOM, akcje, dialogi",
+      "classification": "PRESENTATION",
+      "limitation": "Zawiera również reguły właściwe dla linii",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/actor/template/pc-actor-sheet.js",
+          "symbol": "PCActorSheet / prepareStatContext",
+          "line": 44,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/actor/template/pc-actor-sheet.js#L44"
+        }
+      ]
+    },
+    {
+      "id": "CMP-005",
+      "name": "Legacy sheets",
+      "responsibility": "AppV1 i baza starszych kart",
+      "inputs": "starsze typy Actor; template.json",
+      "consumers": "akcje, dialogi, HTML",
+      "classification": "GAME-SPECIFIC",
+      "limitation": "Inny format ruchu i przewag niż PC",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/actor/template/mortal-actor-sheet.js",
+          "symbol": "MortalActorSheet",
+          "line": 17,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/actor/template/mortal-actor-sheet.js#L17"
+        }
+      ]
+    },
+    {
+      "id": "CMP-006",
+      "name": "Actions",
+      "responsibility": "Akcje UI, mutacje i wybór dialogów",
+      "inputs": "dataset, Actor, Item",
+      "consumers": "dialogi, zapis, tokeny",
+      "classification": "GENERIC",
+      "limitation": "To także miejsce zapisu, nie tylko dispatcher",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/scripts/action-helpers.js",
+          "symbol": "ActionHelper / OnDotCounterChange / RollDice",
+          "line": 57,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/action-helpers.js#L57"
+        }
+      ]
+    },
+    {
+      "id": "CMP-007",
+      "name": "Splat and drop",
+      "responsibility": "Import, instalacja i reset składników",
+      "inputs": "Splat; świat; compendia; UUID",
+      "consumers": "Actor i embedded Itemy",
+      "classification": "SPLAT-SPECIFIC",
+      "limitation": "Operacje wieloetapowe; reset usuwa wszystkie Itemy; PROBE-001",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/scripts/drop-helpers.js",
+          "symbol": "DropSplatToActor / RemoveSplatFromActor",
+          "line": 549,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/drop-helpers.js#L549"
+        }
+      ]
+    },
+    {
+      "id": "CMP-008",
+      "name": "Creation helpers",
+      "responsibility": "Inicjalizacja oraz dostępne akcje",
+      "inputs": "typ, era, wariant, zasoby",
+      "consumers": "karty, drop, tworzenie",
+      "classification": "GAME-SPECIFIC",
+      "limitation": "Łączy inicjalizację i prezentację",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/scripts/create-helpers.js",
+          "symbol": "CreateHelper / CreateButtons*",
+          "line": 8,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/create-helpers.js#L8"
+        }
+      ]
+    },
+    {
+      "id": "CMP-009",
+      "name": "Totals",
+      "responsibility": "Sumy cech, soak, zdrowia i inicjatywy",
+      "inputs": "snapshot; Bonusy; live Actor i pancerze",
+      "consumers": "karty, zapis, ruch, rzuty",
+      "classification": "GENERIC",
+      "limitation": "Odczytuje game.actors; nie jest czystą funkcją argumentu",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/scripts/totals.js",
+          "symbol": "calculateTotals",
+          "line": 3,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/totals.js#L3"
+        }
+      ]
+    },
+    {
+      "id": "CMP-010",
+      "name": "Bonus helpers",
+      "responsibility": "Kategorie i agregowanie premii",
+      "inputs": "Bonus i bonuslist; cel; aktywność",
+      "consumers": "totals, dialogi, combat",
+      "classification": "CAPABILITY-SPECIFIC",
+      "limitation": "Wartość, kości, trudność i sukcesy mają inną semantykę",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/scripts/bonus-helpers.js",
+          "symbol": "BonusHelper.Check* / Get* / applyDroppedBonus",
+          "line": 3,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/bonus-helpers.js#L3"
+        }
+      ]
+    },
+    {
+      "id": "CMP-011",
+      "name": "Combat helpers",
+      "responsibility": "Ruch, zdrowie i powiązania walki",
+      "inputs": "atrybuty, formy, premie, token",
+      "consumers": "aktor, rzuty, inicjatywa",
+      "classification": "GENERIC",
+      "limitation": "Cykl importów z roll-dice; różne formaty ruchu",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/scripts/combat-helpers.js",
+          "symbol": "CalculateMovement / CalculateMovementv2 / GetCombatant",
+          "line": 7,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/combat-helpers.js#L7"
+        }
+      ]
+    },
+    {
+      "id": "CMP-012",
+      "name": "Health",
+      "responsibility": "Tory obrażeń i Corpus",
+      "inputs": "health.damage; poziomy; corpus",
+      "consumers": "karty i zdrowie",
+      "classification": "CAPABILITY-SPECIFIC",
+      "limitation": "Chimerical i Corpus wymagają osobnych przypadków",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/scripts/health.js",
+          "symbol": "calculateHealth / actorHasCorpus",
+          "line": 19,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/health.js#L19"
+        }
+      ]
+    },
+    {
+      "id": "CMP-013",
+      "name": "Roll engine",
+      "responsibility": "Wynik rzutu, wydanie Willpower i czat",
+      "inputs": "DiceRollContainer; CONFIG; Actor; Roll",
+      "consumers": "ChatMessage, sukcesy, combat",
+      "classification": "GENERIC",
+      "limitation": "Rzut może zmienić trwały zasób",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/scripts/roll-dice.js",
+          "symbol": "DiceRoller / InitiativeRoll",
+          "line": 285,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/roll-dice.js#L285"
+        }
+      ]
+    },
+    {
+      "id": "CMP-014",
+      "name": "Roll dialogs",
+      "responsibility": "Składanie puli; osobne dialogi broni, mocy, Arete i soak",
+      "inputs": "aktor, Item, total, premie",
+      "consumers": "DiceRoller",
+      "classification": "CAPABILITY-SPECIFIC",
+      "limitation": "Test silnika nie dowodzi poprawności każdej puli",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/dialogs/dialog-generalroll.js",
+          "symbol": "DialogGeneralRoll / GeneralRoll",
+          "line": 7,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/dialogs/dialog-generalroll.js#L7"
+        }
+      ]
+    },
+    {
+      "id": "CMP-015",
+      "name": "Augmentation",
+      "responsibility": "Trzy zarządzane Bonusy i zapis sum",
+      "inputs": "PC; widoczny bloodpool; flagi; fixed ID",
+      "consumers": "Actor, Item, popup",
+      "classification": "CAPABILITY-SPECIFIC",
+      "limitation": "Kolejka lokalna; ograniczenie między klientami omówione w #1366",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/scripts/attribute-augmentation-helpers.js",
+          "symbol": "AttributeAugmentationHelper / persistTotals",
+          "line": 258,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/attribute-augmentation-helpers.js#L258"
+        }
+      ]
+    },
+    {
+      "id": "CMP-016",
+      "name": "Bio visibility",
+      "responsibility": "Widoczność Bio według widza",
+      "inputs": "bio.visibility; rola",
+      "consumers": "Handlebars i ustawienia",
+      "classification": "PRESENTATION",
+      "limitation": "Nie potwierdza serwerowej redakcji danych",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/scripts/bio-visibility.js",
+          "symbol": "isBioFieldVisible",
+          "line": 1,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/bio-visibility.js#L1"
+        }
+      ]
+    },
+    {
+      "id": "CMP-017",
+      "name": "Settings and selectors",
+      "responsibility": "Ustawienia i listy select-helpers/select/*",
+      "inputs": "game.settings; CONFIG; aktor",
+      "consumers": "karty, dialogi, reguły",
+      "classification": "GENERIC",
+      "limitation": "Era ma dwa formaty zapisu",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/settings.js",
+          "symbol": "systemSettings",
+          "line": 1,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/settings.js#L1"
+        }
+      ]
+    },
+    {
+      "id": "CMP-018",
+      "name": "Migration",
+      "responsibility": "Aktualizacja aktorów, Itemów i compendiów świata",
+      "inputs": "wersje i dokumenty",
+      "consumers": "zapisy; notyfikacje",
+      "classification": "GENERIC",
+      "limitation": "Błędy częściowe; pełna migracja wymaga świata testowego",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/migration.js",
+          "symbol": "UpdateWorld / updates",
+          "line": 10,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/migration.js#L10"
+        }
+      ]
+    },
+    {
+      "id": "CMP-019",
+      "name": "Public PC API",
+      "responsibility": "Rzuty, Itemy i zdrowie przez actor.api",
+      "inputs": "PC; identyfikatory; opcje",
+      "consumers": "akcje, dialogi, silnik",
+      "classification": "CAPABILITY-SPECIFIC",
+      "limitation": "Getter nie udostępnia API dla legacy",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/actor/api-handler.js",
+          "symbol": "PCActorAPI",
+          "line": 15,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/actor/api-handler.js#L15"
+        }
+      ]
+    },
+    {
+      "id": "CMP-020",
+      "name": "Hooks and views",
+      "responsibility": "Render, klasy i integracja dragRuler",
+      "inputs": "hooki Foundry, CONFIG, aktor",
+      "consumers": "DOM i prędkości",
+      "classification": "PRESENTATION",
+      "limitation": "Globalny motyw; format ruchu integracji do sprawdzenia",
+      "status": "VERIFIED",
+      "basis": "code structure; NOT Foundry runtime acceptance",
+      "evidence": [
+        {
+          "path": "module/hooks.js",
+          "symbol": "registerHooks",
+          "line": 57,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/hooks.js#L57"
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "text": "PC i legacy są równocześnie rejestrowane",
+      "status": "VERIFIED",
+      "basis": "code",
+      "evidence": [
+        {
+          "path": "wod.js",
+          "line": 219,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/wod.js#L219"
+        }
+      ]
+    },
+    {
+      "id": "CLM-002",
+      "text": "Spirit jest w słowniku, lecz nie w 13 typach Actor z template.json",
+      "status": "VERIFIED",
+      "basis": "configuration comparison",
+      "evidence": [
+        {
+          "path": "module/config.js",
+          "line": 3,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/config.js#L3"
+        }
+      ]
+    },
+    {
+      "id": "CLM-003",
+      "text": "RemoveSplatFromActor usuwa wszystkie embedded Itemy przed resetem",
+      "status": "VERIFIED",
+      "basis": "code",
+      "evidence": [
+        {
+          "path": "module/scripts/drop-helpers.js",
+          "line": 837,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/drop-helpers.js#L837"
+        }
+      ]
+    },
+    {
+      "id": "CLM-004",
+      "text": "Zastąpienie istniejącego Splat rzuca ReferenceError przed usuwaniem",
+      "status": "VERIFIED",
+      "basis": "Node PROBE-001; NOT Foundry",
+      "evidence": [
+        {
+          "path": "module/scripts/drop-helpers.js",
+          "line": 554,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/drop-helpers.js#L554"
+        }
+      ]
+    },
+    {
+      "id": "CLM-005",
+      "text": "Game, Era, Splat i capability nie tworzą niezależnego iloczynu wspieranych kombinacji",
+      "status": "INFERRED",
+      "basis": "multiple gates; combinations need runtime",
+      "evidence": [
+        {
+          "path": "module/scripts/drop-helpers.js",
+          "line": 803,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/drop-helpers.js#L803"
+        }
+      ]
+    },
+    {
+      "id": "CLM-006",
+      "text": "attribute_dice_buff jest dodawany do puli osobno od total",
+      "status": "VERIFIED",
+      "basis": "code",
+      "evidence": [
+        {
+          "path": "module/dialogs/dialog-generalroll.js",
+          "line": 287,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/dialogs/dialog-generalroll.js#L287"
+        }
+      ]
+    },
+    {
+      "id": "CLM-007",
+      "text": "Kolejka augmentacji nie jest blokadą rozproszoną",
+      "status": "VERIFIED",
+      "basis": "module-local Map; #1366",
+      "evidence": [
+        {
+          "path": "module/scripts/attribute-augmentation-helpers.js",
+          "line": 78,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/attribute-augmentation-helpers.js#L78"
+        }
+      ]
+    },
+    {
+      "id": "CLM-008",
+      "text": "Ukrycie Bio uniemożliwia odczyt danych przez klienta",
+      "status": "UNKNOWN",
+      "basis": "transport and runtime NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/bio-visibility.js",
+          "line": 1,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/bio-visibility.js#L1"
+        }
+      ]
+    },
+    {
+      "id": "CLM-009",
+      "text": "Wszystkie szablony compendiów są kompletne i działają",
+      "status": "UNKNOWN",
+      "basis": "manifest is not functional acceptance",
+      "evidence": [
+        {
+          "path": "system.json",
+          "line": 88,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/system.json#L88"
+        }
+      ]
+    },
+    {
+      "id": "CLM-010",
+      "text": "198 wybranych istniejących testów przeszło na Node v22.21.1",
+      "status": "VERIFIED",
+      "basis": "execution: 191 logic + 7 selected release checks; NOT full npm test",
+      "evidence": [
+        {
+          "path": "tests/README.md",
+          "line": 1,
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/tests/README.md#L1"
+        }
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "id": "SCN-001",
+      "name": "Utworzenie postaci",
+      "trigger": "Foundry create Actor",
+      "preconditions": "typ w template.json i prawo tworzenia",
+      "components": [
+        "CMP-001",
+        "CMP-002",
+        "CMP-008"
+      ],
+      "execution_path": "WoDActor._preCreate → CreateHelper → przygotowanie dokumentu",
+      "reads": "typ, settings, wzorce danych",
+      "writes": "nowy Actor; zależna inicjalizacja",
+      "derived_calculations": "normalizacja i dane pochodne",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "nowy Actor; zależna inicjalizacja",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "PC i każdy starszy typ osobno",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/actor/data/wod-actor-base.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/actor/data/wod-actor-base.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-002",
+      "name": "Zastosowanie Splat",
+      "trigger": "upuszczenie Item Splat",
+      "preconditions": "PC; poprawna definicja; zastąpienie wymaga potwierdzenia",
+      "components": [
+        "CMP-004",
+        "CMP-007"
+      ],
+      "execution_path": "PC._onDropItem → OnDropItem → DropSplatToActor",
+      "reads": "UUID, składniki, obecny aktor",
+      "writes": "create/update/delete Item; Actor.update",
+      "derived_calculations": "limity, zdrowie, soak i settings",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "create/update/delete Item; Actor.update",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "PROBE-001: ReferenceError przy zastąpieniu Splat; inne awarie wieloetapowe do odbioru",
+      "concurrency_risks": "odczyt→zapis i operacje wieloetapowe; brak dowodu transakcji całego scenariusza",
+      "cross_splat_differences": "Splat z formami, Corpus, chimerical i custom; PROBE-001",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/drop-helpers.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/drop-helpers.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-003",
+      "name": "Zmiana cechy",
+      "trigger": "formularz albo klik kropki",
+      "preconditions": "odblokowana karta lub dozwolony wyjątek zasobu",
+      "components": [
+        "CMP-004",
+        "CMP-006",
+        "CMP-009"
+      ],
+      "execution_path": "form.handler / OnDotCounterChange → Item.update albo totals + Actor.update",
+      "reads": "dataset, value, Item, flags",
+      "writes": "Item lub Actor, zależnie od celu",
+      "derived_calculations": "totals w określonych branchach; nie zawsze",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "Item lub Actor, zależnie od celu",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "odczyt→zapis i operacje wieloetapowe; brak dowodu transakcji całego scenariusza",
+      "cross_splat_differences": "nie mylić wartości bazowej, max, total i zasobu",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/actor/template/pc-actor-sheet.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/actor/template/pc-actor-sheet.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-004",
+      "name": "Dodanie/aktywacja bonusu",
+      "trigger": "drop/edycja/aktywacja Item",
+      "preconditions": "obsługiwany typ celu i wpis premii",
+      "components": [
+        "CMP-006",
+        "CMP-010",
+        "CMP-009"
+      ],
+      "execution_path": "BonusHelper.applyDroppedBonus / OnItemActive → kalkulatory",
+      "reads": "Bonus, bonuslist, aktywność, cel",
+      "writes": "Item/bonuslist; niektóre akcje także Actor",
+      "derived_calculations": "kategoria premii wskazuje odbiorców",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "Item/bonuslist; niektóre akcje także Actor",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "odczyt→zapis i operacje wieloetapowe; brak dowodu transakcji całego scenariusza",
+      "cross_splat_differences": "samodzielna premia i wpis w broni/armor; brak capability",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/bonus-helpers.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/bonus-helpers.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-005",
+      "name": "Dezaktywacja bonusu",
+      "trigger": "wyłączenie aktywności",
+      "preconditions": "właściwy Bonus/wpis; prawo zapisu",
+      "components": [
+        "CMP-006",
+        "CMP-010",
+        "CMP-009"
+      ],
+      "execution_path": "handler aktywności → Item.update → ponowne wykorzystanie kalkulatorów",
+      "reads": "aktywny wpis i źródła wartości",
+      "writes": "isactive / bonuslist i ewentualne sumy",
+      "derived_calculations": "odzyskanie wartości bez premii",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "isactive / bonuslist i ewentualne sumy",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "odczyt→zapis i operacje wieloetapowe; brak dowodu transakcji całego scenariusza",
+      "cross_splat_differences": "odróżnić wyłączenie wpisu od odłożenia sprzętu",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/action-helpers.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/action-helpers.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-006",
+      "name": "Augment Attributes",
+      "trigger": "klik ikony i +/−/reset",
+      "preconditions": "PC owner; bloodpool visible; earthbound wykluczony",
+      "components": [
+        "CMP-015",
+        "CMP-010",
+        "CMP-009"
+      ],
+      "execution_path": "popup → helper kolejka lokalna → Itemy → persistTotals",
+      "reads": "trzy zarządzane Bonusy, snapshoty, flagi",
+      "writes": "Itemy i wybrane pola wynikowe aktora",
+      "derived_calculations": "totals; ruch poza persistTotals",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "Itemy i wybrane pola wynikowe aktora",
+      "ui_refresh": "jawny refresh popupu z hooków; inne części do odbioru",
+      "error_handling": "AttributeAugmentationError, conflict detection i sygnalizacja itemsApplied",
+      "concurrency_risks": "odczyt→zapis i operacje wieloetapowe; brak dowodu transakcji całego scenariusza",
+      "cross_splat_differences": "także inne PC z capability; brak automatycznego kosztu krwi",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/attribute-augmentation-helpers.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/attribute-augmentation-helpers.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-007",
+      "name": "Zmiana formy",
+      "trigger": "formActive",
+      "preconditions": "Trait shapeform; dozwolona aktywacja",
+      "components": [
+        "CMP-006",
+        "CMP-010",
+        "CMP-011"
+      ],
+      "execution_path": "OnFormActivate → aktualizacja form i tokena → Actor",
+      "reads": "formy, ikona, premie i token",
+      "writes": "Itemy; status/obraz tokena; Actor",
+      "derived_calculations": "atrybuty, soak, ruch",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "Itemy; status/obraz tokena; Actor",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "odczyt→zapis i operacje wieloetapowe; brak dowodu transakcji całego scenariusza",
+      "cross_splat_differences": "inne reguły Garou, Fera, custom forms",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/action-helpers.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/action-helpers.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-008",
+      "name": "Wydanie zasobu",
+      "trigger": "Use Willpower w rzucie / klik zasobu",
+      "preconditions": "zasób istnieje i jego stan >0",
+      "components": [
+        "CMP-013",
+        "CMP-006",
+        "CMP-003"
+      ],
+      "execution_path": "DiceRoller → _spendTemporaryWillpower; inne zasoby mają odrębne akcje",
+      "reads": "Advantage willpower lub legacy pole",
+      "writes": "temporary Itemu albo legacy Actor.system",
+      "derived_calculations": "bonus kości/sukcesu według ustawienia",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "temporary Itemu albo legacy Actor.system",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "odczyt→zapis i operacje wieloetapowe; brak dowodu transakcji całego scenariusza",
+      "cross_splat_differences": "brak uogólnienia spending WP na Blood Pool/Rage/Pathos",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/roll-dice.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/roll-dice.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-009",
+      "name": "Standardowy rzut",
+      "trigger": "rollDice lub actor.api",
+      "preconditions": "poprawna cecha/pula; może brakować aktora dla free roll",
+      "components": [
+        "CMP-006",
+        "CMP-014",
+        "CMP-013",
+        "CMP-019"
+      ],
+      "execution_path": "RollDialog → DialogGeneralRoll / API → DiceRoller → ChatMessage",
+      "reads": "total, ability, premie kości/trudności, CONFIG",
+      "writes": "opcjonalnie Willpower; ChatMessage",
+      "derived_calculations": "pula, trudność, sukcesy i botch",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "opcjonalnie Willpower; ChatMessage",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "PC/legacy, advantage, spirit, actorless",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/dialogs/dialog-generalroll.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/dialogs/dialog-generalroll.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-010",
+      "name": "Rzut na moc",
+      "trigger": "usePower / przycisk mocy/czaru",
+      "preconditions": "właściwy Power/Sphere/Arete i parametry",
+      "components": [
+        "CMP-006",
+        "CMP-014",
+        "CMP-013"
+      ],
+      "execution_path": "dialog-power lub aretecasting → DiceRoller",
+      "reads": "moc, konfiguracja, cechy i zasoby",
+      "writes": "chat; ewentualny koszt zależny od ścieżki",
+      "derived_calculations": "pula mocy, ewentualny Torment",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "chat; ewentualny koszt zależny od ścieżki",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "Dyscypliny, Dary, Lore, Arete nie są identyczne",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/dialogs/dialog-power.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/dialogs/dialog-power.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-011",
+      "name": "Inicjatywa",
+      "trigger": "macro/action RollInitiative",
+      "preconditions": "aktor; opcjonalny token i encounter",
+      "components": [
+        "CMP-011",
+        "CMP-013"
+      ],
+      "execution_path": "CombatHelper.RollInitiative → InitiativeRoll → combat/chat",
+      "reads": "initiative.total, token, combatant",
+      "writes": "Combatant i/lub ChatMessage zależnie od ścieżki",
+      "derived_calculations": "1d10 + wynik inicjatywy",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "Combatant i/lub ChatMessage zależnie od ścieżki",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "spirit: inna baza; wiele tokenów i actor-only combatant",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/roll-dice.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/roll-dice.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-012",
+      "name": "Atak",
+      "trigger": "użycie broni",
+      "preconditions": "obsługiwana broń i poprawna pula",
+      "components": [
+        "CMP-014",
+        "CMP-013"
+      ],
+      "execution_path": "DialogWeaponv2 → attack → opcjonalne damage",
+      "reads": "weapon, attr/advantage, ability, premie",
+      "writes": "ChatMessage; koszty/ammo sprawdzić per ścieżka",
+      "derived_calculations": "pula ataku i extraSuccesses",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "ChatMessage; koszty/ammo sprawdzić per ścieżka",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "natural/melee/ranged oraz Rage/Willpower ducha",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/dialogs/dialog-weaponv2.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/dialogs/dialog-weaponv2.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-013",
+      "name": "Obrażenia",
+      "trigger": "następny etap po ataku lub rzut damage",
+      "preconditions": "wybrany typ damage i extraSuccesses",
+      "components": [
+        "CMP-014",
+        "CMP-013"
+      ],
+      "execution_path": "DialogWeaponv2 damage → DiceRoller",
+      "reads": "weapon.damage, strength/extraSuccesses, usePenaltyDamage",
+      "writes": "ChatMessage; sam rzut nie oznacza zmiany zdrowia celu",
+      "derived_calculations": "pula obrażeń i kara",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "ChatMessage; sam rzut nie oznacza zmiany zdrowia celu",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "melee/natural vs ranged; #1173/#843 oddzielne wymagania",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/dialogs/dialog-weaponv2.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/dialogs/dialog-weaponv2.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-014",
+      "name": "Soak",
+      "trigger": "dialog soak",
+      "preconditions": "dopuszczony tor i zadane incomingDamage",
+      "components": [
+        "CMP-014",
+        "CMP-013",
+        "CMP-009"
+      ],
+      "execution_path": "DialogSoak → DiceRoller → karta wyniku",
+      "reads": "soak, flagi, incoming/maxApplicableDamage",
+      "writes": "ChatMessage; aplikacja obrażeń jest oddzielna",
+      "derived_calculations": "sukcesy i unsoaked damage",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "ChatMessage; aplikacja obrażeń jest oddzielna",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "zwykły/chimerical, armor, forma i spirit",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/dialogs/dialog-soak.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/dialogs/dialog-soak.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-015",
+      "name": "Aktualizacja zdrowia",
+      "trigger": "klik pola zdrowia albo API.modifyHealth",
+      "preconditions": "właściwy tor i prawo zapisu",
+      "components": [
+        "CMP-006",
+        "CMP-012",
+        "CMP-011",
+        "CMP-019"
+      ],
+      "execution_path": "OnSquareCounterChange / API.modifyHealth → Actor",
+      "reads": "obrażenia, poziomy, corpus, warunki",
+      "writes": "health.damage i zależne pola",
+      "derived_calculations": "tor, overflow i wound penalty",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "health.damage i zależne pola",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "Corpus bez standardowej kary; chimerical osobno",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/health.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/health.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-016",
+      "name": "Obliczenie ruchu",
+      "trigger": "Actor.prepareDerivedData",
+      "preconditions": "total Dexterity gotowe; model właściwej rodziny",
+      "components": [
+        "CMP-002",
+        "CMP-011",
+        "CMP-010"
+      ],
+      "execution_path": "CalculateMovement lub CalculateMovementv2",
+      "reads": "DEX.total, aktywne formy i movement buffs",
+      "writes": "przygotowany movement; trwały zapis zależy od wywołania",
+      "derived_calculations": "walk/jog/run/jump/fly",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "przygotowany movement; trwały zapis zależy od wywołania",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "liczby legacy vs obiekty PC; mnożniki i formy",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/combat-helpers.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/combat-helpers.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-017",
+      "name": "Odświeżenie karty",
+      "trigger": "zmiana dokumentu / render",
+      "preconditions": "aplikacja otwarta; kontekst przygotowany",
+      "components": [
+        "CMP-004",
+        "CMP-005",
+        "CMP-020"
+      ],
+      "execution_path": "Foundry callbacks → prepare*Context / getData → render i hooki",
+      "reads": "Actor, Item, settings, i18n",
+      "writes": "DOM/kontekst; nie automatycznie nowe źródło danych",
+      "derived_calculations": "sortowanie, widoczność i wzbogacenie HTML",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "DOM/kontekst; nie automatycznie nowe źródło danych",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "AppV1/AppV2; zamknięty popup; aktywna zakładka Combat",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/actor/template/pc-actor-sheet.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/actor/template/pc-actor-sheet.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-018",
+      "name": "Aktualizacja między klientami",
+      "trigger": "zapis w kliencie A",
+      "preconditions": "dwóch klientów tej samej instancji",
+      "components": [
+        "CMP-002",
+        "CMP-003",
+        "CMP-015",
+        "CMP-020"
+      ],
+      "execution_path": "zapis dokumentu Foundry → odbiór w B → hooki/render",
+      "reads": "lokalne snapshoty i kolekcje",
+      "writes": "wynik trwały/stan klienta B",
+      "derived_calculations": "synchronizacja i kolejność UNKNOWN runtime",
+      "hooks": "Foundry document hooks; updateActor i create/update/deleteItem odświeżają popup; pełny odbiór UNKNOWN",
+      "side_effects": "wynik trwały/stan klienta B",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "odczyt→zapis i operacje wieloetapowe; brak dowodu transakcji całego scenariusza",
+      "cross_splat_differences": "dwie karty tego samego GM oraz owner+GM; wyścig +1",
+      "route_status": "INFERRED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/ui/attribute-augmentation-popup.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/ui/attribute-augmentation-popup.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-019",
+      "name": "Ograniczony czytelnik",
+      "trigger": "otwarcie Actor przez Limited/Observer",
+      "preconditions": "ownership i opcje widoczności",
+      "components": [
+        "CMP-004",
+        "CMP-016",
+        "CMP-020"
+      ],
+      "execution_path": "przygotowanie kontekstu + helper widoczności → template",
+      "reads": "rola, bio.visibility, pola i części",
+      "writes": "DOM; transport danych UNKNOWN",
+      "derived_calculations": "filtrowanie widoku",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "DOM; transport danych UNKNOWN",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "współbieżne zmiany danych wejściowych i/lub UI; runtime NOT TESTED",
+      "cross_splat_differences": "owner/GM nie jest tożsamy z Observer/Limited; brak dowodu redakcji danych",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/bio-visibility.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/bio-visibility.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-020",
+      "name": "Migracja wersji",
+      "trigger": "ready z inną worldVersion",
+      "preconditions": "GM; kopia świata do odbioru",
+      "components": [
+        "CMP-001",
+        "CMP-018"
+      ],
+      "execution_path": "UpdateWorld → Actor/Items/world Items/world packs → updates",
+      "reads": "wersja, wszystkie dokumenty, pakiety",
+      "writes": "wiele dokumentów; konfiguracja wersji",
+      "derived_calculations": "normalizacja do aktualnej wersji",
+      "hooks": "ready; pozostałe hooki dokumentów zależne od operacji",
+      "side_effects": "wiele dokumentów; konfiguracja wersji",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "odczyt→zapis i operacje wieloetapowe; brak dowodu transakcji całego scenariusza",
+      "cross_splat_differences": "historyczny PC/legacy, brakujące dane, częściowa awaria",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/migration.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/migration.js"
+        }
+      ]
+    },
+    {
+      "id": "SCN-021",
+      "name": "Reset postaci przez usunięcie Splat",
+      "trigger": "settings.removeSplat",
+      "preconditions": "PC unlocked + potwierdzenie",
+      "components": [
+        "CMP-004",
+        "CMP-006",
+        "CMP-007"
+      ],
+      "execution_path": "OnRemoveSplat → RemoveSplatFromActor → render",
+      "reads": "wszystkie Itemy i actor.system",
+      "writes": "delete wszystkich Itemów + szeroki reset Actor",
+      "derived_calculations": "totals po resecie",
+      "hooks": "Dokumenty i render Foundry według wywołanej operacji; pełna kolejność runtime NOT TESTED",
+      "side_effects": "delete wszystkich Itemów + szeroki reset Actor",
+      "ui_refresh": "Zależny od render/kontekstu; runtime NOT TESTED",
+      "error_handling": "Sprawdzić dokładne catch/notification dla wejścia; brak twierdzenia o rollback",
+      "concurrency_risks": "odczyt→zapis i operacje wieloetapowe; brak dowodu transakcji całego scenariusza",
+      "cross_splat_differences": "nie jest przemianą preserving; wymaga testu niezamierzonej utraty danych",
+      "route_status": "VERIFIED",
+      "route_basis": "code-level route; not complete execution proof",
+      "runtime_status": "NOT TESTED",
+      "evidence": [
+        {
+          "path": "module/scripts/drop-helpers.js",
+          "url": "https://github.com/JohanFalt/Foundry_WoD20/blob/32e360a6953d41685bc605ba2cc68e9998b2f9b8/module/scripts/drop-helpers.js"
+        }
+      ]
+    }
+  ],
+  "issues": {
+    "milestone": 34,
+    "title": "v8.x",
+    "platform_intent": "Foundry v15",
+    "snapshot_date": "2026-11-28",
+    "pagination": {
+      "page_size": 100,
+      "pages": [
+        {
+          "page": 1,
+          "count": 32
+        },
+        {
+          "page": 2,
+          "count": 0
+        }
+      ],
+      "declared_open_count": 32
+    },
+    "comments_expected": 23,
+    "comments_read": 23,
+    "nonempty_threads_read": 13,
+    "attachments_inspected": false,
+    "records": [
+      {
+        "id": "ISS-1492",
+        "number": 1492,
+        "title": "Feature Request: Handling the \"Quickening\" attribute buff via temporary dot trackers",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1492",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-10-16T09:47:41Z",
+        "requirement": "Tymczasowe podbicie atrybutów i reset; opcjonalne koszty krwi",
+        "problem": "Tymczasowe podbicie atrybutów i reset; opcjonalne koszty krwi",
+        "components": [
+          "CMP-015",
+          "CMP-009",
+          "CMP-010"
+        ],
+        "classification": "CAPABILITY-SPECIFIC",
+        "existing_implementation": "Popup i trzy Bonusy w #1366 realizują ręczne podbicie i reset",
+        "gap": "Rozliczanie krwi, ograniczenia epoki i generacji oraz oczekiwany tracker nie są tym samym zakresem",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Rozliczanie krwi, ograniczenia epoki i generacji oraz oczekiwany tracker nie są tym samym zakresem",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Rozliczanie krwi, ograniczenia epoki i generacji oraz oczekiwany tracker nie są tym samym zakresem",
+        "required_tests": "attribute-augmentation-helpers.test.mjs; popup; dwa klienty",
+        "unresolved_decision": "Czy ręczny popup wystarcza? Automatyka jest osobną decyzją",
+        "comments_expected": 1,
+        "comments_read": 1,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1492#issuecomment-6195593670",
+            "author": "Hellfalas"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1491",
+        "number": 1491,
+        "title": "[Feature] Force Sheet Theme",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1491",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-11-28T08:58:24Z",
+        "requirement": "Motyw karty niezależny od motywu Foundry klienta",
+        "problem": "Motyw karty niezależny od motywu Foundry klienta",
+        "components": [
+          "CMP-020",
+          "CMP-017"
+        ],
+        "classification": "PRESENTATION",
+        "existing_implementation": "Hooki czytają motyw aplikacji z core uiConfig",
+        "gap": "Osobne wymuszenie motywu systemu/klienta",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Preferować konfigurację/widok; ewentualne trwałe opcje wymagają osobnej decyzji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "UI, role i trwałość konfiguracji",
+        "candidate_scope": "Osobne wymuszenie motywu systemu/klienta",
+        "required_tests": "PC i legacy; dark/light; dwa światy",
+        "unresolved_decision": "Zakres client/world i pierwszeństwo ustawień",
+        "comments_expected": 2,
+        "comments_read": 2,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1491#issuecomment-7236266269",
+            "author": "JohanFalt"
+          },
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1491#issuecomment-7236915591",
+            "author": "Havoclivekiller"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1488",
+        "number": 1488,
+        "title": "Question regarding movement bonuses",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1488",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-10-06T18:23:43Z",
+        "requirement": "Addytywny bonus ruchu obok mnożnika",
+        "problem": "Addytywny bonus ruchu obok mnożnika",
+        "components": [
+          "CMP-011",
+          "CMP-010"
+        ],
+        "classification": "CAPABILITY-SPECIFIC",
+        "existing_implementation": "CalculateMovement/v2 mnożą walk/jog/run przez movement_buff",
+        "gap": "Operator dodawania i kolejność względem form oraz mnożników",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Operator dodawania i kolejność względem form oraz mnożników",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Operator dodawania i kolejność względem form oraz mnożników",
+        "required_tests": "ruch PC/legacy; forma; wiele premii",
+        "unresolved_decision": "Kolejność działań i format danych",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1486",
+        "number": 1486,
+        "title": "Dynamic bio selects",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1486",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-10-06T18:07:17Z",
+        "requirement": "Konfigurowalne listy wyboru biografii w świecie",
+        "problem": "Konfigurowalne listy wyboru biografii w świecie",
+        "components": [
+          "CMP-017",
+          "CMP-004"
+        ],
+        "classification": "PRESENTATION",
+        "existing_implementation": "SetupItem i select/* dostarczają listy",
+        "gap": "Edycja list świata, ich tożsamość i migracja wartości",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Preferować konfigurację/widok; ewentualne trwałe opcje wymagają osobnej decyzji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "UI, role i trwałość konfiguracji",
+        "candidate_scope": "Edycja list świata, ich tożsamość i migracja wartości",
+        "required_tests": "custom select; puste i usunięte opcje",
+        "unresolved_decision": "Zakres świata kontra szablonu; stabilne identyfikatory",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1481",
+        "number": 1481,
+        "title": "Mage: \"Reroll\" Chat Button for \"Cast Spell\"",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1481",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:19:01Z",
+        "requirement": "Powtórzenie rzutu Cast Spell z tymi samymi opcjami",
+        "problem": "Powtórzenie rzutu Cast Spell z tymi samymi opcjami",
+        "components": [
+          "CMP-014",
+          "CMP-013"
+        ],
+        "classification": "GAME-SPECIFIC",
+        "existing_implementation": "Dialog Arete i karta wyniku istnieją; użytkownik wskazuje m.in. Lucky",
+        "gap": "Zapis kontekstu rzutu i kontrola skutków ubocznych przy ponowieniu",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Zapis kontekstu rzutu i kontrola skutków ubocznych przy ponowieniu",
+        "cross_splat_impact": "Właściwa linia + negatywny przypadek innej linii; PC/legacy rozróżnić",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Zapis kontekstu rzutu i kontrola skutków ubocznych przy ponowieniu",
+        "required_tests": "Arete, Willpower, zmieniony aktor, uprawnienia czatu",
+        "unresolved_decision": "Czy powtarzamy koszty i karę; kto może wykonać reroll",
+        "comments_expected": 2,
+        "comments_read": 2,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1481#issuecomment-5596154855",
+            "author": "JohanFalt"
+          },
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1481#issuecomment-5607439632",
+            "author": "Doctologist"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1468",
+        "number": 1468,
+        "title": "Tewo questions",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1468",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:13:32Z",
+        "requirement": "Oddzielne premie soak chimerical i zwykłego; premie custom abilities",
+        "problem": "Oddzielne premie soak chimerical i zwykłego; premie custom abilities",
+        "components": [
+          "CMP-010",
+          "CMP-009"
+        ],
+        "classification": "CAPABILITY-SPECIFIC",
+        "existing_implementation": "Totals stosuje wspólne premie do obu torów; bonusy umiejętności mają własne cele",
+        "gap": "Dwie niezależne części: maska toru soak i identyfikacja własnej Ability",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Dwie niezależne części: maska toru soak i identyfikacja własnej Ability",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Dwie niezależne części: maska toru soak i identyfikacja własnej Ability",
+        "required_tests": "soak oba tory; Ability niestandardowa i etykieta po tłumaczeniu",
+        "unresolved_decision": "Rozdzielić wymagania przed implementacją",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1466",
+        "number": 1466,
+        "title": "Revert back to mortal",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1466",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:11:53Z",
+        "requirement": "Usunięcie szablonu i powrót do pustego PC",
+        "problem": "Usunięcie szablonu i powrót do pustego PC",
+        "components": [
+          "CMP-007",
+          "CMP-004"
+        ],
+        "classification": "SPLAT-SPECIFIC",
+        "existing_implementation": "RemoveSplatFromActor i przycisk już istnieją",
+        "gap": "Reset kasuje wszystkie Itemy; potwierdzić oczekiwaną ochronę dorobku",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Reset kasuje wszystkie Itemy; potwierdzić oczekiwaną ochronę dorobku",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Reset kasuje wszystkie Itemy; potwierdzić oczekiwaną ochronę dorobku",
+        "required_tests": "reset PC, anulowanie, ekwipunek, ręczne notatki",
+        "unresolved_decision": "Pusty PC czy zachowanie postaci jako śmiertelnika?",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1447",
+        "number": 1447,
+        "title": "New bonus: Add possibility to give value bonus to advantages (e.g blood pool)",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1447",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:13:13Z",
+        "requirement": "Bonus do wartości przewagi, np. Blood Pool",
+        "problem": "Bonus do wartości przewagi, np. Blood Pool",
+        "components": [
+          "CMP-010",
+          "CMP-003",
+          "CMP-009"
+        ],
+        "classification": "CAPABILITY-SPECIFIC",
+        "existing_implementation": "Model Advantage ma permanent/temporary/max/roll; brak opisu issue",
+        "gap": "Nieustalone, które pole i czy chodzi o pojemność czy stan",
+        "scope_status": "UNKNOWN",
+        "assessment": "unknown",
+        "model_impact": "Nieustalone, które pole i czy chodzi o pojemność czy stan",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Wymagania/reprodukcja przed implementacją",
+        "required_tests": "brzeg max/current/permanent; Willpower i zasób innej linii",
+        "unresolved_decision": "Najpierw doprecyzować semantykę wartości",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1446",
+        "number": 1446,
+        "title": "New bonus: Add possibility to give dice bonus to advantages",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1446",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:13:07Z",
+        "requirement": "Bonus do puli rzutu przewagi",
+        "problem": "Bonus do puli rzutu przewagi",
+        "components": [
+          "CMP-010",
+          "CMP-014"
+        ],
+        "classification": "CAPABILITY-SPECIFIC",
+        "existing_implementation": "Advantage.roll i dialog rzutu istnieją; brak treści issue",
+        "gap": "Własna kategoria bonusu przewag oraz cele wymagają specyfikacji",
+        "scope_status": "UNKNOWN",
+        "assessment": "unknown",
+        "model_impact": "Własna kategoria bonusu przewag oraz cele wymagają specyfikacji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Wymagania/reprodukcja przed implementacją",
+        "required_tests": "przewaga z permanent/temporary; bez useroll",
+        "unresolved_decision": "Czy bonus wpływa wyłącznie na pulę; lista celów",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1394",
+        "number": 1394,
+        "title": "Make abilities not automatically sorted by Alphabetical order",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1394",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:38:50Z",
+        "requirement": "Własna kolejność umiejętności zamiast alfabetu",
+        "problem": "Własna kolejność umiejętności zamiast alfabetu",
+        "components": [
+          "CMP-004",
+          "CMP-017"
+        ],
+        "classification": "PRESENTATION",
+        "existing_implementation": "prepareStatContext i settings sortują przetłumaczone etykiety",
+        "gap": "Trwały porządek i reguła domyślna; spójność widoków",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Preferować konfigurację/widok; ewentualne trwałe opcje wymagają osobnej decyzji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "UI, role i trwałość konfiguracji",
+        "candidate_scope": "Trwały porządek i reguła domyślna; spójność widoków",
+        "required_tests": "języki, talenty/skills/knowledges; nowe Itemy",
+        "unresolved_decision": "Kolejność per Actor, Splat czy klient",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1359",
+        "number": 1359,
+        "title": "PC Actore Virtue position option",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1359",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:38:41Z",
+        "requirement": "Możliwość przesunięcia grupy Virtues przy hybrydzie mage/ghoul",
+        "problem": "Możliwość przesunięcia grupy Virtues przy hybrydzie mage/ghoul",
+        "components": [
+          "CMP-004"
+        ],
+        "classification": "PRESENTATION",
+        "existing_implementation": "Karta PC ma grupowanie advantages i quintessence",
+        "gap": "Konfigurowalny układ grup, bez zakładania jednej linii",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Preferować konfigurację/widok; ewentualne trwałe opcje wymagają osobnej decyzji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "UI, role i trwałość konfiguracji",
+        "candidate_scope": "Konfigurowalny układ grup, bez zakładania jednej linii",
+        "required_tests": "hybryda, brak grupy, wiele grup",
+        "unresolved_decision": "Minimalne przestawienie czy trwały układ sekcji",
+        "comments_expected": 1,
+        "comments_read": 1,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1359#issuecomment-3979245543",
+            "author": "JohanFalt"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1352",
+        "number": 1352,
+        "title": "[Feature Request]: ACL Fine tuning on the Ownership Groups",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1352",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:56:26Z",
+        "requirement": "Widoczność pól i sekcji według ownership; prośba o dodatkową grupę",
+        "problem": "Widoczność pól i sekcji według ownership; prośba o dodatkową grupę",
+        "components": [
+          "CMP-016",
+          "CMP-004"
+        ],
+        "classification": "PRESENTATION",
+        "existing_implementation": "7.4.0 dodało widoczność pól Bio przez #1506",
+        "gap": "Pełne sekcje, portret i nowa grupa nie wynikają z Bio.visibility",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Preferować konfigurację/widok; ewentualne trwałe opcje wymagają osobnej decyzji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "UI, role i trwałość konfiguracji",
+        "candidate_scope": "Pełne sekcje, portret i nowa grupa nie wynikają z Bio.visibility",
+        "required_tests": "GM/owner/observer/limited; dane poza DOM",
+        "unresolved_decision": "UI visibility kontra realny dostęp do danych; ograniczenia Foundry",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1339",
+        "number": 1339,
+        "title": "all specializations visible with the press of a button",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1339",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-10-16T09:32:28Z",
+        "requirement": "Jednoczesne wyświetlenie wszystkich specjalizacji",
+        "problem": "Jednoczesne wyświetlenie wszystkich specjalizacji",
+        "components": [
+          "CMP-004",
+          "CMP-020"
+        ],
+        "classification": "PRESENTATION",
+        "existing_implementation": "Specjalizacje są polami; maintainer wskazuje problem układu UI",
+        "gap": "Tryb prezentacji i zachowanie klawisza/przycisku",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Preferować konfigurację/widok; ewentualne trwałe opcje wymagają osobnej decyzji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "UI, role i trwałość konfiguracji",
+        "candidate_scope": "Tryb prezentacji i zachowanie klawisza/przycisku",
+        "required_tests": "PC/legacy, klawiatura, długie etykiety",
+        "unresolved_decision": "Forma przełącznika i dostępność",
+        "comments_expected": 2,
+        "comments_read": 2,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1339#issuecomment-6195669475",
+            "author": "Hellfalas"
+          },
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1339#issuecomment-6212533091",
+            "author": "JohanFalt"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1318",
+        "number": 1318,
+        "title": "Choose Base form",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1318",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:12:48Z",
+        "requirement": "Wskazanie formy bazowej dla początkowej ikony",
+        "problem": "Wskazanie formy bazowej dla początkowej ikony",
+        "components": [
+          "CMP-007",
+          "CMP-006"
+        ],
+        "classification": "CAPABILITY-SPECIFIC",
+        "existing_implementation": "Instalacja wybiera pierwszą formę według order; aktywacja aktualizuje ikonę",
+        "gap": "Jawna preferencja bazowej formy/ikony",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Jawna preferencja bazowej formy/ikony",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Jawna preferencja bazowej formy/ikony",
+        "required_tests": "pierwsze użycie; linked/unlinked token; zmiana kolejności",
+        "unresolved_decision": "Komentarz autora prośby dotyczy ikony, nie samego braku aktywnej formy",
+        "comments_expected": 3,
+        "comments_read": 3,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1318#issuecomment-3901234611",
+            "author": "JohanFalt"
+          },
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1318#issuecomment-3906264345",
+            "author": "Azerkatil"
+          },
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1318#issuecomment-3984192500",
+            "author": "JohanFalt"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1311",
+        "number": 1311,
+        "title": "Splat remove button",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1311",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:11:45Z",
+        "requirement": "Przycisk usuwania Splata w Settings / Sheet",
+        "problem": "Przycisk usuwania Splata w Settings / Sheet",
+        "components": [
+          "CMP-004",
+          "CMP-007"
+        ],
+        "classification": "SPLAT-SPECIFIC",
+        "existing_implementation": "Przycisk removeSplat, handler i reset istnieją w 7.4.0",
+        "gap": "Odbiór działania i potwierdzenie semantyki kasowania",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Odbiór działania i potwierdzenie semantyki kasowania",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Odbiór działania i potwierdzenie semantyki kasowania",
+        "required_tests": "klik, blokada karty, anulowanie, usuwane Itemy",
+        "unresolved_decision": "Nie oznaczać jako RESOLVED bez odbioru i decyzji maintenera",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1291",
+        "number": 1291,
+        "title": "Houserule Support: Adding specialties and/or rule-of-10s to power traits",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1291",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:13:59Z",
+        "requirement": "Specjalizacje i reguła dziesiątek dla power traits",
+        "problem": "Specjalizacje i reguła dziesiątek dla power traits",
+        "components": [
+          "CMP-014",
+          "CMP-013",
+          "CMP-003"
+        ],
+        "classification": "CAPABILITY-SPECIFIC",
+        "existing_implementation": "Silnik ma obsługę specjalizacji/dziesiątek; przewagi mają roll",
+        "gap": "Konfiguracja na konkretnych typach cech i propagacja do kontenera",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Konfiguracja na konkretnych typach cech i propagacja do kontenera",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Konfiguracja na konkretnych typach cech i propagacja do kontenera",
+        "required_tests": "Rage/Gnosis/Willpower/Arete; zwykłe Ability bez regresji",
+        "unresolved_decision": "Które cechy i jak współdziała z zasadami świata",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1290",
+        "number": 1290,
+        "title": "Option to ignore 1s globally or on specific rolls/items",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1290",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:13:49Z",
+        "requirement": "Wyłączenie jedynek na pojedynczy rzut",
+        "problem": "Wyłączenie jedynek na pojedynczy rzut",
+        "components": [
+          "CMP-014",
+          "CMP-013",
+          "CMP-017"
+        ],
+        "classification": "GENERIC",
+        "existing_implementation": "Globalne ustawienie istnieje; komentarze zawężają prośbę do per-roll",
+        "gap": "Opcja dialogu i przekazanie do silnika",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Opcja dialogu i przekazanie do silnika",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Opcja dialogu i przekazanie do silnika",
+        "required_tests": "global on/off × override; botch vs anulowanie sukcesów",
+        "unresolved_decision": "Zakres wszystkich dialogów i domyślność override",
+        "comments_expected": 2,
+        "comments_read": 2,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1290#issuecomment-3816471811",
+            "author": "JohanFalt"
+          },
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1290#issuecomment-3819923272",
+            "author": "owlbermensch"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1275",
+        "number": 1275,
+        "title": "Addition to bonuses",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1275",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:12:59Z",
+        "requirement": "Cele premii: wszystkie physical/social/mental",
+        "problem": "Cele premii: wszystkie physical/social/mental",
+        "components": [
+          "CMP-010",
+          "CMP-017"
+        ],
+        "classification": "CAPABILITY-SPECIFIC",
+        "existing_implementation": "Kategorie atrybutów istnieją, premie wybierają cele",
+        "gap": "Cel grupowy; obsługa różnych zestawów atrybutów",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Cel grupowy; obsługa różnych zestawów atrybutów",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Cel grupowy; obsługa różnych zestawów atrybutów",
+        "required_tests": "20th/5th; custom pola; nakładanie celów",
+        "unresolved_decision": "Issue jawnie wyklucza grupy talent/skill/knowledge",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1257",
+        "number": 1257,
+        "title": "[Feature Request] Custom chat background",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1257",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:57:28Z",
+        "requirement": "Klasy/style kart czatu według gry i epoki",
+        "problem": "Klasy/style kart czatu według gry i epoki",
+        "components": [
+          "CMP-013",
+          "CMP-020"
+        ],
+        "classification": "PRESENTATION",
+        "existing_implementation": "Rzut zna aktora; główny template ma klasę wod20-roll",
+        "gap": "Ustalenie klas i konfiguracji stylów; komentarze wskazują game/era",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Preferować konfigurację/widok; ewentualne trwałe opcje wymagają osobnej decyzji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "UI, role i trwałość konfiguracji",
+        "candidate_scope": "Ustalenie klas i konfiguracji stylów; komentarze wskazują game/era",
+        "required_tests": "różne linie w jednym świecie; rzut bez aktora",
+        "unresolved_decision": "Zestaw stabilnych klas i pierwszeństwo wariantu",
+        "comments_expected": 2,
+        "comments_read": 2,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1257#issuecomment-3517061772",
+            "author": "JohanFalt"
+          },
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1257#issuecomment-3517084776",
+            "author": "Genizaro"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1241",
+        "number": 1241,
+        "title": "[Feature Request] Hide Empty Fields on Character Sheets for Limited and Observer Users",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1241",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:56:16Z",
+        "requirement": "Ukrywanie pustych pól dla nie-właścicieli",
+        "problem": "Ukrywanie pustych pól dla nie-właścicieli",
+        "components": [
+          "CMP-016",
+          "CMP-004"
+        ],
+        "classification": "PRESENTATION",
+        "existing_implementation": "Istnieje per-field visibility z #1506",
+        "gap": "Automatyczne rozpoznanie pustki jest osobną regułą",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Preferować konfigurację/widok; ewentualne trwałe opcje wymagają osobnej decyzji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "UI, role i trwałość konfiguracji",
+        "candidate_scope": "Automatyczne rozpoznanie pustki jest osobną regułą",
+        "required_tests": "puste HTML, zero, pusty select; owner kontra limited",
+        "unresolved_decision": "Definicja pustej treści i relacja do ręcznych flag",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1240",
+        "number": 1240,
+        "title": "[Feature Request] Hability to Disguise Character Sheet",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1240",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:56:05Z",
+        "requirement": "Pokazanie Limited karty śmiertelnika jako kamuflażu",
+        "problem": "Pokazanie Limited karty śmiertelnika jako kamuflażu",
+        "components": [
+          "CMP-016",
+          "CMP-004",
+          "CMP-020"
+        ],
+        "classification": "PRESENTATION",
+        "existing_implementation": "variantsheet i filtrowanie widoku istnieją jako różne mechanizmy",
+        "gap": "Polityka maskowania rodzaju postaci oraz zakres ujawniania",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Preferować konfigurację/widok; ewentualne trwałe opcje wymagają osobnej decyzji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "UI, role i trwałość konfiguracji",
+        "candidate_scope": "Polityka maskowania rodzaju postaci oraz zakres ujawniania",
+        "required_tests": "Limited→Observer; ikony, czat, nagłówki, dane klienta",
+        "unresolved_decision": "Wygląd czy ochrona danych; nie utożsamiać z przełączeniem CSS",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1218",
+        "number": 1218,
+        "title": "Creature don't list rites correctly nor can you add them.",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1218",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:12:25Z",
+        "requirement": "Rites na Creature — zgłoszenie problemu listy/dodawania",
+        "problem": "Rites na Creature — zgłoszenie problemu listy/dodawania",
+        "components": [
+          "CMP-004",
+          "CMP-006",
+          "CMP-007"
+        ],
+        "classification": "GAME-SPECIFIC",
+        "existing_implementation": "Treść to niewypełniony szablon raportu; tytuł opisuje problem",
+        "gap": "Brak wersji i reprodukcji; ustalić PC czy legacy i wariant",
+        "scope_status": "UNKNOWN",
+        "assessment": "unknown",
+        "model_impact": "Brak wersji i reprodukcji; ustalić PC czy legacy i wariant",
+        "cross_splat_impact": "Właściwa linia + negatywny przypadek innej linii; PC/legacy rozróżnić",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Wymagania/reprodukcja przed implementacją",
+        "required_tests": "Creature/Rites; upuszczenie i utworzenie ręczne",
+        "unresolved_decision": "Wymaga minimalnego przykładu przed zmianą",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1196",
+        "number": 1196,
+        "title": "Settings",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1196",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:12:40Z",
+        "requirement": "Edycja ustawień karty, pozostałe Game/Era",
+        "problem": "Edycja ustawień karty, pozostałe Game/Era",
+        "components": [
+          "CMP-004",
+          "CMP-017",
+          "CMP-007"
+        ],
+        "classification": "GENERIC",
+        "existing_implementation": "Lista issue ma większość pozycji odhaczoną; markup Game/Era jest w settings.hbs",
+        "gap": "Trzeba sprawdzić powiązanie przycisków z zapisem i semantykę zmiany",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Trzeba sprawdzić powiązanie przycisków z zapisem i semantykę zmiany",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Trzeba sprawdzić powiązanie przycisków z zapisem i semantykę zmiany",
+        "required_tests": "Game/Era; custom Splat; istniejące zdolności",
+        "unresolved_decision": "Zmiana etykiety, prezentacji czy migracja postaci?",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1173",
+        "number": 1173,
+        "title": "Use health penalties in melee damage rolls",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1173",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:14:17Z",
+        "requirement": "Kara obrażeń tylko melee/natural, osobno ranged",
+        "problem": "Kara obrażeń tylko melee/natural, osobno ranged",
+        "components": [
+          "CMP-014",
+          "CMP-013",
+          "CMP-017"
+        ],
+        "classification": "GENERIC",
+        "existing_implementation": "Dialog broni odczytuje wspólne usePenaltyDamage",
+        "gap": "Rozdzielenie polityki według typu obrażeń/ataku",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Rozdzielenie polityki według typu obrażeń/ataku",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Rozdzielenie polityki według typu obrażeń/ataku",
+        "required_tests": "melee/natural/ranged × ignore pain/frenzy",
+        "unresolved_decision": "Komentarze uzgadniają podział melee/natural kontra ranged",
+        "comments_expected": 2,
+        "comments_read": 2,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1173#issuecomment-3032448443",
+            "author": "JohanFalt"
+          },
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1173#issuecomment-3032455735",
+            "author": "Laczi11"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1161",
+        "number": 1161,
+        "title": "Kindred of the East: The Relentless Age",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1161",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:28:43Z",
+        "requirement": "Kindred of the East: The Relentless Age",
+        "problem": "Kindred of the East: The Relentless Age",
+        "components": [
+          "CMP-017",
+          "CMP-007",
+          "CMP-004"
+        ],
+        "classification": "GAME-SPECIFIC",
+        "existing_implementation": "Wariant kindredeast jest w konfiguracji; issue nie ma treści",
+        "gap": "Zakres wsparcia nieokreślony",
+        "scope_status": "UNKNOWN",
+        "assessment": "unknown",
+        "model_impact": "Zakres wsparcia nieokreślony",
+        "cross_splat_impact": "Właściwa linia + negatywny przypadek innej linii; PC/legacy rozróżnić",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Wymagania/reprodukcja przed implementacją",
+        "required_tests": "do ustalenia po wymaganiach",
+        "unresolved_decision": "Nie utożsamiać wariantu z kompletną implementacją podręcznika",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-1068",
+        "number": 1068,
+        "title": "Feature - Way to disable Rule-of-1 for an individual roll.",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/1068",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:13:43Z",
+        "requirement": "Jednorazowe wyłączenie Rule-of-1",
+        "problem": "Jednorazowe wyłączenie Rule-of-1",
+        "components": [
+          "CMP-014",
+          "CMP-013"
+        ],
+        "classification": "GENERIC",
+        "existing_implementation": "Globalne ustawienie istnieje; autor odróżnia no-botch od Rule-of-1",
+        "gap": "Override per roll; powiązanie z #1290",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Override per roll; powiązanie z #1290",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Override per roll; powiązanie z #1290",
+        "required_tests": "jedynki, sukcesy, botch; wszystkie dialogi",
+        "unresolved_decision": "Ujednolicić semantykę z #1290 przed kodowaniem",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-973",
+        "number": 973,
+        "title": "Generation 14+ Vampires: Recommendation for allowing 10 Blood Points",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/973",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:27:31Z",
+        "requirement": "10 punktów krwi wysokich pokoleń z rozróżnieniem zastosowań",
+        "problem": "10 punktów krwi wysokich pokoleń z rozróżnieniem zastosowań",
+        "components": [
+          "CMP-003",
+          "CMP-009",
+          "CMP-004"
+        ],
+        "classification": "GAME-SPECIFIC",
+        "existing_implementation": "Bloodpool ma stan i limity; komentarze wskazują różne dozwolone użycia",
+        "gap": "Pojemność i dostępność do celu to dwa różne wymiary",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Pojemność i dostępność do celu to dwa różne wymiary",
+        "cross_splat_impact": "Właściwa linia + negatywny przypadek innej linii; PC/legacy rozróżnić",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Pojemność i dostępność do celu to dwa różne wymiary",
+        "required_tests": "pokolenia 13–16; wydawanie; zachowany stan po edycji",
+        "unresolved_decision": "Sposób reprezentacji ograniczonej części krwi",
+        "comments_expected": 2,
+        "comments_read": 2,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/973#issuecomment-2689806093",
+            "author": "JohanFalt"
+          },
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/973#issuecomment-2691734232",
+            "author": "HuevoBendito"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-941",
+        "number": 941,
+        "title": "Turn mortal to Werewolf/Mage/Vampire",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/941",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-11-26T11:01:17Z",
+        "requirement": "Przemiana śmiertelnika w Werewolf/Mage/Vampire",
+        "problem": "Przemiana śmiertelnika w Werewolf/Mage/Vampire",
+        "components": [
+          "CMP-007",
+          "CMP-002",
+          "CMP-004"
+        ],
+        "classification": "SPLAT-SPECIFIC",
+        "existing_implementation": "Drop Splat istnieje; Actor drop i zachowanie historii to inny zakres",
+        "gap": "Scalanie, zachowanie tożsamości, tokenów i odzyskanie; PROBE-001",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Scalanie, zachowanie tożsamości, tokenów i odzyskanie; PROBE-001",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Scalanie, zachowanie tożsamości, tokenów i odzyskanie; PROBE-001",
+        "required_tests": "anulowanie, notatki, specialty, linked/unlinked, awaria zapisu",
+        "unresolved_decision": "Komentarz ThresholdOps to propozycja, nie zatwierdzenie maintenera",
+        "comments_expected": 1,
+        "comments_read": 1,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/941#issuecomment-7190153441",
+            "author": "ThresholdOps"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-877",
+        "number": 877,
+        "title": "[Feature Request] \"Spirit\" Creature Sheet Quality of Life and Housekeeping",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/877",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:12:16Z",
+        "requirement": "Opcjonalne zwykłe statystyki, zdrowie i typ ducha",
+        "problem": "Opcjonalne zwykłe statystyki, zdrowie i typ ducha",
+        "components": [
+          "CMP-002",
+          "CMP-004",
+          "CMP-014"
+        ],
+        "classification": "GAME-SPECIFIC",
+        "existing_implementation": "Creature/spirit ma specjalizacje obliczeń i pul",
+        "gap": "Model ducha materializującego się i prezentacja zwykłych statystyk",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Model ducha materializującego się i prezentacja zwykłych statystyk",
+        "cross_splat_impact": "Właściwa linia + negatywny przypadek innej linii; PC/legacy rozróżnić",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Model ducha materializującego się i prezentacja zwykłych statystyk",
+        "required_tests": "spirit ze statami i bez; formy; zdrowie",
+        "unresolved_decision": "Wariant house rule i podstawowy model ducha",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-843",
+        "number": 843,
+        "title": "Support editing bonus successes from an attack before rolling damage.",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/843",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:14:06Z",
+        "requirement": "Edycja sukcesów z ataku przed rzutem obrażeń",
+        "problem": "Edycja sukcesów z ataku przed rzutem obrażeń",
+        "components": [
+          "CMP-014",
+          "CMP-013"
+        ],
+        "classification": "GENERIC",
+        "existing_implementation": "extraSuccesses jest wyliczane i wyświetlane; są pola bonus i dodgebonus",
+        "gap": "Jawna edycja extraSuccesses i kontrola zera/dodge",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Jawna edycja extraSuccesses i kontrola zera/dodge",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Jawna edycja extraSuccesses i kontrola zera/dodge",
+        "required_tests": "0/1/wiele sukcesów; unik; ustawienie carry-over",
+        "unresolved_decision": "Korekta wyniku czy osobny modyfikator; zachowanie wyniku oryginalnego",
+        "comments_expected": 1,
+        "comments_read": 1,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/843#issuecomment-3667755488",
+            "author": "therealjasonkenney"
+          }
+        ],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-827",
+        "number": 827,
+        "title": "Add Attributes and skills to Spirit (Creature) or Charm Powers to other sheets on Settings",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/827",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:12:07Z",
+        "requirement": "Atrybuty/umiejętności ducha lub Charms na innych kartach",
+        "problem": "Atrybuty/umiejętności ducha lub Charms na innych kartach",
+        "components": [
+          "CMP-002",
+          "CMP-004",
+          "CMP-006"
+        ],
+        "classification": "CAPABILITY-SPECIFIC",
+        "existing_implementation": "Model PC i capability rozdzielają część możliwości, lecz warunki linii nadal istnieją",
+        "gap": "Dostępność Charms i zwykłych cech bez narzucania jednego wariantu",
+        "scope_status": "INFERRED",
+        "assessment": "candidate",
+        "model_impact": "Dostępność Charms i zwykłych cech bez narzucania jednego wariantu",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Dostępność Charms i zwykłych cech bez narzucania jednego wariantu",
+        "required_tests": "duch, śmiertelnik, custom Splat, brak Charms",
+        "unresolved_decision": "Dwie alternatywy wymagań; sprawdzić wspólną część z #877",
+        "comments_expected": 0,
+        "comments_read": 0,
+        "comment_sources": [],
+        "attachments_inspected": false
+      },
+      {
+        "id": "ISS-575",
+        "number": 575,
+        "title": "[Feature Request] Item / Accessory Bonus",
+        "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/575",
+        "github_state": "open",
+        "milestone": "v8.x",
+        "updated_at": "2026-09-10T12:13:21Z",
+        "requirement": "Bonusy osadzane na broni/ekwipunku",
+        "problem": "Bonusy osadzane na broni/ekwipunku",
+        "components": [
+          "CMP-010",
+          "CMP-003",
+          "CMP-014"
+        ],
+        "classification": "CAPABILITY-SPECIFIC",
+        "existing_implementation": "BonusHelper obsługuje bonuslist i drop Bonus na Item",
+        "gap": "Ustalić, które oczekiwania pozostały po obecnej implementacji",
+        "scope_status": "INFERRED",
+        "assessment": "partial",
+        "model_impact": "Ustalić, które oczekiwania pozostały po obecnej implementacji",
+        "cross_splat_impact": "Wszystkie istotne capability i ich brak; PC/legacy oraz custom/hybrid",
+        "regression_risk": "Wspólne obliczenia, kolejność zapisu i odmienne reprezentacje danych",
+        "candidate_scope": "Ustalić, które oczekiwania pozostały po obecnej implementacji",
+        "required_tests": "wyposażony/niewyposażony Item; aktywność wpisu; armor i weapon",
+        "unresolved_decision": "Odbiór aktualnej ścieżki przed kolejną implementacją",
+        "comments_expected": 2,
+        "comments_read": 2,
+        "comment_sources": [
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/575#issuecomment-1649902472",
+            "author": "JohanFalt"
+          },
+          {
+            "url": "https://github.com/JohanFalt/Foundry_WoD20/issues/575#issuecomment-1692759063",
+            "author": "JohanFalt"
+          }
+        ],
+        "attachments_inspected": false
+      }
+    ],
+    "related": [
+      {
+        "number": 1366,
+        "state": "open",
+        "released_in": "7.4.0",
+        "comments_read": 6
+      },
+      {
+        "number": 1506,
+        "state": "closed",
+        "released_in": "7.4.0",
+        "comments_read": 1
+      }
+    ],
+    "relationships": [
+      {
+        "from": 1492,
+        "to": 1366,
+        "type": "PARTIALLY_IMPLEMENTED_BY",
+        "status": "VERIFIED",
+        "basis": "Popup i trzy premie realizują ręczne podbicie/reset; koszty i ograniczenia nie są automatyzowane"
+      },
+      {
+        "from": 1466,
+        "to": 1311,
+        "type": "OVERLAPS",
+        "status": "VERIFIED",
+        "basis": "Obie prośby dotyczą usunięcia szablonu; istnieje wspólny reset; semantyka zachowania danych do uzgodnienia"
+      },
+      {
+        "from": 1290,
+        "to": 1068,
+        "type": "OVERLAPS",
+        "status": "VERIFIED",
+        "basis": "Obie wymagają jednorazowego override Rule-of-1; #1290 zawężono w komentarzu"
+      },
+      {
+        "from": 877,
+        "to": 827,
+        "type": "OVERLAPS",
+        "status": "VERIFIED",
+        "basis": "Zwykłe cechy materializującego się ducha; pozostały zakres różny"
+      },
+      {
+        "from": 1241,
+        "to": 1506,
+        "type": "PARTIALLY_IMPLEMENTED_BY",
+        "status": "VERIFIED",
+        "basis": "Widoczność Bio per pole istnieje, automatyczne ukrywanie pustych pól wymaga osobnej reguły"
+      },
+      {
+        "from": 1352,
+        "to": 1506,
+        "type": "PARTIALLY_IMPLEMENTED_BY",
+        "status": "VERIFIED",
+        "basis": "Bio per pole obejmuje wycinek prośby o pełną tabelę sekcji i dodatkową grupę"
+      },
+      {
+        "from": 1240,
+        "to": 1352,
+        "type": "SHARES_COMPONENT",
+        "status": "INFERRED",
+        "basis": "Widz, uprawnienia i polityka kontekstu; kamuflaż nie jest tym samym wymaganiem"
+      },
+      {
+        "from": 1488,
+        "to": 1492,
+        "type": "SHARES_TEST_SCENARIO",
+        "status": "INFERRED",
+        "basis": "Efektywna Dexterity wpływa na ruch; additive movement jest osobną operacją"
+      },
+      {
+        "from": 1446,
+        "to": 1447,
+        "type": "SHARES_DATA_MODEL",
+        "status": "VERIFIED",
+        "basis": "Advantage, lecz premia puli i pojemności/stanu nie mają tożsamej semantyki"
+      },
+      {
+        "from": 1468,
+        "to": 575,
+        "type": "SHARES_COMPONENT",
+        "status": "INFERRED",
+        "basis": "BonusHelper i bonuslist; rozdzielenie torów soak to osobny zakres"
+      },
+      {
+        "from": 1173,
+        "to": 843,
+        "type": "SHARES_COMPONENT",
+        "status": "VERIFIED",
+        "basis": "Dialog broni i ścieżka damage; kara zdrowia i nadmiarowe sukcesy są niezależne"
+      },
+      {
+        "from": 1481,
+        "to": 1291,
+        "type": "SHARES_COMPONENT",
+        "status": "INFERRED",
+        "basis": "Budowa opcji rzutu i silnik; reroll wymaga kontekstu oraz kontroli kosztów"
+      },
+      {
+        "from": 941,
+        "to": 1466,
+        "type": "SHARES_DATA_MODEL",
+        "status": "VERIFIED",
+        "basis": "Zarządzanie Splat i Itemami; reset nie realizuje przemiany zachowującej dorobek"
+      },
+      {
+        "from": 1318,
+        "to": 941,
+        "type": "SHARES_TEST_SCENARIO",
+        "status": "INFERRED",
+        "basis": "Postać i token po zmianie natury/formy; brak dowodu zależności implementacji"
+      }
+    ]
+  },
+  "tests": [
+    {
+      "id": "TEST-001",
+      "status": "PASS",
+      "count": 191,
+      "environment": "Node v22.21.1 with Foundry test doubles",
+      "scope": "11 existing logic test files; NOT Foundry runtime"
+    },
+    {
+      "id": "TEST-002",
+      "status": "PASS",
+      "count": 7,
+      "environment": "Node v22.21.1",
+      "scope": "selected existing release checks; NOT full npm test"
+    },
+    {
+      "id": "TEST-003",
+      "status": "PASS",
+      "files": 125,
+      "mismatches": 0,
+      "scope": "Git blob SHA-1 verification of initial downloaded source files"
+    },
+    {
+      "id": "PROBE-001",
+      "status": "FAIL",
+      "environment": "Node fixture",
+      "operation": "replace existing Splat",
+      "observed": {
+        "error": "ReferenceError",
+        "message": "Cannot access 'idsToDelete' before initialization",
+        "deletes": 0
+      },
+      "reproducer": "checks/reproduce-splat-replacement.mjs"
+    },
+    {
+      "id": "TEST-004",
+      "status": "PASS",
+      "scope": "descriptor extraction, six schemas; NOT Foundry validation"
+    },
+    {
+      "id": "TEST-005",
+      "status": "NOT TESTED",
+      "scope": "full npm test"
+    },
+    {
+      "id": "TEST-006",
+      "status": "BLOCKED",
+      "scope": "Foundry V14 UI/multi-client/migration"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "GAP-001",
+      "subject": "Rzeczywiste Splat/Form/UUID w compendiach",
+      "phases": [
+        "D01",
+        "D02"
+      ],
+      "status": "OPEN",
+      "basis": "Manifest i nazwy pakietów nie certyfikują zawartości",
+      "acceptance": "Odczytać bazę przez Foundry lub wiarygodny eksport; powiązać z konkretnym SHA"
+    },
+    {
+      "id": "GAP-002",
+      "subject": "Pełne read/write i wszystkie branchy wartości wynikowych",
+      "phases": [
+        "D02",
+        "D03",
+        "D04"
+      ],
+      "status": "OPEN",
+      "basis": "Słownik schematów i główna macierz są gotowe; to nie pełny graf wywołań",
+      "acceptance": "Dokończyć field→writer→consumer→refresh i warunki modelu"
+    },
+    {
+      "id": "GAP-003",
+      "subject": "Wykonanie Foundry V14",
+      "phases": [
+        "D04",
+        "D06"
+      ],
+      "status": "OPEN",
+      "basis": "Node PASS nie potwierdza modelu ani UI",
+      "acceptance": "Wykonać REG-001–REG-014 na instancji testowej"
+    },
+    {
+      "id": "GAP-004",
+      "subject": "Unlinked token i wiele klientów",
+      "phases": [
+        "D02",
+        "D04",
+        "D06"
+      ],
+      "status": "OPEN",
+      "basis": "game.actors lookup i lokalne kolejki mogą zmieniać wynik",
+      "acceptance": "Osobne próby linked/unlinked i A/B z obserwacją żądań"
+    },
+    {
+      "id": "GAP-005",
+      "subject": "Widoczność versus dostęp do danych klienta",
+      "phases": [
+        "D03",
+        "D04",
+        "D05"
+      ],
+      "status": "OPEN",
+      "basis": "Bio helper dotyczy prezentacji; brak dowodu redakcji transportu",
+      "acceptance": "Zmierzyć dane dostępne Limited/Observer poza DOM"
+    },
+    {
+      "id": "GAP-006",
+      "subject": "Niepełne wymagania i obrazy issue",
+      "phases": [
+        "D05"
+      ],
+      "status": "OPEN",
+      "basis": "Brak pełnego zakresu #1446/#1447/#1161, brak reprodukcji #1218; obrazów nie analizowano",
+      "acceptance": "Doprecyzować zakres; przejrzeć załączniki przed projektem"
+    },
+    {
+      "id": "GAP-007",
+      "subject": "Historyczny prototyp i dawne próby runtime",
+      "phases": [
+        "D00",
+        "D06"
+      ],
+      "status": "OPEN",
+      "basis": "ZIP i wcześniejsze wyniki nie są dowodem aktualnego wydania",
+      "acceptance": "Zachować jako historyczne; porównać dopiero gdy potrzebne do regresji"
+    },
+    {
+      "id": "GAP-008",
+      "subject": "Różnice platform V14/V15",
+      "phases": [
+        "D03",
+        "D05",
+        "D07"
+      ],
+      "status": "OPEN",
+      "basis": "v8.x deklaruje Foundry v15, baseline to V14",
+      "acceptance": "Osobno zbudować platform delta; nie zmieniać referencji 7.4.0"
+    },
+    {
+      "id": "GAP-009",
+      "subject": "Pełne testy release oraz graf include/partial",
+      "phases": [
+        "D03",
+        "D06"
+      ],
+      "status": "OPEN",
+      "basis": "Wybrane 7 kontroli nie obejmuje wszystkich zasobów",
+      "acceptance": "Pobrać pełny snapshot i wykonać pełne npm test oraz walidację Mermaid"
+    },
+    {
+      "id": "GAP-010",
+      "subject": "Szczegółowe dowody zakresu każdego komponentu dla każdej linii",
+      "phases": [
+        "D01",
+        "D03"
+      ],
+      "status": "OPEN",
+      "basis": "Warunki są rozproszone; główne ścieżki to nie cała implementacja",
+      "acceptance": "Powiązać warunki has*/id/variant z konsumentami i testami"
+    }
+  ],
+  "risks": [
+    {
+      "id": "RSK-001",
+      "severity": "HIGH",
+      "subject": "Wymiana istniejącego Splat rzuca ReferenceError",
+      "status": "VERIFIED",
+      "evidence": "PROBE-001; DropSplatToActor",
+      "mitigation": "Mała odrębna naprawa po decyzji o implementacji; potwierdzić w Foundry"
+    },
+    {
+      "id": "RSK-002",
+      "severity": "HIGH",
+      "subject": "Reset usuwa także Itemy niewyróżnione jako składniki Splata",
+      "status": "VERIFIED",
+      "evidence": "RemoveSplatFromActor: map wszystkich Itemów i delete",
+      "mitigation": "Uzgodnić reset versus zachowanie dorobku; nie używać jako gotowej przemiany"
+    },
+    {
+      "id": "RSK-003",
+      "severity": "HIGH",
+      "subject": "Kolejność zapisu total i przygotowania ruchu/UI może dawać niespójny widok",
+      "status": "HYPOTHESIS",
+      "evidence": "Wiele wejść aktualizacji, osobny persistTotals i prepareDerivedData",
+      "mitigation": "REG-001, aktywna zakładka Combat i ponowne otwarcie"
+    },
+    {
+      "id": "RSK-004",
+      "severity": "MEDIUM",
+      "subject": "Dwa przyjęte +1 mogą zredukować się do jednego wyniku",
+      "status": "VERIFIED",
+      "evidence": "Publiczny wątek #1366 opisuje zaakceptowane ograniczenie; kolejka lokalna w kodzie",
+      "mitigation": "Nie wnioskować o globalnym locku; bieżące dwa klienty do ponownego odbioru"
+    },
+    {
+      "id": "RSK-005",
+      "severity": "MEDIUM",
+      "subject": "Era krótka i zlokalizowana; schemat domyślny różny od importu",
+      "status": "VERIFIED",
+      "evidence": "select/era.js i DataModel settings",
+      "mitigation": "Używać istniejącego resolvera; przetestować oba formaty"
+    },
+    {
+      "id": "RSK-006",
+      "severity": "HIGH",
+      "subject": "Utożsamienie premii puli, wartości i pojemności rozszerza wpływ zmiany",
+      "status": "INFERRED",
+      "evidence": "BonusHelper; Advantage fields; #1446/#1447/#973",
+      "mitigation": "Jawny kontrakt pola i odbiorców przed PR"
+    },
+    {
+      "id": "RSK-007",
+      "severity": "MEDIUM",
+      "subject": "game.actors lookup może użyć innego źródła niż tokenowy snapshot",
+      "status": "HYPOTHESIS",
+      "evidence": "Totals i obliczenia Item odczytują kolekcję aktorów",
+      "mitigation": "REG-003/004 i unlinked token, bez domyślnej oceny wyniku"
+    },
+    {
+      "id": "RSK-008",
+      "severity": "HIGH",
+      "subject": "Ukrywanie interfejsu może nie spełniać oczekiwania poufności #1240/#1352",
+      "status": "UNKNOWN",
+      "evidence": "Helper Bio i role nie są dowodem kontraktu transportowego",
+      "mitigation": "Rozstrzygnąć wymaganie i wykonać REG-009"
+    },
+    {
+      "id": "RSK-009",
+      "severity": "MEDIUM",
+      "subject": "Wynik atrapy Node może być przeniesiony na Foundry bez dowodu",
+      "status": "INFERRED",
+      "evidence": "tests/README i ograniczenia tej sesji",
+      "mitigation": "Status wykonywania i status wiedzy muszą być oddzielne"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "status": "ACCEPTED",
+      "subject": "Baseline 7.4.0 przypięty do SHA; main jest tylko kontrolą aktualności",
+      "basis": "polecenie użytkownika i potwierdzony tag",
+      "consequence": "Nie mieszać bieżącego main z referencją analizy"
+    },
+    {
+      "id": "DEC-002",
+      "status": "ACCEPTED",
+      "subject": "Cross-splat i PC/legacy są osobnymi wymiarami odbioru",
+      "basis": "prompt użytkownika i kod rejestracji",
+      "consequence": "Funkcja specyficzna nie musi pojawiać się wszędzie; testować brak capability"
+    },
+    {
+      "id": "DEC-003",
+      "status": "ACCEPTED",
+      "subject": "Prace dokumentacyjne na oddzielnej gałęzi forka; bez upstream, komentarzy i PR",
+      "basis": "prompt użytkownika",
+      "consequence": "Nie wprowadzać kodu implementacji"
+    },
+    {
+      "id": "DEC-004",
+      "status": "OPEN",
+      "subject": "Znaczenie usuwania Splat: pusty reset czy odtworzenie śmiertelnika",
+      "basis": "#1466/#1311/#941 i aktualny reset",
+      "consequence": "Decyzja o zachowaniu danych poprzedza projekt przemiany"
+    },
+    {
+      "id": "DEC-005",
+      "status": "OPEN",
+      "subject": "Kontrakt Rule-of-1 override i rozróżnienie no-botch",
+      "basis": "#1290/#1068",
+      "consequence": "Uzgodnić wszystkie dialogi i domyślne ustawienie"
+    },
+    {
+      "id": "DEC-006",
+      "status": "OPEN",
+      "subject": "Operator i kolejność additive/multiplicative movement",
+      "basis": "#1488",
+      "consequence": "Uzgodnić formy i kumulację premii"
+    },
+    {
+      "id": "DEC-007",
+      "status": "OPEN",
+      "subject": "Co oznacza bonus wartości Advantage",
+      "basis": "#1447 bez treści",
+      "consequence": "permanent, temporary, max i roll nie są zamienne"
+    },
+    {
+      "id": "DEC-008",
+      "status": "OPEN",
+      "subject": "Widoczność: prezentacja czy ograniczenie dostępnych danych",
+      "basis": "#1240/#1352; częściowo #1506",
+      "consequence": "Zgodność z kontraktami Foundry wymaga weryfikacji"
+    },
+    {
+      "id": "DEC-009",
+      "status": "OPEN",
+      "subject": "Reroll: opcje historyczne kontra aktualne dane i ponawianie kosztu",
+      "basis": "#1481; DiceRoller wydaje Willpower",
+      "consequence": "Nie ponawiać skutków ubocznych bez ustalenia semantyki"
+    },
+    {
+      "id": "DEC-010",
+      "status": "OPEN",
+      "subject": "Wysokie pokolenia: pojemność krwi kontra jej dozwolone zastosowania",
+      "basis": "#973",
+      "consequence": "Nie sprowadzać do arbitralnego max ani do uniwersalnego resource engine"
+    }
+  ],
+  "documentation_validation": {
+    "status": "PASS",
+    "problems": [],
+    "scope": "JSON parse, stable IDs, component references, Markdown local/source links and fence pairing; NOT rendered Mermaid/Markdown"
+  }
+}
