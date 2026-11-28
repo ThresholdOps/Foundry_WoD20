@@ -2900,5 +2900,137 @@
     "status": "PASS",
     "problems": [],
     "scope": "JSON parse, stable IDs, component references, Markdown local/source links and fence pairing; NOT rendered Mermaid/Markdown"
-  }
+  },
+  "iterations": [
+    {
+      "id": "IT-002",
+      "date": "2026-11-28",
+      "author": "Moros",
+      "input_doc_commit": "8f19211439e4d5ad3c0b0fec256ff55098f609df",
+      "code_baseline": "32e360a6953d41685bc605ba2cc68e9998b2f9b8",
+      "document": "d00-verification.md"
+    }
+  ],
+  "findings": [
+    {
+      "id": "FND-001",
+      "status": "VERIFIED",
+      "basis": "code+node_probe",
+      "summary": "DropSplatToActor uses this.actor in static method; masked by PROBE-001 ReferenceError",
+      "evidence": [
+        "module/scripts/drop-helpers.js:572",
+        "checks/reproduce-splat-replacement-masked.mjs"
+      ],
+      "risks": [
+        "RSK-010"
+      ]
+    },
+    {
+      "id": "FND-002",
+      "status": "VERIFIED",
+      "basis": "code+data",
+      "summary": "abilities.defaultmaxvalue overwritten by powers.defaultmaxvalue; powers.defaultmaxvalue never set on install",
+      "evidence": [
+        "module/scripts/drop-helpers.js:769-770"
+      ],
+      "intent_status": "HYPOTHESIS",
+      "risks": [
+        "RSK-011"
+      ]
+    },
+    {
+      "id": "FND-003",
+      "status": "VERIFIED",
+      "basis": "code+data",
+      "effect_status": "INFERRED",
+      "summary": "9 Savage Age splats set settings.splat outside CONFIG.splat (bilai, anupabael, apis, ceilican, grondir, khara, naghaluu, saksomaknami, wlewa)",
+      "evidence": [
+        "module/scripts/drop-helpers.js:811",
+        "templates/actor/parts/macro_icons.hbs:6",
+        "templates/actor/parts/macro_icons.hbs:20",
+        "module/scripts/combat-helpers.js:93",
+        "module/hooks.js:110-185",
+        "module/scripts/select-helpers.js:929",
+        "data/splat-pack-catalog.json"
+      ],
+      "gaps": [
+        "GAP-011"
+      ],
+      "risks": [
+        "RSK-012"
+      ],
+      "tests": [
+        "REG-015"
+      ]
+    },
+    {
+      "id": "FND-004",
+      "status": "VERIFIED",
+      "basis": "code+data",
+      "summary": "Install resolves components compendium -> world -> embedded copy; Populate* keeps only flags, order, itemuuid and Ability.type from the splat entry",
+      "evidence": [
+        "module/scripts/drop-helpers.js:1142-1182",
+        "module/scripts/drop-helpers.js:1488-1540",
+        "module/scripts/drop-helpers.js:1542-1553"
+      ]
+    },
+    {
+      "id": "FND-005",
+      "status": "VERIFIED",
+      "basis": "data",
+      "summary": "System packs readable statically; 115 splats, 4840/4840 UUID references resolve",
+      "evidence": [
+        "checks/dump-packs.mjs",
+        "checks/check-splat-references.py",
+        "data/splat-pack-catalog.json"
+      ],
+      "gaps": [
+        "GAP-001"
+      ]
+    },
+    {
+      "id": "FND-006",
+      "status": "VERIFIED",
+      "basis": "code+data",
+      "summary": "CONFIG.variant keys (capitalised Fera) differ from splat data (lowercase); data uses variants outside CONFIG.variant",
+      "evidence": [
+        "module/config.js",
+        "module/actor/data/wod-actor-base.js:1934-1978",
+        "module/handlebars.js:209-211"
+      ],
+      "risks": [
+        "RSK-012"
+      ]
+    },
+    {
+      "id": "FND-007",
+      "status": "VERIFIED",
+      "basis": "data",
+      "summary": "No compendium Splat for PC creature or spirit",
+      "gaps": [
+        "GAP-013"
+      ]
+    },
+    {
+      "id": "FND-008",
+      "status": "VERIFIED",
+      "basis": "data",
+      "summary": "Wild West and Sorcerers Crusade splats use era=victorian"
+    },
+    {
+      "id": "FND-009",
+      "status": "HYPOTHESIS",
+      "basis": "code",
+      "summary": "actor.update(duplicate(actor)) carries stale items array; runtime effect unknown",
+      "evidence": [
+        "module/scripts/drop-helpers.js:638",
+        "module/scripts/drop-helpers.js:819",
+        "module/scripts/drop-helpers.js:847",
+        "module/scripts/drop-helpers.js:1009"
+      ],
+      "risks": [
+        "RSK-013"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,10342 @@
+{
+ "source": "packs/splats @ 32e360a6953d41685bc605ba2cc68e9998b2f9b8",
+ "extracted_by": "checks/dump-packs.mjs (classic-level, read-only copy)",
+ "count": 115,
+ "splats": [
+  {
+   "pack_id": "wGlOJcpYocWAbkvB",
+   "name": "Changeling [modern]",
+   "folder": "Changeling the Dreaming",
+   "settings": {
+    "id": "changeling",
+    "game": "changeling",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "changeling",
+    "usechimerical": true
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "nightmare",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glamour",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "banality",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal Seeming",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Fae Mien",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Actor",
+     "type": "Realm"
+    },
+    {
+     "name": "Fae",
+     "type": "Realm"
+    },
+    {
+     "name": "Nature",
+     "type": "Realm"
+    },
+    {
+     "name": "Prop",
+     "type": "Realm"
+    },
+    {
+     "name": "Scene",
+     "type": "Realm"
+    },
+    {
+     "name": "Time",
+     "type": "Realm"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "dft0KFAppsswuJub",
+   "name": "Dark-kin [modern]",
+   "folder": "Changeling the Dreaming",
+   "settings": {
+    "id": "changeling",
+    "game": "changeling",
+    "era": "modern",
+    "variant": "darkkin",
+    "variantsheet": "changeling",
+    "usechimerical": true
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "nightmare",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glamour",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "banality",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal Seeming",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Fae Mien",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Actor",
+     "type": "Realm"
+    },
+    {
+     "name": "Fae",
+     "type": "Realm"
+    },
+    {
+     "name": "Nature",
+     "type": "Realm"
+    },
+    {
+     "name": "Prop",
+     "type": "Realm"
+    },
+    {
+     "name": "Scene",
+     "type": "Realm"
+    },
+    {
+     "name": "Time",
+     "type": "Realm"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "4cqWhgpT6q8rTkiR",
+   "name": "Dauntain [modern]",
+   "folder": "Changeling the Dreaming",
+   "settings": {
+    "id": "changeling",
+    "game": "changeling",
+    "era": "modern",
+    "variant": "dauntain",
+    "variantsheet": "changeling",
+    "usechimerical": true
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "nightmare",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glamour",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "banality",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal Seeming",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Fae Mien",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Actor",
+     "type": "Realm"
+    },
+    {
+     "name": "Fae",
+     "type": "Realm"
+    },
+    {
+     "name": "Nature",
+     "type": "Realm"
+    },
+    {
+     "name": "Prop",
+     "type": "Realm"
+    },
+    {
+     "name": "Scene",
+     "type": "Realm"
+    },
+    {
+     "name": "Time",
+     "type": "Realm"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "0B2Qq1q6JcBRfD8s",
+   "name": "Enchanted [modern]",
+   "folder": "Changeling the Dreaming",
+   "settings": {
+    "id": "mortal",
+    "game": "changeling",
+    "era": "modern",
+    "variant": "enchanted",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "glamour",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "banality",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "hHIlWYx3h6uojHtg",
+   "name": "Hsien [modern]",
+   "folder": "Changeling the Dreaming",
+   "settings": {
+    "id": "changeling",
+    "game": "changeling",
+    "era": "modern",
+    "variant": "hsien",
+    "variantsheet": "changeling",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "yugen",
+     "group": "",
+     "max": 20
+    },
+    {
+     "id": "tao",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "yin",
+     "group": "yinyang",
+     "max": 5
+    },
+    {
+     "id": "yang",
+     "group": "yinyang",
+     "max": 5
+    },
+    {
+     "id": "ditan",
+     "group": "wutan",
+     "max": 5
+    },
+    {
+     "id": "houtan",
+     "group": "wutan",
+     "max": 5
+    },
+    {
+     "id": "lintan",
+     "group": "wutan",
+     "max": 5
+    },
+    {
+     "id": "tiehtan",
+     "group": "wutan",
+     "max": 5
+    },
+    {
+     "id": "shuitan",
+     "group": "wutan",
+     "max": 5
+    },
+    {
+     "id": "neitan",
+     "group": "wutan",
+     "max": 5
+    }
+   ],
+   "features": [],
+   "powers": [
+    {
+     "name": "Actor",
+     "type": "Realm"
+    },
+    {
+     "name": "Fae",
+     "type": "Realm"
+    },
+    {
+     "name": "Nature",
+     "type": "Realm"
+    },
+    {
+     "name": "Prop",
+     "type": "Realm"
+    },
+    {
+     "name": "Scene",
+     "type": "Realm"
+    },
+    {
+     "name": "Time",
+     "type": "Realm"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "thqgY0D8P65FIgsJ",
+   "name": "Inanimae [modern]",
+   "folder": "Changeling the Dreaming",
+   "settings": {
+    "id": "changeling",
+    "game": "changeling",
+    "era": "modern",
+    "variant": "inanimae",
+    "variantsheet": "changeling",
+    "usechimerical": true
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "nightmare",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glamour",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "banality",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal Seeming",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Fae Mien",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Actor",
+     "type": "Realm"
+    },
+    {
+     "name": "Fae",
+     "type": "Realm"
+    },
+    {
+     "name": "Nature",
+     "type": "Realm"
+    },
+    {
+     "name": "Prop",
+     "type": "Realm"
+    },
+    {
+     "name": "Scene",
+     "type": "Realm"
+    },
+    {
+     "name": "Time",
+     "type": "Realm"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "Vm53jLy3QXLaNSGX",
+   "name": "Menehune [modern]",
+   "folder": "Changeling the Dreaming",
+   "settings": {
+    "id": "changeling",
+    "game": "changeling",
+    "era": "modern",
+    "variant": "menehune",
+    "variantsheet": "changeling",
+    "usechimerical": true
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "nightmare",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glamour",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "banality",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal Seeming",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Fae Mien",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Actor",
+     "type": "Realm"
+    },
+    {
+     "name": "Fae",
+     "type": "Realm"
+    },
+    {
+     "name": "Nature",
+     "type": "Realm"
+    },
+    {
+     "name": "Prop",
+     "type": "Realm"
+    },
+    {
+     "name": "Scene",
+     "type": "Realm"
+    },
+    {
+     "name": "Time",
+     "type": "Realm"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "Hej6pOjm7OBXMPXs",
+   "name": "Mortal [modern]",
+   "folder": "Changeling the Dreaming",
+   "settings": {
+    "id": "mortal",
+    "game": "changeling",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "banality",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "IRSdpzh2mqJyO8wK",
+   "name": "Nunnehi [modern]",
+   "folder": "Changeling the Dreaming",
+   "settings": {
+    "id": "changeling",
+    "game": "changeling",
+    "era": "modern",
+    "variant": "nunnehi",
+    "variantsheet": "changeling",
+    "usechimerical": true
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "nightmare",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glamour",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "banality",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal Seeming",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Fae Mien",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Actor",
+     "type": "Realm"
+    },
+    {
+     "name": "Fae",
+     "type": "Realm"
+    },
+    {
+     "name": "Nature",
+     "type": "Realm"
+    },
+    {
+     "name": "Prop",
+     "type": "Realm"
+    },
+    {
+     "name": "Scene",
+     "type": "Realm"
+    },
+    {
+     "name": "Time",
+     "type": "Realm"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "9JCC3vYzG68UOhN8",
+   "name": "Thallain [modern]",
+   "folder": "Changeling the Dreaming",
+   "settings": {
+    "id": "changeling",
+    "game": "changeling",
+    "era": "modern",
+    "variant": "thallain",
+    "variantsheet": "changeling",
+    "usechimerical": true
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "nightmare",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glamour",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "banality",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal Seeming",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Fae Mien",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Actor",
+     "type": "Realm"
+    },
+    {
+     "name": "Fae",
+     "type": "Realm"
+    },
+    {
+     "name": "Nature",
+     "type": "Realm"
+    },
+    {
+     "name": "Prop",
+     "type": "Realm"
+    },
+    {
+     "name": "Scene",
+     "type": "Realm"
+    },
+    {
+     "name": "Time",
+     "type": "Realm"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "eWW70nYSWzTl7mmH",
+   "name": "Ajaba",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "ajaba",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "obligation",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Anthros",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crocas",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Hyaenid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "zL4GIEBr4KPKdK7j",
+   "name": "Ananasi",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "ananasi",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "bloodpool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "obedience",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Lilian",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Pithus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crawlering",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "tyTzq0Ct8zBAUfDS",
+   "name": "Bastet - Bagheera",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "bastet",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Bagheera - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Bagheera - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Bagheera - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Bagheera - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "tDQDEWidAK999Wlb",
+   "name": "Bastet - Balam",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "bastet",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Balam - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Balam - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Balam - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Balam - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "nyXDFbP9sHuay92v",
+   "name": "Bastet - Bubasti",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "bastet",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Bubasti - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Bubasti - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Bubasti - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Bubasti - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "EAGNIal2bs0B1zqp",
+   "name": "Bastet - Ceilican",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "bastet",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Ceilican - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Ceilican - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Ceilican - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Ceilican - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "WP7CMmctlyYzyCoq",
+   "name": "Bastet - Khan",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "bastet",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khan - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khan - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khan - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khan - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "5OvKdvw9ndq42cZA",
+   "name": "Bastet - Pumonca",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "bastet",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Pumonca - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Pumonca - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Pumonca - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Pumonca - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "teCjqEX5izH9lqlg",
+   "name": "Bastet - Qualmi",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "bastet",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Qualmi - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Qualmi - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Qualmi - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Qualmi - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "had4HQ7d44GTuqbR",
+   "name": "Bastet - Simba",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "bastet",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Qualmi - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Simba - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Simba - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Simba - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "ZGmpHi29rApsSAd3",
+   "name": "Bastet - Swara",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "bastet",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Swara - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Swara - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Swara - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Swara - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "zbgNuU4e9T61UZPV",
+   "name": "Corax",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "corax",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Corvis",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "hx3uNPEg0OiGttWm",
+   "name": "Gurahl",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "gurahl",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "succor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Arthren",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Bjornen",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Ursus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "NOSR7r0VBqSxL7KJ",
+   "name": "Kitsune",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "kitsune",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "chie",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "toku",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "kagayaki",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Sambuhenge",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Koto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Juko",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Kyubi",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "06bo7cmzCqz2Bg7m",
+   "name": "Mokolé - Champsa",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "mokole",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Archid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Suchid - Champsa",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "lsNpy9rusVqemwIi",
+   "name": "Mokolé - Gharial",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "mokole",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Archid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Suchid - Gharial",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "hdK60SIND6distfd",
+   "name": "Mokolé - Halpatee",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "mokole",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Archid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Suchid - Halpatee",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "3mTXa8MvbkfEwnz9",
+   "name": "Mokolé - Karna",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "mokole",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Archid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Suchid - Karna",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "a1qgb3knKdzEyQOY",
+   "name": "Mokolé - Makara",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "mokole",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Archid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Suchid - Makara",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "ijWe8LFPhLupCCrW",
+   "name": "Mokolé - Ora",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "mokole",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Archid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Suchid - Ora",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "MxebIt6ZAq8gheBN",
+   "name": "Mokolé - Paisa",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "mokole",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Archid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Suchid - Paisa",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "JeDfSJZxuun3RchZ",
+   "name": "Mokolé - Syrta",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "mokole",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Archid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Suchid - Syrta",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "u0hCirc5Y0Z4Y6XI",
+   "name": "Mokolé - Unktehi",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "mokole",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Archid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Suchid - Unktehi",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "O7HyX5mlQZTMpl2f",
+   "name": "Nagah",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "nagah",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Silkaram",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Azhi Dahaka",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Kali Dahaka",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Vasuki",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "haD9iBPUdjxs67H4",
+   "name": "Nuwisha",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "nuwisha",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "humor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Tsitsu",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Manabozho",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Sendeh",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Latrani",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "a2A2x29cQe33SRFa",
+   "name": "Ratkin",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "ratkin",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "infamy",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "obligation",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Rodens",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "B9vGZZITyFcuzCpm",
+   "name": "Ratkin - metis",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "ratkin",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "infamy",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "obligation",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Rodens",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crinos - metis",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "ytgcIb40jRI7rs6U",
+   "name": "Rokea",
+   "folder": "Changing Breeds [modern]",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "rokea",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    },
+    {
+     "id": "valor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "harmony",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "innovation",
+     "group": "renown",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Glabrus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Gladius",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Chasmus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Squamus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "kkpHc2MCJOtdQ7tX",
+   "name": "Apis",
+   "folder": "Changing Breeds [modern] - Lost",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "apis",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Apis - Minotaur",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Apis - Aurochs",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "alFaOpysiaQtKmwh",
+   "name": "Bastet - Khara",
+   "folder": "Changing Breeds [modern] - Lost",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "bastet",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "ferocity",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "cunning",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khara - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khara - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khara - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "pUhfcVnRPHmew3qa",
+   "name": "Camazotz",
+   "folder": "Changing Breeds [modern] - Lost",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "camazotz",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Apterous",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Megachiroptrera",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "aJVildkiTEEVVOjJ",
+   "name": "Grondr",
+   "folder": "Changing Breeds [modern] - Lost",
+   "settings": {
+    "id": "changingbreed",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "grondr",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Grondr - Aperius",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Grondr - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Grondr - Daeodon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Grondr - Scrofa",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "XNh2iIL90FQBPA3T",
+   "name": "Demon [modern] - blank",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "NYlD8r0eCy1rTno2",
+   "name": "Demon [modern] Defiler (Adad)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Weather Sense",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Immune to Electricity",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Initiative",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Shocking Touch",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Teeth",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Spines",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Shark Hide",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Ink Cloud",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "vsVjb0cnisavXFGt",
+   "name": "Demon [modern] Defiler (Ishhara)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Enhanced Social Traits",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Lyrical Voice",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Senses",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Intuition",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Claws",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Venom",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Limbs",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Casts No Reflection",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "IuUU8U9h9poJrE0a",
+   "name": "Demon [modern] Defiler (Mammetum)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Enhanced Empathy",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Casts No Reflection",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Pass Without Trace",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Dexterity",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Claws/Teeth",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Initiative",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Venom",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Actions",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "pfdP3EKs9HQd42L5",
+   "name": "Demon [modern] Devil (Bel)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Wings",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Lordly Mein",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Senses",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Increased Awareness",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Claws/Teeth",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Scales",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Increased Size",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Dread Gaze",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "o6jfnBaCFvjD7H7M",
+   "name": "Demon [modern] Devil (Nusku)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Shroud of Flames",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Immunity of Fire",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Actions",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Initiative",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Claws/Teeth",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Lashing Tail",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Increased Size",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Fiery Blood",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "LxvoEhE3w0eoAFcj",
+   "name": "Demon [modern] Devil (Qingu)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Wings",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Inhuman Allure",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Radiant Aura",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Sense of the Hidden",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Voice of the Damned",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Casts No Reflection",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Corrosive Spit",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Horns",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "a1XmvpdR7xq9SkhW",
+   "name": "Demon [modern] Devourer (Aruru)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Enhanced Social Traits",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Immunity to Poisons",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Initiative",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Casts No Reflection",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Health Levels",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Armor",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Gaping Maw",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Regeneration",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "c8eVWd6l7DEpl8nr",
+   "name": "Demon [modern] Devourer (Ninurtu)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Enhanced Senses",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Chameleon Skin",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Pass Without Trace",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Health Levels",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Thorns",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Increased Size",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Limbs",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Venom",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "WvwYTFo6i8f9qNcj",
+   "name": "Demon [modern] Devourer (Zaltu)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Increased Size",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Senses",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Claws/Teeth",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Actions",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Thick Hide",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Gaping Maw",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Limbs",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Chameleon Skin",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "ZImDnQknuAZUIiHQ",
+   "name": "Demon [modern] Fiend (Nedu)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Pass Without Trace",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Perception",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Increased Awareness",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Wings",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Cloak of Shadows",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Initiative",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Dodge",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Casts No Reflection",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "g2S8tiocuy2P87rR",
+   "name": "Demon [modern] Fiend (Ninsun)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Wings",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Initiative",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Intuition",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhancd Mental Acuity",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Aura of Misfortune",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Actions",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Limbs",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Sibilant Whispers",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "l9FpK13HDfJp35ja",
+   "name": "Demon [modern] Fiend (Shamash)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Enhancd Mental Acuity",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Night Sight",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Chimerical Aura",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Unearthly Glamour",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Hypnotic Visions",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Dread Mien",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Chimerical Attack",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Casts No Reflection",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "g3zj7qC8O4VeBl21",
+   "name": "Demon [modern] Malefactor (Antu)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Dead reckoning",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Perception",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Initiative",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Flashing Fingers",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Pass Without Trace",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Alter Size",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Mirage",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Relentless",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "M3vHf1W1tm9WSsQx",
+   "name": "Demon [modern] Malefactor (Kishar)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Increased Size",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Immune to Bashing Damage",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Irresistable Force",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Night Vision",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Limbs",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Gaping Maw",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Spikes",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Ichor",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "1U6iRpE56wIs50Cd",
+   "name": "Demon [modern] Malefactor (Mummu)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Master Artisan",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Increased Size",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Thunderous Voice",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Immunity of Fire",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Blades",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Limbs",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Magnetic Field",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Iron Skin",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "XPATZUIY1e0xvuVZ",
+   "name": "Demon [modern] Scourge (Anshar)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Enhanced Senses",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Wings",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Intuition",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Dodge",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Cloak of Shadows",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Multiple Eyes",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Initiative",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Claws",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "PTxuvDc7LBQR6FTX",
+   "name": "Demon [modern] Scourge (Dagan)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Aura of Vitality",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Pass Without Trace",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Physical Capabilities",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Wings",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Miasma",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Health Levels",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Viscous Flesh",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Limbs",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "NvhcOXneJ6u0eQUf",
+   "name": "Demon [modern] Scourge (Ellil)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Supernatural Vision",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Wings",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Perfect Balance",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Immune to Falling Damage",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Claws",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Extra Actions",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Quills",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Caustic Bile",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "zsyDKpurzB9IcqGn",
+   "name": "Demon [modern] Slayer (Ereshkigal)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Dead Reckoning",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Pass Without Trace",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Increased Awareness",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Conjure from Nothing",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Cloak of Shadows",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Relentless",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Voice of the Grave",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Dread Gaze",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "YSUD5lJuRD9HXTqu",
+   "name": "Demon [modern] Slayer (Namtar)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Wings",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Improved Initiative",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Pass Without Trace",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Casts No Reflection",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Cloak of Shadows",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Deathgrip",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Aura of Entropy",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Damage Resistance",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "C8xqhI5GcJmgH5gc",
+   "name": "Demon [modern] Slayer (Nergal)",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [
+    {
+     "name": "Mortal",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Ghost Sight",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Enhanced Social Traits",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Pass Without Trace",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Wings",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Cloak of Shadows",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Howl of the Damned",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Aura of Dread",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    },
+    {
+     "name": "Damage Resistance",
+     "type": "Trait",
+     "systype": "wod.types.apocalypticform"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing physical damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to mind-control",
+     "type": "Trait"
+    },
+    {
+     "name": "Immunity to possession",
+     "type": "Trait"
+    },
+    {
+     "name": "Invocations",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to illusion",
+     "type": "Trait"
+    },
+    {
+     "name": "Resistance to lethal damage",
+     "type": "Trait"
+    },
+    {
+     "name": "Supernatural awareness",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "4FHt1FDiSBbJtfHI",
+   "name": "Earthbound [modern] - blank",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "demon",
+    "game": "demon",
+    "era": "modern",
+    "variant": "earthbound",
+    "variantsheet": "demon",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "faithpool",
+     "group": "",
+     "max": 50
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "emotion",
+     "group": "Urge",
+     "max": 5
+    },
+    {
+     "id": "flesh",
+     "group": "Urge",
+     "max": 5
+    },
+    {
+     "id": "thought",
+     "group": "Urge",
+     "max": 5
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "65aHPOk2Jclzr5Lk",
+   "name": "Thrall [modern]",
+   "folder": "Demon the Fallen",
+   "settings": {
+    "id": "mortal",
+    "game": "demon",
+    "era": "modern",
+    "variant": "thrall",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "faith",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "torment",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "conviction",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "O0YdC1kcolrgVLaG",
+   "name": "Abyssal Exalted",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "abyssal",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "YX23GxniMYHyBlir",
+   "name": "Alchemical Exalted",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "alchemical",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "PPpW7w2TUKgfDOJI",
+   "name": "Dragon-Born Exalted",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "dragon",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "R5K8zwPT13Ohef4E",
+   "name": "Infernal Exalted [demon emperor]",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "infernal",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Human",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Demon Emperor Shintai",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "36vbpZ55I0yeSo6N",
+   "name": "Infernal Exalted [devil-beast]",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "infernal",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Human",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Devil-Beast Shintai",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "SQgZthyDMPfb4FNd",
+   "name": "Infernal Exalted [devil-tyrant]",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "infernal",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Human",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Devil-Tyrant Avatar Shintai",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "OjQNYnyYOuqOE9Vr",
+   "name": "Infernal Exalted [incarnate apotheosis]",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "infernal",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Human",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Incarnate Apotheosis Shintai",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "8eSV77pBYrnRIox2",
+   "name": "Liminal Exalted",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "liminal",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limit",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "Cl9HsQoCSqTTkjIV",
+   "name": "Lunar Exalted [beastman]",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "lunar",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Human",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Beastman",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "XZc2EmvuqkQsQAGw",
+   "name": "Lunar Exalted [earthshaker]",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "lunar",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Human",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Earthshaker",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "iDUWuIWcOOxFJmHc",
+   "name": "Lunar Exalted [farstrider]",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "lunar",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Human",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Farstrider",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "3YLcinAOGxMeU2qG",
+   "name": "Lunar Exalted [lord of fangs]",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "lunar",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Human",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Lord of Fangs",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "usaP0p99eKJdx0S4",
+   "name": "Lunar Exalted [nightstalker]",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "lunar",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Human",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Nightstalker",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "JCnz2ETclBdCGUYW",
+   "name": "Lunar Exalted [scutterling]",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "lunar",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [
+    {
+     "name": "Human",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Scutterling",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "7bt3AmpRzJNR3SMh",
+   "name": "Sidereal Exalted",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "sidereal",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "DuQOYQ7i4jlzVxE7",
+   "name": "Solar Exalted",
+   "folder": "Exalted vs WoD",
+   "settings": {
+    "id": "exalted",
+    "game": "exalted",
+    "era": "modern",
+    "variant": "solar",
+    "variantsheet": "exalted",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "essence",
+     "group": "",
+     "max": 5
+    },
+    {
+     "id": "essencepool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "limitbreak",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "wXciA1SkLwzwSXMz",
+   "name": "Hunter [modern]",
+   "folder": "Hunter the Reckoning",
+   "settings": {
+    "id": "hunter",
+    "game": "hunter",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "hunter",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "conviction",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "mercy",
+     "group": "huntervirtue",
+     "max": 10
+    },
+    {
+     "id": "vision",
+     "group": "huntervirtue",
+     "max": 10
+    },
+    {
+     "id": "zeal",
+     "group": "huntervirtue",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "wDkSXq0D3pPzKUhA",
+   "name": "Mage [modern]",
+   "folder": "Mage the Ascension",
+   "settings": {
+    "id": "mage",
+    "game": "mage",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "mage",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 33,
+   "advantages": [
+    {
+     "id": "arete",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "quintessence",
+     "group": "quintessence",
+     "max": 20
+    },
+    {
+     "id": "paradox",
+     "group": "quintessence",
+     "max": 20
+    }
+   ],
+   "features": [],
+   "powers": [
+    {
+     "name": "Correspondence",
+     "type": "Sphere"
+    },
+    {
+     "name": "Entropy",
+     "type": "Sphere"
+    },
+    {
+     "name": "Forces",
+     "type": "Sphere"
+    },
+    {
+     "name": "Life",
+     "type": "Sphere"
+    },
+    {
+     "name": "Matter",
+     "type": "Sphere"
+    },
+    {
+     "name": "Mind",
+     "type": "Sphere"
+    },
+    {
+     "name": "Prime",
+     "type": "Sphere"
+    },
+    {
+     "name": "Spirit",
+     "type": "Sphere"
+    },
+    {
+     "name": "Time",
+     "type": "Sphere"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "WrXmRHlD0BfTMBSH",
+   "name": "Mage [sorcerers crusade]",
+   "folder": "Mage the Ascension",
+   "settings": {
+    "id": "mage",
+    "game": "mage",
+    "era": "victorian",
+    "variant": "general",
+    "variantsheet": "mage",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 33,
+   "advantages": [
+    {
+     "id": "arete",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "quintessence",
+     "group": "quintessence",
+     "max": 20
+    },
+    {
+     "id": "paradox",
+     "group": "quintessence",
+     "max": 20
+    }
+   ],
+   "features": [],
+   "powers": [
+    {
+     "name": "Correspondence",
+     "type": "Sphere"
+    },
+    {
+     "name": "Entropy",
+     "type": "Sphere"
+    },
+    {
+     "name": "Forces",
+     "type": "Sphere"
+    },
+    {
+     "name": "Life",
+     "type": "Sphere"
+    },
+    {
+     "name": "Matter",
+     "type": "Sphere"
+    },
+    {
+     "name": "Mind",
+     "type": "Sphere"
+    },
+    {
+     "name": "Prime",
+     "type": "Sphere"
+    },
+    {
+     "name": "Spirit",
+     "type": "Sphere"
+    },
+    {
+     "name": "Time",
+     "type": "Sphere"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "jGuw3ThrqSbcUEvY",
+   "name": "Mage [victorian age]",
+   "folder": "Mage the Ascension",
+   "settings": {
+    "id": "mage",
+    "game": "mage",
+    "era": "victorian",
+    "variant": "general",
+    "variantsheet": "mage",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 33,
+   "advantages": [
+    {
+     "id": "arete",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "quintessence",
+     "group": "quintessence",
+     "max": 20
+    },
+    {
+     "id": "paradox",
+     "group": "quintessence",
+     "max": 20
+    }
+   ],
+   "features": [],
+   "powers": [
+    {
+     "name": "Correspondence",
+     "type": "Sphere"
+    },
+    {
+     "name": "Entropy",
+     "type": "Sphere"
+    },
+    {
+     "name": "Forces",
+     "type": "Sphere"
+    },
+    {
+     "name": "Life",
+     "type": "Sphere"
+    },
+    {
+     "name": "Matter",
+     "type": "Sphere"
+    },
+    {
+     "name": "Mind",
+     "type": "Sphere"
+    },
+    {
+     "name": "Prime",
+     "type": "Sphere"
+    },
+    {
+     "name": "Spirit",
+     "type": "Sphere"
+    },
+    {
+     "name": "Time",
+     "type": "Sphere"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "T0lVPWuPZM5UltrA",
+   "name": "Mortal [modern]",
+   "folder": "Mage the Ascension",
+   "settings": {
+    "id": "mortal",
+    "game": "mage",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "IMazQRCw7pkA7zY3",
+   "name": "Sorcerer [modern]",
+   "folder": "Mage the Ascension",
+   "settings": {
+    "id": "mortal",
+    "game": "mage",
+    "era": "modern",
+    "variant": "sorcerer",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "quintessence",
+     "group": "quintessence",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "OHDi0aA9QhqxETZG",
+   "name": "Mummy [modern]",
+   "folder": "Mummy the Resurrection",
+   "settings": {
+    "id": "mummy",
+    "game": "mummy",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "mummy",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "balance",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "sekhem",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 6
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "jvAs0hs1BLC9vwoS",
+   "name": "Anupa-Ba-El [savage age]",
+   "folder": "Savage  Age",
+   "settings": {
+    "id": "anupabael",
+    "game": "werewolf",
+    "era": "savage",
+    "variant": "general",
+    "variantsheet": "werewolf",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 24,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Anupa-Ba-El - Naria",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Anupa-Ba-El - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Anupa-Ba-El - Alkab",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Anupa-Ba-El - Aureus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "XNgl9oNrAcsmQ1Qo",
+   "name": "Apis [savage age]",
+   "folder": "Savage  Age",
+   "settings": {
+    "id": "apis",
+    "game": "werewolf",
+    "era": "savage",
+    "variant": "apis",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 24,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Apis - Minotaur",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Apis - Aurochs",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "VHE4c2NMRsrgdjH2",
+   "name": "Ceilican [savage age]",
+   "folder": "Savage  Age",
+   "settings": {
+    "id": "ceilican",
+    "game": "werewolf",
+    "era": "savage",
+    "variant": "ceilican",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 24,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Ceilican - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Ceilican - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Ceilican - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Ceilican - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "ScWjllpo6Bm03KRL",
+   "name": "Garou [savage age]",
+   "folder": "Savage  Age",
+   "settings": {
+    "id": "bilai",
+    "game": "werewolf",
+    "era": "savage",
+    "variant": "general",
+    "variantsheet": "werewolf",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 24,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Glabro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Bilai - Hispo",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Lupus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "g5ZOSBhCbRO5W93Z",
+   "name": "Grondr [savage age]",
+   "folder": "Savage  Age",
+   "settings": {
+    "id": "grondir",
+    "game": "werewolf",
+    "era": "savage",
+    "variant": "grondr",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 24,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Grondr - Aperius",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Grondr - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Grondr - Daeodon",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Grondr - Scrofa",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "CWXIyNgMmsEtZ0w7",
+   "name": "Human [savage age]",
+   "folder": "Savage  Age",
+   "settings": {
+    "id": "mortal",
+    "game": "werewolf",
+    "era": "savage",
+    "variant": "general",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 24,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "LRfqkZfWof4VNKuH",
+   "name": "Khara [savage age]",
+   "folder": "Savage  Age",
+   "settings": {
+    "id": "khara",
+    "game": "werewolf",
+    "era": "savage",
+    "variant": "khara",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 24,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khara - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khara - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khara - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Khara - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "Ms8CYDY4tbV3w2xs",
+   "name": "Naghaluu [savage age]",
+   "folder": "Savage  Age",
+   "settings": {
+    "id": "naghaluu",
+    "game": "werewolf",
+    "era": "savage",
+    "variant": "naghaluu",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 24,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Naghaluu - Glabro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Naghaluu - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Naghaluu - Hispo",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Naghaluu - Dirus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "DkIZAPB4oZRFzIiN",
+   "name": "Saksom Aknami [savage age]",
+   "folder": "Savage  Age",
+   "settings": {
+    "id": "saksomaknami",
+    "game": "werewolf",
+    "era": "savage",
+    "variant": "saksomaknami",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 24,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Saksom Aknami - Arthren",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Saksom Aknami - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Saksom Aknami - Arthren",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Saksom Aknami - Ursus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "PcBo2ruod6EwNedu",
+   "name": "Wlewa [savage age]",
+   "folder": "Savage  Age",
+   "settings": {
+    "id": "wlewa",
+    "game": "werewolf",
+    "era": "savage",
+    "variant": "wlewa",
+    "variantsheet": "changingbreed",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 24,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Wlewa - Sokto",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Wlewa - Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Wlewa - Chatro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Wlewa - Feline",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "Br4rkSYqMFZu5l0E",
+   "name": "Ghoul [modern]",
+   "folder": "Vampire the Masquerade",
+   "settings": {
+    "id": "mortal",
+    "game": "vampire",
+    "era": "modern",
+    "variant": "ghoul",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "path",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "bloodpool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "selfcontrol",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "XT116hykBKuVTwqe",
+   "name": "Kindred of the East [modern]",
+   "folder": "Vampire the Masquerade",
+   "settings": {
+    "id": "vampire",
+    "game": "vampire",
+    "era": "modern",
+    "variant": "kindredeast",
+    "variantsheet": "vampire",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "dharma",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "hun",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "po",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "demonchi",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "yinchi",
+     "group": "yinchi",
+     "max": 10
+    },
+    {
+     "id": "yin",
+     "group": "yinchi",
+     "max": 10
+    },
+    {
+     "id": "yang",
+     "group": "yinchi",
+     "max": 10
+    },
+    {
+     "id": "yangchi",
+     "group": "yinchi",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "hp7v8fAofTDwRL84",
+   "name": "Mortal [modern]",
+   "folder": "Vampire the Masquerade",
+   "settings": {
+    "id": "mortal",
+    "game": "vampire",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "uVtgesyvRNFxmIPL",
+   "name": "Vampire [age of the living gods]",
+   "folder": "Vampire the Masquerade",
+   "settings": {
+    "id": "vampire",
+    "game": "vampire",
+    "era": "livinggods",
+    "variant": "general",
+    "variantsheet": "vampire",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "path",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "bloodpool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "selfcontrol",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "r2jUandiughwvrqj",
+   "name": "Vampire [classical age]",
+   "folder": "Vampire the Masquerade",
+   "settings": {
+    "id": "vampire",
+    "game": "vampire",
+    "era": "classical",
+    "variant": "general",
+    "variantsheet": "vampire",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "path",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "bloodpool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "selfcontrol",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "FLiKCjmYj8nrLAKs",
+   "name": "Vampire [dark ages]",
+   "folder": "Vampire the Masquerade",
+   "settings": {
+    "id": "vampire",
+    "game": "vampire",
+    "era": "darkages",
+    "variant": "general",
+    "variantsheet": "vampire",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "path",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "bloodpool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "selfcontrol",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "DzvMAiNxSLTy1pcH",
+   "name": "Vampire [modern]",
+   "folder": "Vampire the Masquerade",
+   "settings": {
+    "id": "vampire",
+    "game": "vampire",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "vampire",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "path",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "bloodpool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "selfcontrol",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "W0PPDhPlsNSQGxg2",
+   "name": "Vampire [victorian age]",
+   "folder": "Vampire the Masquerade",
+   "settings": {
+    "id": "vampire",
+    "game": "vampire",
+    "era": "victorian",
+    "variant": "general",
+    "variantsheet": "vampire",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "path",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "bloodpool",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "conscience",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "selfcontrol",
+     "group": "virtue",
+     "max": 5
+    },
+    {
+     "id": "courage",
+     "group": "virtue",
+     "max": 5
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "pyShiXW1GooWXuQr",
+   "name": "Kinfolk [modern]",
+   "folder": "Werewolf the Apocalypse",
+   "settings": {
+    "id": "mortal",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "kinfolk",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "8mcypXXUEqxCxmA1",
+   "name": "Mortal [modern]",
+   "folder": "Werewolf the Apocalypse",
+   "settings": {
+    "id": "mortal",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "S7LiDR2wrsK0oujc",
+   "name": "Werewolf [dark ages]",
+   "folder": "Werewolf the Apocalypse",
+   "settings": {
+    "id": "werewolf",
+    "game": "werewolf",
+    "era": "darkages",
+    "variant": "general",
+    "variantsheet": "werewolf",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Glabro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Hispo",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Lupus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "iZIbuVK2k919yBL8",
+   "name": "Werewolf [modern]",
+   "folder": "Werewolf the Apocalypse",
+   "settings": {
+    "id": "werewolf",
+    "game": "werewolf",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "werewolf",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Glabro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Hispo",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Lupus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "S135ikG9K40U27Ek",
+   "name": "Werewolf [wild west]",
+   "folder": "Werewolf the Apocalypse",
+   "settings": {
+    "id": "werewolf",
+    "game": "werewolf",
+    "era": "victorian",
+    "variant": "general",
+    "variantsheet": "werewolf",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "rage",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "gnosis",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "glory",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "honor",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "wisdom",
+     "group": "renown",
+     "max": 10
+    },
+    {
+     "id": "rank",
+     "group": "renown",
+     "max": 6
+    }
+   ],
+   "features": [
+    {
+     "name": "Homid",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Glabro",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Crinos",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Hispo",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    },
+    {
+     "name": "Lupus",
+     "type": "Trait",
+     "systype": "wod.types.shapeform"
+    }
+   ],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "1ZBqVQoKs9QvBqip",
+   "name": "Orpheus [modern]",
+   "folder": "Wraith the Oblivion",
+   "settings": {
+    "id": "mortal",
+    "game": "wraith",
+    "era": "modern",
+    "variant": "orpheus",
+    "variantsheet": "mortal",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 36,
+   "advantages": [
+    {
+     "id": "vitality",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "spite",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [
+    {
+     "name": "Dead-Eyes",
+     "type": "Trait"
+    },
+    {
+     "name": "Detect Nature Group",
+     "type": "Trait"
+    },
+    {
+     "name": "Incorporeal & Invisible",
+     "type": "Trait"
+    },
+    {
+     "name": "Manifest",
+     "type": "Trait"
+    },
+    {
+     "name": "Misery Loves Company",
+     "type": "Trait"
+    },
+    {
+     "name": "Sense Lifeline",
+     "type": "Trait"
+    },
+    {
+     "name": "Sever the Strand",
+     "type": "Trait"
+    },
+    {
+     "name": "Thievery",
+     "type": "Trait"
+    }
+   ],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "VPVp4UIzKF0hW1Wb",
+   "name": "Shadow [modern]",
+   "folder": "Wraith the Oblivion",
+   "settings": {
+    "id": "wraith",
+    "game": "wraith",
+    "era": "modern",
+    "variant": "shadow",
+    "variantsheet": "wraith",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 0,
+   "advantages": [
+    {
+     "id": "angst",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "psychewillpower",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  },
+  {
+   "pack_id": "diAE3ZARAmJAiRI6",
+   "name": "Wraith [modern]",
+   "folder": "Wraith the Oblivion",
+   "settings": {
+    "id": "wraith",
+    "game": "wraith",
+    "era": "modern",
+    "variant": "general",
+    "variantsheet": "wraith",
+    "usechimerical": false
+   },
+   "defaultmax": {
+    "attributes": 5,
+    "abilities": 5,
+    "powers": 5
+   },
+   "abilities": 30,
+   "advantages": [
+    {
+     "id": "pathos",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "willpower",
+     "group": "",
+     "max": 10
+    },
+    {
+     "id": "corpus",
+     "group": "",
+     "max": 10
+    }
+   ],
+   "features": [],
+   "powers": [],
+   "health": {
+    "damage": null,
+    "bruised": 1,
+    "hurt": 1,
+    "injured": 1,
+    "wounded": 1,
+    "mauled": 1,
+    "crippled": 1,
+    "incapacitated": 1
+   },
+   "itemuuid_refs": 0
+  }
+ ]
+}

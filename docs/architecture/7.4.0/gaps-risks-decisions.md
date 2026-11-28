@@ -14,6 +14,11 @@ Identyfikatory są stabilne. Status wiedzy nie jest statusem realizacji ani test
 | GAP-008 Różnice platform V14/V15 / D03, D05, D07 | v8.x deklaruje Foundry v15, baseline to V14 | Osobno zbudować platform delta; nie zmieniać referencji 7.4.0 |
 | GAP-009 Pełne testy release oraz graf include/partial / D03, D06 | Wybrane 7 kontroli nie obejmuje wszystkich zasobów | Pobrać pełny snapshot i wykonać pełne npm test oraz walidację Mermaid |
 | GAP-010 Szczegółowe dowody zakresu każdego komponentu dla każdej linii / D01, D03 | Warunki są rozproszone; główne ścieżki to nie cała implementacja | Powiązać warunki has*/id/variant z konsumentami i testami |
+| GAP-011 `settings.splat` spoza słownika (Savage Age) / D01, D03, D06 | 9 Splatów z compendium ma `id` spoza `CONFIG.splat`; konsumenci porównują z nazwą linii (FND-003) | Pełna lista konsumentów `splat`/`game`; decyzja maintenera, czy epoka ma być kodowana w `id`; REG-015 |
+| GAP-012 Aktualność snapshotu v8.x / D05 | Iteracja 2 nie miała dostępu do API GitHub upstream | Ponowny odczyt stron milestone i komentarzy; porównanie `updated_at` z discovery.json |
+| GAP-013 PC Creature / Spirit bez Splata w compendium / D01, D05 | Klucze są w `CONFIG.splat`, w pakach brak definicji (FND-007) | Ustalić z użytkownikami/maintenerem, jak budowane są takie postacie; przypisać #1218 do PC albo legacy |
+
+**Adnotacje iteracji 2 (28.11.2026):** GAP-001 częściowo zamknięta: paki systemu odczytane statycznie, 4840/4840 odwołań UUID rozwiązanych ([d00-verification.md](d00-verification.md), FND-005). GAP-009 częściowo zamknięta: pełne `npm test` 206/206 PASS; walidacja Mermaid nadal otwarta.
 
 ## Architecture Risk Register
 | ID | Waga / stan wiedzy | Ryzyko | Dowód i dalszy krok |
@@ -27,6 +32,10 @@ Identyfikatory są stabilne. Status wiedzy nie jest statusem realizacji ani test
 | RSK-007 MEDIUM / HYPOTHESIS | game.actors lookup może użyć innego źródła niż tokenowy snapshot | Totals i obliczenia Item odczytują kolekcję aktorów. REG-003/004 i unlinked token, bez domyślnej oceny wyniku |
 | RSK-008 HIGH / UNKNOWN | Ukrywanie interfejsu może nie spełniać oczekiwania poufności #1240/#1352 | Helper Bio i role nie są dowodem kontraktu transportowego. Rozstrzygnąć wymaganie i wykonać REG-009 |
 | RSK-009 MEDIUM / INFERRED | Wynik atrapy Node może być przeniesiony na Foundry bez dowodu | tests/README i ograniczenia tej sesji. Status wykonywania i status wiedzy muszą być oddzielne |
+| RSK-010 HIGH / VERIFIED | Naprawa RSK-001 samego `ReferenceError` ujawni kolejny wyjątek na `this.actor` | PROBE-002, `drop-helpers.js:572`. PKG-001 obejmuje obie linie; test liczy faktyczne usunięcia |
+| RSK-011 LOW / VERIFIED (code), HYPOTHESIS (intencja) | `abilities.defaultmaxvalue` nadpisywane limitem mocy; `powers.defaultmaxvalue` nieustawiane | `drop-helpers.js:770`. Dziś niewidoczne (115 × 5/5/5); własne Splaty z innymi limitami |
+| RSK-012 MEDIUM / INFERRED | Warunki `splat == <linia>` pomijają Savage Age i inne `id` spoza słownika | FND-003, FND-006. Każda zmiana warunkowana linią testowana także na Garou Savage Age (REG-015) |
+| RSK-013 MEDIUM / HYPOTHESIS | `actor.update(duplicate(actor))` z nieaktualną tablicą `items` może nadpisać zmiany Itemów | FND-009, `drop-helpers.js:638/819`, `:847/1009`. REG-008 z obserwacją Itemów po instalacji |
 
 ## Architecture Decision Register
 ACCEPTED dotyczy ustaleń tego zadania. OPEN nie jest decyzją maintenera.

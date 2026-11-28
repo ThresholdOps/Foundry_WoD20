@@ -7,7 +7,9 @@
 | TEST-003 | 125 lokalnych plików względem hashy blobów Git | PASS — 0 rozbieżności | pierwotny snapshot, nie całe archiwum |
 | PROBE-001 | zastąpienie istniejącego Splat po zgodzie | FAIL funkcjonalny: ReferenceError, 0 delete | błąd odtworzony w Node; bez UI |
 | TEST-004 | ekstrakcja defineSchema sześciu modeli | PASS wykonania ekstraktora | deskryptory pól, nie walidacja Foundry |
-| TEST-005 | pełne npm test | NOT TESTED | nie pobrano całych templates/lang/styles/packs |
+| TEST-005 | pełne npm test | PASS — 206/206 (iteracja 2) | Node v22.23.5, pełne repozytorium; nadal atrapy Foundry |
+| PROBE-002 | wymiana Splata po usunięciu ReferenceError | FAIL funkcjonalny: TypeError na `this.actor`, 0 delete | łatana kopia tymczasowa; [reproduktor](checks/reproduce-splat-replacement-masked.mjs) |
+| CHK-SPLAT-REF | odwołania UUID Splat → składniki w pakach | PASS — 4840/4840 | analiza danych; [skrypt](checks/check-splat-references.py) |
 | TEST-006 | Foundry V14 / oba typy kart | BLOCKED | brak dostępnej instancji w tej sesji; środowisko wykonawcze ponownie niedostępne |
 | TEST-007 | dwa klienty i aktorzy tokenowi | BLOCKED | brak bieżącej próby runtime |
 | TEST-008 | prywatny prototyp ZIP | NOT TESTED | nie użyto jako źródła aktualnego działania |
@@ -45,6 +47,7 @@ Wszystkie poniższe pozycje mają status NOT TESTED; dostęp do środowiska jest
 | REG-012 | CAP-004/CAP-011 | hybryda Mage+Ghoul, custom Ability i custom Splat; dodatnia capability i jej brak |
 | REG-013 | CAP-008 | wszystkie 6 kluczy epok oraz krótkie/pełne wartości; poprawny fallback i brak zmiany zapisanej semantyki |
 | REG-014 | wszystkie wspólne ścieżki | PC dla każdej wykrytej rodziny i reprezentatywne legacy; zakres rozszerzać według warunków, nie tylko etykiet |
+| REG-015 | SCN-002/007/012/016 | Garou Savage Age (`settings.splat = bilai`) obok Werewolf modern: makra Frenzy/Shapechange, ruch Glabro/Crinos, klasa CSS, listy Breed/Auspice/Tribe, typ kości (FND-003) |
 
 ## Strategia warstw
 Unit sprawdza obliczenia i kategorie. Integracja powinna łączyć realne funkcje reguł z reprezentatywnymi modelami; atrapy nie mogą udawać gwarancji serwera. Runtime potwierdza modele, uprawnienia, hooki i kolejność. UI potwierdza widoczny wynik po renderze. Migracja korzysta wyłącznie z kopii świata. Multi-client mierzy oba żądania, wynik zapisu i odświeżenie. Cross-splat łączy warianty posiadające capability z przypadkiem, który jej nie ma.

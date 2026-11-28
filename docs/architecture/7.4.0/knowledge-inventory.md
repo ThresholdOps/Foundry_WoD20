@@ -12,6 +12,8 @@ Baseline `32e360a6953d41685bc605ba2cc68e9998b2f9b8`. Zakres przeszukania: znana 
 | KNW-007 | Prototyp #1366 v0.1, ZIP | metadane pliku, zawartość nieodczytana | UNKNOWN wersji; nie użyto do twierdzeń o As-Is |
 | KNW-008 | Załączony Architecture Discovery prompt | wymagania D00–D07 | wymaganie użytkownika, nie opis rzeczywistego kodu; wykryto dwie kopie pliku o tej samej wielkości |
 | KNW-009 | Issues v8.x i komentarze | aktualny odczyt 28.11.2026 | VERIFIED treści tekstowej i stanów w chwili odczytu; implementacja wymaga dowodu z kodu |
+| KNW-010 | Dokumentacja Charona jako całość (commit dok. 8f19211) | kod 32e360a | VERIFIED wyrywkowo w iteracji 2: 14/14 twierdzeń, 0 CONFLICT — [d00-verification.md](d00-verification.md) |
+| KNW-011 | Compendia systemu `packs/*` (LevelDB) | 32e360a | VERIFIED(data): odczyt statyczny 32 paków z manifestu; `packs/abilities` pusty i poza manifestem |
 
 ## Walidacja odziedziczonej mapy
 - Tag v7.4.0 i upstream main wskazywały przy odczycie na `32e360a6953d41685bc605ba2cc68e9998b2f9b8`. To stan chwilowy; dalsze analizy nadal używają SHA.

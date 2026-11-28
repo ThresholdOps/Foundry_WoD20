@@ -4,7 +4,7 @@
 ## Stan faz
 | Faza | Stan | Zakres / wyniki | Co potrzebne do odbioru |
 | --- | --- | --- | --- |
-| D00 Inwentaryzacja zidentyfikowanych materiałów i luk | COMPLETE | knowledge-inventory.md, gaps-risks-decisions.md. Dowody: tag/main SHA; 125 zgodnych blobów; 198 wybranych testów; PROBE-001 | zarejestrowane źródła, wersje, granice dowodu, obszary brakujące i plan uzupełnienia. Otwarte: GAP-007: ZIP historyczny nieużyty jako bieżący dowód |
+| D00 Inwentaryzacja zidentyfikowanych materiałów i luk | COMPLETE (iteracja 2: zweryfikowana) | knowledge-inventory.md, d00-verification.md, gaps-risks-decisions.md. Dowody: tag/main SHA; 206/206 npm test; PROBE-001, PROBE-002; CHK-SPLAT-REF 4840/4840; 14/14 VER | zarejestrowane źródła, wersje, granice dowodu, obszary brakujące i plan uzupełnienia. Otwarte: GAP-007, GAP-012 |
 | D01 Game/Era/Splat, typy, capabilities i schematy | PARTIAL | functional-catalog.md, catalog.json. Dowody: 13 Actor types; 16 Item types; 6 eras; 47 variant keys; 6 modeli | pełny katalog rzeczywistych szablonów/form i powiązań oraz sprawdzone warunki. Otwarte: GAP-001, GAP-010 |
 | D02 Słownik semantyczny, źródła prawdy i przepływ zapisu | PARTIAL | data-model.md, catalog.json. Dowody: DAT-001–020; macierz zapisów; łańcuch atrybut→odbiorcy | field-level sources/writers/consumers i lifecycle całego zakresu D02. Otwarte: GAP-002, GAP-004 |
 | D03 Komponenty, interfejsy, rozszerzenia i Foundry | PARTIAL | components.md, discovery.json. Dowody: CMP-001–020; IF-001–014; EXT-001–007; 245 importów | pełne zależności wywołań/globali/template oraz kontrakty platformy. Otwarte: GAP-009, GAP-010, GAP-008 |
@@ -14,6 +14,15 @@
 | D07 Końcowa Development Roadmap i Candidate PR Backlog | NOT_STARTED | roadmap.md zawiera kolejność rozpoznania, nie końcowy projekt. Dowody: wstępne PKG z D05 | ocena wartości, zakresu, kosztu testów i ryzyka każdego niezależnego kandydata po domknięciu wiedzy. Otwarte: DEC-004–010, bramki NEXT-001–007 |
 
 Pełne rekordy faz z wejściami/wyjściami/kryteriami/dowodami są w discovery.json. COMPLETE D00 oznacza wykonanie inwentaryzacji i rejestru luk w zidentyfikowanym zakresie, nie ukończenie rozpoznania systemu ani odczyt każdego prywatnego archiwum.
+
+## Iteracja 2 — 28 listopada 2026 (Moros)
+- Zweryfikowano wyrywkowo mapę Charona: 14/14 twierdzeń potwierdzonych, bez CONFLICT.
+- Pełne `npm test`: 206/206 PASS (zamyka TEST-005).
+- PROBE-002: po usunięciu `ReferenceError` wymiana Splata pada na `this.actor` (FND-001, RSK-010).
+- Odczytano compendia systemu z LevelDB: 115 Splatów, 4840 odwołań UUID, 0 zerwanych (FND-005, częściowo GAP-001).
+- Savage Age zapisuje `settings.splat` spoza `CONFIG.splat` (FND-003, GAP-011, REG-015).
+- Przy instalacji wygrywa źródło z compendium, nie kopia w Splacie (FND-004).
+- Ograniczenie: brak dostępu do API GitHub upstream w tej sesji, snapshot v8.x nieodświeżony (GAP-012).
 
 ## Co zmieniło się względem v0.1
 - Odczytano i zastosowano pełny prompt D00–D07.
