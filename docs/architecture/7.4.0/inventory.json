@@ -1,0 +1,4040 @@
+{
+  "schema_version": 1,
+  "title": "WoD20 7.4.0 architecture inventory",
+  "created_date": "2026-11-28",
+  "source": {
+    "repository": "JohanFalt/Foundry_WoD20",
+    "tag": "v7.4.0",
+    "commit": "32e360a6953d41685bc605ba2cc68e9998b2f9b8",
+    "tree": "e29d053ffb2ea82fb6f5a0e348d5cbf7f4d3053c",
+    "tree_truncated": false
+  },
+  "verification": {
+    "runtime_tests": "not confirmed: execution environment disconnected before result",
+    "foundry_live": "not performed",
+    "method": "Text extraction of literal relative import/export-from statements across all repository .js files; block comments removed; unique directed file pairs; excludes dynamic imports, global and template dependencies.",
+    "downloaded_source_files": 125,
+    "manually_traced": "bootstrap; PC/legacy split; main update paths; general roll; Splat installation; attribute augmentation"
+  },
+  "summary": {
+    "commit": "32e360a6953d41685bc605ba2cc68e9998b2f9b8",
+    "repository_files": 688,
+    "js_files": 105,
+    "module_js_files": 98,
+    "retrieved_files": 125,
+    "unread_js": [],
+    "templates": 196,
+    "hbs": 74,
+    "html": 122,
+    "test_files": 12,
+    "packs": 32,
+    "styles": 17,
+    "languages": 7,
+    "actor_types": [
+      "PC",
+      "Changeling",
+      "Changing Breed",
+      "Creature",
+      "Demon",
+      "Exalted",
+      "Hunter",
+      "Mage",
+      "Mortal",
+      "Mummy",
+      "Vampire",
+      "Wraith",
+      "Werewolf"
+    ],
+    "item_types": [
+      "Splat",
+      "Ability",
+      "Advantage",
+      "Sphere",
+      "Realm",
+      "Armor",
+      "Bonus",
+      "Experience",
+      "Feature",
+      "Fetish",
+      "Item",
+      "Melee Weapon",
+      "Ranged Weapon",
+      "Power",
+      "Rote",
+      "Trait"
+    ],
+    "import_edges": 245,
+    "cycles": [
+      [
+        "module/scripts/combat-helpers.js",
+        "module/scripts/roll-dice.js"
+      ]
+    ],
+    "missing_imports": [],
+    "most_imported": [
+      [
+        "module/scripts/bonus-helpers.js",
+        22
+      ],
+      [
+        "module/scripts/action-helpers.js",
+        17
+      ],
+      [
+        "module/scripts/create-helpers.js",
+        15
+      ],
+      [
+        "module/scripts/roll-dice.js",
+        13
+      ],
+      [
+        "module/actor/template/mortal-actor-sheet.js",
+        12
+      ],
+      [
+        "module/scripts/combat-helpers.js",
+        11
+      ],
+      [
+        "module/scripts/select-helpers.js",
+        10
+      ],
+      [
+        "module/scripts/totals.js",
+        7
+      ],
+      [
+        "module/scripts/drop-helpers.js",
+        7
+      ],
+      [
+        "module/scripts/select/utils.js",
+        6
+      ],
+      [
+        "module/scripts/health.js",
+        5
+      ],
+      [
+        "module/scripts/item-helpers.js",
+        5
+      ]
+    ],
+    "largest_js": [
+      [
+        "module/migration.js",
+        4145
+      ],
+      [
+        "module/scripts/create-helpers.js",
+        3383
+      ],
+      [
+        "module/scripts/action-helpers.js",
+        2175
+      ],
+      [
+        "module/actor/data/wod-actor-base.js",
+        2144
+      ],
+      [
+        "module/scripts/totals.js",
+        1851
+      ],
+      [
+        "module/scripts/drop-helpers.js",
+        1818
+      ],
+      [
+        "module/handlebars.js",
+        1761
+      ],
+      [
+        "module/scripts/bonus-helpers.js",
+        1641
+      ],
+      [
+        "module/settings.js",
+        1623
+      ],
+      [
+        "module/actor/template/pc-actor-sheet.js",
+        1617
+      ]
+    ],
+    "system_version": "7.4.0",
+    "reachable_js": 103,
+    "not_reached_js": [
+      "module/dialogs/dialog-weapon.js",
+      "module/scripts/import-helpers.js"
+    ]
+  },
+  "imports": {
+    "assets/data/sheet/ability.js": [],
+    "assets/data/sheet/bio.js": [],
+    "assets/data/sheet/biotab.js": [],
+    "assets/data/sheet/powertab.js": [],
+    "module/actor/api-handler.js": [
+      "module/scripts/roll-dice.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/combat-helpers.js"
+    ],
+    "module/actor/data/wod-actor-base.js": [
+      "module/scripts/totals.js",
+      "module/scripts/combat-helpers.js",
+      "module/scripts/create-helpers.js",
+      "module/functions.js",
+      "module/actor/api-handler.js"
+    ],
+    "module/actor/datamodel/_module.js": [
+      "module/actor/datamodel/pc-actor-datamodel.js"
+    ],
+    "module/actor/datamodel/base/actor_attributes.js": [],
+    "module/actor/datamodel/base/actor_health.js": [],
+    "module/actor/datamodel/base/actor_settings.js": [],
+    "module/actor/datamodel/base/actor_traits.js": [],
+    "module/actor/datamodel/pc-actor-datamodel.js": [
+      "module/actor/datamodel/base/actor_attributes.js",
+      "module/actor/datamodel/base/actor_settings.js",
+      "module/actor/datamodel/base/actor_traits.js",
+      "module/actor/datamodel/base/actor_health.js"
+    ],
+    "module/actor/template/_module.js": [
+      "module/actor/template/pc-actor-sheet.js",
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/actor/template/werewolf-actor-sheet.js",
+      "module/actor/template/mage-actor-sheet.js",
+      "module/actor/template/vampire-actor-sheet.js",
+      "module/actor/template/changeling-actor-sheet.js",
+      "module/actor/template/hunter-actor-sheet.js",
+      "module/actor/template/demon-actor-sheet.js",
+      "module/actor/template/wraith-actor-sheet.js",
+      "module/actor/template/mummy-actor-sheet.js",
+      "module/actor/template/exalted-actor-sheet.js",
+      "module/actor/template/changingbreed-actor-sheet.js",
+      "module/actor/template/creature-actor-sheet.js"
+    ],
+    "module/actor/template/changeling-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/create-helpers.js",
+      "module/scripts/health.js"
+    ],
+    "module/actor/template/changingbreed-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/create-helpers.js"
+    ],
+    "module/actor/template/creature-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/create-helpers.js"
+    ],
+    "module/actor/template/demon-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/create-helpers.js"
+    ],
+    "module/actor/template/exalted-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/create-helpers.js"
+    ],
+    "module/actor/template/hunter-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/create-helpers.js"
+    ],
+    "module/actor/template/mage-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/create-helpers.js",
+      "module/scripts/bonus-helpers.js"
+    ],
+    "module/actor/template/mortal-actor-sheet.js": [
+      "module/scripts/drop-helpers.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/create-helpers.js",
+      "module/scripts/bio-helpers.js",
+      "module/scripts/ability-helpers.js",
+      "module/scripts/attribute-helpers.js",
+      "module/scripts/sphere-helpers.js",
+      "module/scripts/item-helpers.js",
+      "module/scripts/select-helpers.js",
+      "module/scripts/combat-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/health.js",
+      "module/scripts/spec-select.js"
+    ],
+    "module/actor/template/mummy-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/create-helpers.js"
+    ],
+    "module/actor/template/pc-actor-sheet.js": [
+      "module/scripts/action-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/drop-helpers.js",
+      "module/scripts/item-helpers.js",
+      "module/scripts/select-helpers.js",
+      "module/scripts/health.js",
+      "module/scripts/totals.js",
+      "module/ui/attribute-augmentation-popup.js",
+      "module/scripts/bio-visibility.js"
+    ],
+    "module/actor/template/vampire-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/create-helpers.js"
+    ],
+    "module/actor/template/werewolf-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/token-helpers.js"
+    ],
+    "module/actor/template/wraith-actor-sheet.js": [
+      "module/actor/template/mortal-actor-sheet.js",
+      "module/scripts/action-helpers.js",
+      "module/scripts/create-helpers.js",
+      "module/scripts/health.js"
+    ],
+    "module/config.js": [],
+    "module/dialogs/dialog-aretecasting.js": [
+      "module/scripts/roll-dice.js"
+    ],
+    "module/dialogs/dialog-bonus.js": [
+      "module/scripts/select-helpers.js"
+    ],
+    "module/dialogs/dialog-checkfrenzy.js": [
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/roll-dice.js"
+    ],
+    "module/dialogs/dialog-edits.js": [],
+    "module/dialogs/dialog-generalroll.js": [
+      "module/scripts/roll-dice.js",
+      "module/scripts/combat-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/functions.js"
+    ],
+    "module/dialogs/dialog-item.js": [
+      "module/scripts/roll-dice.js",
+      "module/scripts/combat-helpers.js"
+    ],
+    "module/dialogs/dialog-power-selection.js": [
+      "module/scripts/create-helpers.js"
+    ],
+    "module/dialogs/dialog-power.js": [
+      "module/scripts/roll-dice.js",
+      "module/scripts/combat-helpers.js",
+      "module/scripts/bonus-helpers.js"
+    ],
+    "module/dialogs/dialog-shapechange.js": [
+      "module/scripts/roll-dice.js"
+    ],
+    "module/dialogs/dialog-soak.js": [
+      "module/scripts/roll-dice.js",
+      "module/scripts/combat-helpers.js"
+    ],
+    "module/dialogs/dialog-sortpower.js": [],
+    "module/dialogs/dialog-trait.js": [
+      "module/scripts/roll-dice.js"
+    ],
+    "module/dialogs/dialog-variant.js": [
+      "module/scripts/create-helpers.js"
+    ],
+    "module/dialogs/dialog-weapon.js": [
+      "module/scripts/combat-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/roll-dice.js"
+    ],
+    "module/dialogs/dialog-weaponv2.js": [
+      "module/scripts/select-helpers.js",
+      "module/scripts/combat-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/roll-dice.js"
+    ],
+    "module/functions.js": [],
+    "module/handlebars.js": [
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/item-helpers.js",
+      "module/functions.js",
+      "module/scripts/health.js",
+      "module/scripts/bio-visibility.js"
+    ],
+    "module/hooks.js": [],
+    "module/items/data/wod-item-base.js": [
+      "module/scripts/totals.js",
+      "module/scripts/select/era.js"
+    ],
+    "module/items/datamodel/_module.js": [
+      "module/items/datamodel/spalt-item-datamodel.js",
+      "module/items/datamodel/ability-item-datamodel.js",
+      "module/items/datamodel/advantage-item-datamodel.js",
+      "module/items/datamodel/sphere-item-datamodel.js",
+      "module/items/datamodel/realm-item-datamodel.js"
+    ],
+    "module/items/datamodel/ability-item-datamodel.js": [
+      "module/items/datamodel/base/item_base_settings.js"
+    ],
+    "module/items/datamodel/advantage-item-datamodel.js": [
+      "module/items/datamodel/base/item_base_settings.js"
+    ],
+    "module/items/datamodel/base/item_base_settings.js": [],
+    "module/items/datamodel/realm-item-datamodel.js": [
+      "module/items/datamodel/base/item_base_settings.js"
+    ],
+    "module/items/datamodel/spalt-item-datamodel.js": [
+      "module/items/datamodel/base/item_base_settings.js",
+      "module/actor/datamodel/base/actor_health.js"
+    ],
+    "module/items/datamodel/sphere-item-datamodel.js": [
+      "module/items/datamodel/base/item_base_settings.js"
+    ],
+    "module/items/template/_module.js": [
+      "module/items/template/splat-item-sheet.js",
+      "module/items/template/ability-item-sheet.js",
+      "module/items/template/advantage-item-sheet.js",
+      "module/items/template/sphere-item-sheet.js",
+      "module/items/template/realm-item-sheet.js",
+      "module/items/template/item-sheet.js"
+    ],
+    "module/items/template/ability-item-sheet.js": [
+      "module/items/template/item-sheet-v2.js",
+      "module/scripts/select-helpers.js",
+      "module/scripts/action-helpers.js"
+    ],
+    "module/items/template/advantage-item-sheet.js": [
+      "module/items/template/item-sheet-v2.js",
+      "module/scripts/select-helpers.js"
+    ],
+    "module/items/template/item-sheet-v2.js": [
+      "module/scripts/action-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/item-actions.js",
+      "module/scripts/drop-helpers.js"
+    ],
+    "module/items/template/item-sheet.js": [
+      "module/scripts/action-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/select-helpers.js",
+      "module/scripts/totals.js"
+    ],
+    "module/items/template/realm-item-sheet.js": [
+      "module/items/template/item-sheet-v2.js",
+      "module/scripts/select-helpers.js"
+    ],
+    "module/items/template/sphere-item-sheet.js": [
+      "module/items/template/item-sheet-v2.js",
+      "module/scripts/select-helpers.js"
+    ],
+    "module/items/template/splat-item-sheet.js": [
+      "module/items/template/item-sheet-v2.js",
+      "module/scripts/select-helpers.js",
+      "module/scripts/drop-helpers.js",
+      "module/scripts/item-actions.js"
+    ],
+    "module/migration.js": [
+      "module/scripts/message-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/ui/migration-wizard-helper.js"
+    ],
+    "module/scripts/ability-helpers.js": [
+      "module/dialogs/dialog-edits.js"
+    ],
+    "module/scripts/action-helpers.js": [
+      "module/scripts/totals.js",
+      "module/scripts/bio-visibility.js",
+      "module/scripts/roll-dice.js",
+      "module/scripts/create-helpers.js",
+      "module/scripts/combat-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/item-helpers.js",
+      "module/scripts/drop-helpers.js",
+      "module/scripts/attribute-helpers.js",
+      "module/scripts/sphere-helpers.js",
+      "module/dialogs/dialog-weaponv2.js",
+      "module/dialogs/dialog-power.js",
+      "module/dialogs/dialog-trait.js",
+      "module/dialogs/dialog-sortpower.js",
+      "module/dialogs/dialog-variant.js",
+      "module/dialogs/dialog-item.js",
+      "module/dialogs/dialog-power-selection.js",
+      "module/dialogs/dialog-generalroll.js",
+      "module/dialogs/dialog-aretecasting.js",
+      "module/dialogs/dialog-checkfrenzy.js",
+      "module/dialogs/dialog-shapechange.js",
+      "module/dialogs/dialog-soak.js"
+    ],
+    "module/scripts/attribute-augmentation-helpers.js": [
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/totals.js"
+    ],
+    "module/scripts/attribute-helpers.js": [
+      "module/dialogs/dialog-edits.js"
+    ],
+    "module/scripts/bio-helpers.js": [
+      "module/dialogs/dialog-edits.js"
+    ],
+    "module/scripts/bio-visibility.js": [],
+    "module/scripts/bonus-helpers.js": [
+      "module/dialogs/dialog-bonus.js"
+    ],
+    "module/scripts/combat-helpers.js": [
+      "module/scripts/message-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/roll-dice.js"
+    ],
+    "module/scripts/create-helpers.js": [
+      "module/scripts/ability-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/drop-helpers.js",
+      "module/scripts/select/era.js"
+    ],
+    "module/scripts/drop-helpers.js": [
+      "module/scripts/item-helpers.js",
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/totals.js"
+    ],
+    "module/scripts/health.js": [],
+    "module/scripts/import-helpers.js": [],
+    "module/scripts/item-actions.js": [],
+    "module/scripts/item-helpers.js": [
+      "module/scripts/bonus-helpers.js"
+    ],
+    "module/scripts/message-helpers.js": [],
+    "module/scripts/roll-dice.js": [
+      "module/scripts/bonus-helpers.js",
+      "module/scripts/combat-helpers.js"
+    ],
+    "module/scripts/select-helpers.js": [
+      "module/scripts/select/utils.js",
+      "module/scripts/select/era.js",
+      "module/scripts/select/changeling.js",
+      "module/scripts/select/hunter.js",
+      "module/scripts/select/demon.js",
+      "module/scripts/select/changingbreed.js",
+      "module/scripts/select/power-roll.js",
+      "module/scripts/select/numeric.js",
+      "module/scripts/select/vampire.js",
+      "module/scripts/select/werewolf.js",
+      "module/scripts/select/mage.js"
+    ],
+    "module/scripts/select/changeling.js": [
+      "module/scripts/select/utils.js"
+    ],
+    "module/scripts/select/changingbreed.js": [
+      "module/scripts/select/utils.js"
+    ],
+    "module/scripts/select/demon.js": [
+      "module/scripts/select/utils.js"
+    ],
+    "module/scripts/select/era.js": [],
+    "module/scripts/select/hunter.js": [
+      "module/scripts/select/utils.js"
+    ],
+    "module/scripts/select/mage.js": [],
+    "module/scripts/select/numeric.js": [],
+    "module/scripts/select/power-roll.js": [
+      "module/scripts/select/utils.js"
+    ],
+    "module/scripts/select/utils.js": [],
+    "module/scripts/select/vampire.js": [],
+    "module/scripts/select/werewolf.js": [],
+    "module/scripts/spec-select.js": [],
+    "module/scripts/sphere-helpers.js": [
+      "module/dialogs/dialog-edits.js"
+    ],
+    "module/scripts/token-helpers.js": [],
+    "module/scripts/totals.js": [
+      "module/scripts/bonus-helpers.js"
+    ],
+    "module/scripts/wodsetup.js": [],
+    "module/settings.js": [],
+    "module/templates.js": [
+      "assets/data/sheet/bio.js",
+      "assets/data/sheet/ability.js",
+      "assets/data/sheet/biotab.js",
+      "assets/data/sheet/powertab.js"
+    ],
+    "module/ui/attribute-augmentation-popup.js": [
+      "module/scripts/attribute-augmentation-helpers.js"
+    ],
+    "module/ui/dialog-migration-wizard.js": [],
+    "module/ui/icons.js": [],
+    "module/ui/migration-wizard-helper.js": [
+      "module/ui/dialog-migration-wizard.js"
+    ],
+    "module/ui/settings-sidebar.js": [],
+    "tours/tour.js": [
+      "module/scripts/drop-helpers.js"
+    ],
+    "tours/toursetup.js": [
+      "tours/tour.js"
+    ],
+    "wod.js": [
+      "module/migration.js",
+      "module/config.js",
+      "module/settings.js",
+      "module/templates.js",
+      "module/handlebars.js",
+      "module/ui/settings-sidebar.js",
+      "module/scripts/wodsetup.js",
+      "module/actor/data/wod-actor-base.js",
+      "module/items/data/wod-item-base.js",
+      "module/actor/datamodel/_module.js",
+      "module/items/datamodel/_module.js",
+      "module/actor/template/_module.js",
+      "module/items/template/_module.js",
+      "tours/toursetup.js",
+      "module/dialogs/dialog-generalroll.js",
+      "module/ui/icons.js",
+      "module/ui/migration-wizard-helper.js",
+      "module/hooks.js"
+    ]
+  },
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "blob_sha": "d9f0046a27df5dbdf70d2964e48b0f57028828e4",
+      "size_bytes": 502
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "blob_sha": "df81be2bee2767f5b98051c3cc739f1f7e8a9b11",
+      "size_bytes": 458
+    },
+    {
+      "path": "LICENSE",
+      "blob_sha": "e62ec04cdeece724caeeeeaeb6ae1f6af1bb6b9a",
+      "size_bytes": 35129
+    },
+    {
+      "path": "README.md",
+      "blob_sha": "01f769885c0fd741e5503726443861e12b3adc3c",
+      "size_bytes": 4268
+    },
+    {
+      "path": "assets/data/sheet/ability.js",
+      "blob_sha": "c4409736dd5f684d24e30d038efa7a85c58cbc29",
+      "size_bytes": 20168
+    },
+    {
+      "path": "assets/data/sheet/bio.js",
+      "blob_sha": "19082f557c63a0e2d82fc83167290d0e45b9a2e5",
+      "size_bytes": 8054
+    },
+    {
+      "path": "assets/data/sheet/biotab.js",
+      "blob_sha": "02619950445e62d4debf631c9b918b630d3cb2a8",
+      "size_bytes": 4426
+    },
+    {
+      "path": "assets/data/sheet/powertab.js",
+      "blob_sha": "11d7c9ebe19d07822ae2ffc84286afd8c78f1d4b",
+      "size_bytes": 1462
+    },
+    {
+      "path": "assets/fonts/C20_Kells_2.ttf",
+      "blob_sha": "9acf2b8fcbd948d3ee024ae70bf160216fa75067",
+      "size_bytes": 23868
+    },
+    {
+      "path": "assets/fonts/C20_MeathFLF.ttf",
+      "blob_sha": "fdc876845608e2a3e36d861abffa919d603b6202",
+      "size_bytes": 43148
+    },
+    {
+      "path": "assets/fonts/Demon_LushUs_v2.otf",
+      "blob_sha": "a947d4f0f2e1889fac02b9d0731bd768912e7306",
+      "size_bytes": 27184
+    },
+    {
+      "path": "assets/fonts/EscalidoGothico.ttf",
+      "blob_sha": "7a808cfbe18a3c3e369a80c331998f8146cbb17d",
+      "size_bytes": 132664
+    },
+    {
+      "path": "assets/fonts/GOUDOS.TTF",
+      "blob_sha": "701b8b56326600ba6be9b1153a90da2553ffcfe9",
+      "size_bytes": 81376
+    },
+    {
+      "path": "assets/fonts/M20_abbess_regular.ttf",
+      "blob_sha": "c6669a7a8bdb262d264f3cef17b438575cf2e44d",
+      "size_bytes": 66168
+    },
+    {
+      "path": "assets/fonts/Umb000.ttf",
+      "blob_sha": "5a5c7dc8f8b5c2d075e4ff2bef56232e2b85f6d8",
+      "size_bytes": 48888
+    },
+    {
+      "path": "assets/fonts/V20DA_deroos.ttf",
+      "blob_sha": "35eedd3a74d6894b15dd260bf9ccbfeab1e65bbe",
+      "size_bytes": 50492
+    },
+    {
+      "path": "assets/fonts/V20Victorian_ChiseledOpenRegular.ttf",
+      "blob_sha": "e0dd5b7f3dc6ccff1b4a33226b17c0f78c0623e7",
+      "size_bytes": 37396
+    },
+    {
+      "path": "assets/fonts/V20Victorian_university_roman.ttf",
+      "blob_sha": "edfe0167a7babd0ace20c1b17d183c64e94cbecd",
+      "size_bytes": 36944
+    },
+    {
+      "path": "assets/fonts/V20_delavan.ttf",
+      "blob_sha": "b58580e84806c55484a1cbe94a0fd5f275183e7c",
+      "size_bytes": 57848
+    },
+    {
+      "path": "assets/fonts/Victorian/University_Roman_Bold_LET_Regular.ttf",
+      "blob_sha": "d39a22c22ea8d9373c051b7157a50758b7ab6f8c",
+      "size_bytes": 32888
+    },
+    {
+      "path": "assets/fonts/W20_Wildwest_Saddlebag.ttf",
+      "blob_sha": "008e80921c73df3a88629036e86da2d005ab26e4",
+      "size_bytes": 43000
+    },
+    {
+      "path": "assets/fonts/W20_balthazar.ttf",
+      "blob_sha": "ce9d95ff5cf9533f9bc59a403b329328fad663d6",
+      "size_bytes": 64544
+    },
+    {
+      "path": "assets/fonts/Wild West/W20_Wildwest_Stagecoach.ttf",
+      "blob_sha": "8e3c43a4ded2d5e87342f04b9b26f1c83c8ad2d6",
+      "size_bytes": 73146
+    },
+    {
+      "path": "assets/fonts/Wr20_MatrixTall.ttf",
+      "blob_sha": "df1c30ff14bc24e5d0f91f1c40eef02fd85cbeb8",
+      "size_bytes": 61787
+    },
+    {
+      "path": "assets/fonts/exalted/MinionPro-Regular_0.otf",
+      "blob_sha": "ee6d5a74ae19082fc751bdf45f74fecf631c6798",
+      "size_bytes": 218640
+    },
+    {
+      "path": "assets/fonts/exalted/SevenSerifICG-Bold.ttf",
+      "blob_sha": "27336670566d6129609d47ff115b1777395dbcb9",
+      "size_bytes": 56364
+    },
+    {
+      "path": "assets/fonts/exalted/frizquadratatt.ttf",
+      "blob_sha": "e4cefa9272f2b8269622245559880bdbb954118f",
+      "size_bytes": 62316
+    },
+    {
+      "path": "assets/fonts/hunter.ttf",
+      "blob_sha": "f2b31f2f8b9110e53d5e54e1e1573d23dfef5e55",
+      "size_bytes": 42260
+    },
+    {
+      "path": "assets/fonts/mummy/Nueva_Caesar2_0.ttf",
+      "blob_sha": "b897ce1dd7e88ace71564ebd5d7e40cbeaddbd2f",
+      "size_bytes": 69800
+    },
+    {
+      "path": "assets/fonts/mummy/P22_Cezanne_Regular.ttf",
+      "blob_sha": "ab9ee98b8dcd52ba362332b2dd7c2f796bb0fe52",
+      "size_bytes": 95144
+    },
+    {
+      "path": "assets/fonts/orpheus/Fudge.otf",
+      "blob_sha": "9b7dff707643d02d353275beb4acb583f4d214d7",
+      "size_bytes": 353340
+    },
+    {
+      "path": "assets/img/buttons/castspell.svg",
+      "blob_sha": "3e3bbff547a976540e01f0ec0098bfd91cc0167b",
+      "size_bytes": 1420
+    },
+    {
+      "path": "assets/img/buttons/changeling.png",
+      "blob_sha": "5ca6cf4735d5ba405d09ee2228aeb2c54af0123b",
+      "size_bytes": 164722
+    },
+    {
+      "path": "assets/img/buttons/cog.svg",
+      "blob_sha": "326cd32089f902e40b2f2c2c47217a1b9e072b29",
+      "size_bytes": 1798
+    },
+    {
+      "path": "assets/img/buttons/d10.svg",
+      "blob_sha": "d21e62ff6e3f832817bc22cded30907e64c326e1",
+      "size_bytes": 3449
+    },
+    {
+      "path": "assets/img/buttons/electric.svg",
+      "blob_sha": "00e59322ce0f72b6709852df82ee5cb2afbf7324",
+      "size_bytes": 298
+    },
+    {
+      "path": "assets/img/buttons/frenzy.svg",
+      "blob_sha": "79b4f20fc07374635b1c96256453b38781b78f59",
+      "size_bytes": 2944
+    },
+    {
+      "path": "assets/img/buttons/gym-bag.svg",
+      "blob_sha": "90d866b18c5f7226f015fd54f21c02dc6248f547",
+      "size_bytes": 1916
+    },
+    {
+      "path": "assets/img/buttons/initiative.svg",
+      "blob_sha": "1a25db415f43a06fb07f59831ea6b479299dad06",
+      "size_bytes": 1571
+    },
+    {
+      "path": "assets/img/buttons/notebook.svg",
+      "blob_sha": "50760bff11f8a98d11d8ceb2d8b660e937f5a0b9",
+      "size_bytes": 2625
+    },
+    {
+      "path": "assets/img/buttons/open-book.svg",
+      "blob_sha": "95de3ae17428265d265ae8ee197a14b4b925fbb5",
+      "size_bytes": 1318
+    },
+    {
+      "path": "assets/img/buttons/perspective-dice-six-faces-random.svg",
+      "blob_sha": "6338f4ee60d79a50c0a08aeceb9ff824e9a44763",
+      "size_bytes": 3093
+    },
+    {
+      "path": "assets/img/buttons/pistol-gun.svg",
+      "blob_sha": "f8c3be28d6ebab4f40321942e039d842546aee21",
+      "size_bytes": 688
+    },
+    {
+      "path": "assets/img/buttons/remainactive.svg",
+      "blob_sha": "7d1c91f4549e20e88d74ee7d4a1839eff6017df3",
+      "size_bytes": 2568
+    },
+    {
+      "path": "assets/img/buttons/rote.svg",
+      "blob_sha": "aedfed6f09b0aec98b42fdc09c8f5682939fdbc9",
+      "size_bytes": 2566
+    },
+    {
+      "path": "assets/img/buttons/scarab-beetle.svg",
+      "blob_sha": "f8a3c64d7be28f46759c9c408a2fa0a2af50106f",
+      "size_bytes": 4179
+    },
+    {
+      "path": "assets/img/buttons/shapechange.svg",
+      "blob_sha": "32ecc5bf61175c556c46afca2eb5dc2e6e5733b8",
+      "size_bytes": 1007
+    },
+    {
+      "path": "assets/img/buttons/skills.svg",
+      "blob_sha": "31b2e89fef061138f664f60dd6a01759662e16f8",
+      "size_bytes": 1058
+    },
+    {
+      "path": "assets/img/buttons/soak.svg",
+      "blob_sha": "63ecde6d9cc5b6f0148b921521f9abb5e50d5b0c",
+      "size_bytes": 361
+    },
+    {
+      "path": "assets/img/dice/_d10_black.svg",
+      "blob_sha": "6b47be812b2ddb9d4cd6ea2a0f9f37e385fcb53e",
+      "size_bytes": 449
+    },
+    {
+      "path": "assets/img/dice/d10.png",
+      "blob_sha": "10c34a54e1b5ca26334b8f1ab57b1cf8dd7fd2d2",
+      "size_bytes": 513
+    },
+    {
+      "path": "assets/img/dice/d10.svg",
+      "blob_sha": "1a58b8d94d14f623c87386778dfb17beb0c9c221",
+      "size_bytes": 449
+    },
+    {
+      "path": "assets/img/dice/d10_black.svg",
+      "blob_sha": "2f21e837a89b8eb3186d334f2df66b14fcb983e7",
+      "size_bytes": 3299
+    },
+    {
+      "path": "assets/img/dice/d10_white.svg",
+      "blob_sha": "1a58b8d94d14f623c87386778dfb17beb0c9c221",
+      "size_bytes": 449
+    },
+    {
+      "path": "assets/img/graphics/20Page.jpg",
+      "blob_sha": "f29120a1b7c5b2063977d917ec698884fc86c034",
+      "size_bytes": 66451
+    },
+    {
+      "path": "assets/img/graphics/C20Banner.png",
+      "blob_sha": "affbd2ebea1aeadf32b6e117228b0db7383ebfb3",
+      "size_bytes": 44272
+    },
+    {
+      "path": "assets/img/graphics/C20Page.jpg",
+      "blob_sha": "0318198e52efc5ed0e9d458ff4e79b3fc47ba244",
+      "size_bytes": 136720
+    },
+    {
+      "path": "assets/img/graphics/C20TopBanner.png",
+      "blob_sha": "e503360fc19d61544efb25bafa06370d2d655acf",
+      "size_bytes": 750113
+    },
+    {
+      "path": "assets/img/graphics/D20Banner.png",
+      "blob_sha": "29956ec3e6a06ab9f3cc3318e7494ae056e750c0",
+      "size_bytes": 11158
+    },
+    {
+      "path": "assets/img/graphics/D20Banner_small.png",
+      "blob_sha": "4e4572f86fb3a8315010403855db790d237654e4",
+      "size_bytes": 4995
+    },
+    {
+      "path": "assets/img/graphics/D20Page.jpg",
+      "blob_sha": "bb6fdeadc52bd11e03add6146531b1d444407bcf",
+      "size_bytes": 99038
+    },
+    {
+      "path": "assets/img/graphics/Exalted.jpg",
+      "blob_sha": "db0347b2b85460b7ab9d2fc39253c61090ebadf9",
+      "size_bytes": 239213
+    },
+    {
+      "path": "assets/img/graphics/H20Banner.png",
+      "blob_sha": "39825f9afd5a349faac3156a6e31459882783afd",
+      "size_bytes": 42680
+    },
+    {
+      "path": "assets/img/graphics/H20Banner_small.png",
+      "blob_sha": "3237c1049e154e706eb967c00740d1be29fa3583",
+      "size_bytes": 30112
+    },
+    {
+      "path": "assets/img/graphics/H20Page.jpg",
+      "blob_sha": "bb6fdeadc52bd11e03add6146531b1d444407bcf",
+      "size_bytes": 99038
+    },
+    {
+      "path": "assets/img/graphics/M20Banner.png",
+      "blob_sha": "4c590bb66d0c35bc3bb2b38fd558f11efe5259c5",
+      "size_bytes": 42352
+    },
+    {
+      "path": "assets/img/graphics/V20Banner.png",
+      "blob_sha": "fc2b0aa4911e5c1dd0a9a93342a3d31724412272",
+      "size_bytes": 16433
+    },
+    {
+      "path": "assets/img/graphics/V20Banner_small.png",
+      "blob_sha": "4ad019ebcb4d547978ea4e617ce50bf4deefac25",
+      "size_bytes": 17041
+    },
+    {
+      "path": "assets/img/graphics/W20Banner.png",
+      "blob_sha": "2593fcbab233d6f7747b85a5ddd94cce30e72a74",
+      "size_bytes": 162641
+    },
+    {
+      "path": "assets/img/graphics/W20Banner_small.png",
+      "blob_sha": "d73fa5dbc1821b08182bc46cd1168557a611145d",
+      "size_bytes": 161725
+    },
+    {
+      "path": "assets/img/graphics/W20Page.jpg",
+      "blob_sha": "8ebd0492cd392544b4ec8f758172819c357622d6",
+      "size_bytes": 129543
+    },
+    {
+      "path": "assets/img/graphics/Wr20Banner.png",
+      "blob_sha": "dcb72b6817bc7feca6d938f43084eca78fa9665b",
+      "size_bytes": 36814
+    },
+    {
+      "path": "assets/img/graphics/Wr20Banner_small.png",
+      "blob_sha": "11112ace440ff7df3eae0b4bddfff3049c9fbfa8",
+      "size_bytes": 20394
+    },
+    {
+      "path": "assets/img/graphics/Wr20Page.jpg",
+      "blob_sha": "c4d66a67e287cbcba870c91b37f98eb65c34fb64",
+      "size_bytes": 101598
+    },
+    {
+      "path": "assets/img/graphics/chat-background.jpg",
+      "blob_sha": "5c542ba4e3d741280c0e9fd8ca7e8d601f3df862",
+      "size_bytes": 56344
+    },
+    {
+      "path": "assets/img/graphics/darkpack_logo2.png",
+      "blob_sha": "fc9b67a51c2d4e5c229efab8adedca56bf4b458c",
+      "size_bytes": 1069062
+    },
+    {
+      "path": "assets/img/graphics/exalted_banner.jpg",
+      "blob_sha": "88f4bd1d602edb5005ad9d7234a4b9fec1659a02",
+      "size_bytes": 18441
+    },
+    {
+      "path": "assets/img/graphics/exalted_banner.psd",
+      "blob_sha": "83b2eb19055dac178bf4e514faf5799437ada8c1",
+      "size_bytes": 161639
+    },
+    {
+      "path": "assets/img/graphics/exalted_banner_small.jpg",
+      "blob_sha": "3e5cfae625cb4a497194256dbfbb20882cbeb7fd",
+      "size_bytes": 15362
+    },
+    {
+      "path": "assets/img/graphics/exalted_banner_small.psd",
+      "blob_sha": "2b49512f5cf2a5ab5455b483a450cc93af48cb86",
+      "size_bytes": 98551
+    },
+    {
+      "path": "assets/img/graphics/exalted_side_banner.psd",
+      "blob_sha": "109f6b23b192884b87a17e1d1d4d9068e8386afc",
+      "size_bytes": 1651557
+    },
+    {
+      "path": "assets/img/graphics/parchment - kopia.png",
+      "blob_sha": "0b05a2fd70b473e76922d6fa4ed1ac08838c6561",
+      "size_bytes": 2697497
+    },
+    {
+      "path": "assets/img/graphics/parchment.jpg",
+      "blob_sha": "a2db9e3c8cdc67ed779b73eda35bb5c2bf12f019",
+      "size_bytes": 294870
+    },
+    {
+      "path": "assets/img/graphics/parchment.png",
+      "blob_sha": "0b05a2fd70b473e76922d6fa4ed1ac08838c6561",
+      "size_bytes": 2697497
+    },
+    {
+      "path": "assets/img/graphics/sand.png",
+      "blob_sha": "03f25795459d22d9032daa20fd8d790aea057c6d",
+      "size_bytes": 39334
+    },
+    {
+      "path": "assets/img/graphics/stone.jpg",
+      "blob_sha": "abd1ea2d42d1966175615e9698145829a6a108af",
+      "size_bytes": 64366
+    },
+    {
+      "path": "assets/img/graphics/wod.png",
+      "blob_sha": "7824958073a60be5d59e9b4ac190bcf6eb0eb150",
+      "size_bytes": 211978
+    },
+    {
+      "path": "assets/img/items/armor.svg",
+      "blob_sha": "0a7e06fef5326b634250b885d1f8d7fc5a596bcb",
+      "size_bytes": 1128
+    },
+    {
+      "path": "assets/img/items/feature.svg",
+      "blob_sha": "f91b3f2758d98493c778bc290a1817067cd64de9",
+      "size_bytes": 2629
+    },
+    {
+      "path": "assets/img/items/fetish.svg",
+      "blob_sha": "83c4531e9d68c29618aea5ff737122a3fba36ee2",
+      "size_bytes": 3169
+    },
+    {
+      "path": "assets/img/items/fetish_werewolf.svg",
+      "blob_sha": "7c837df6ea1419cbec4fe88ada8a5bcad498758c",
+      "size_bytes": 3168
+    },
+    {
+      "path": "assets/img/items/items.svg",
+      "blob_sha": "3486fef7d75e4f574d05d72c640ca058e15a97ab",
+      "size_bytes": 2362
+    },
+    {
+      "path": "assets/img/items/mainpower.svg",
+      "blob_sha": "8cd6fbc578cf4a4e58c3711ac6fa77b9dad1e4e8",
+      "size_bytes": 1144
+    },
+    {
+      "path": "assets/img/items/mainpower_changeling.svg",
+      "blob_sha": "8fccf1a31991f745601d2611a7f3cfac45279389",
+      "size_bytes": 1147
+    },
+    {
+      "path": "assets/img/items/mainpower_demon.svg",
+      "blob_sha": "ebdfe4cddc638412449b4b27ead5bfd2c43ca4e7",
+      "size_bytes": 1147
+    },
+    {
+      "path": "assets/img/items/mainpower_hunter.svg",
+      "blob_sha": "128f0b43afa7b35afca0a33f356930965d0b2ec6",
+      "size_bytes": 1147
+    },
+    {
+      "path": "assets/img/items/mainpower_mage.svg",
+      "blob_sha": "792f75c831080bf6fe8a34310363e18340705110",
+      "size_bytes": 1147
+    },
+    {
+      "path": "assets/img/items/mainpower_mummy.svg",
+      "blob_sha": "8b554e51ed1ac84c445a264e7ef95464f87fe9b1",
+      "size_bytes": 1156
+    },
+    {
+      "path": "assets/img/items/mainpower_vampire.svg",
+      "blob_sha": "3e6471da422b54d6a90f0c7a50141f05c3c3ebc2",
+      "size_bytes": 1147
+    },
+    {
+      "path": "assets/img/items/mainpower_werewolf.svg",
+      "blob_sha": "c504f8dc28249356d0b4f3b7b8f2fb6ba2e4c3e7",
+      "size_bytes": 1147
+    },
+    {
+      "path": "assets/img/items/mainpower_wraith.svg",
+      "blob_sha": "f6fc0fa0bc97a4eedb5c9a036d465386b117714b",
+      "size_bytes": 1147
+    },
+    {
+      "path": "assets/img/items/meleeweapons.svg",
+      "blob_sha": "5c2473f308be85b3df2e6ecd6fe3d1890ea55c92",
+      "size_bytes": 1405
+    },
+    {
+      "path": "assets/img/items/naturalweapons.svg",
+      "blob_sha": "a1b43860f17f1fdef1671ba2ada11ac1acde379c",
+      "size_bytes": 671
+    },
+    {
+      "path": "assets/img/items/power.svg",
+      "blob_sha": "009f3efc9876b2b8bbc1bc242958045a0c920c7d",
+      "size_bytes": 948
+    },
+    {
+      "path": "assets/img/items/power_changeling.svg",
+      "blob_sha": "671c46f69adb92d158852c4b9b05acb79af9e285",
+      "size_bytes": 947
+    },
+    {
+      "path": "assets/img/items/power_demon.svg",
+      "blob_sha": "53d3e8d7ff2d3cdcc50c785753d1f9ad493887c2",
+      "size_bytes": 947
+    },
+    {
+      "path": "assets/img/items/power_exalted.svg",
+      "blob_sha": "0883a7e2705b1783a25f6d2b1a3feddd3c60ada7",
+      "size_bytes": 958
+    },
+    {
+      "path": "assets/img/items/power_hunter.svg",
+      "blob_sha": "e07024471dd51b9dc8607481cb5b0e24022efb00",
+      "size_bytes": 947
+    },
+    {
+      "path": "assets/img/items/power_mage.svg",
+      "blob_sha": "fd811d9a948c8c40275f5b541f3a1c85d94ce3d1",
+      "size_bytes": 947
+    },
+    {
+      "path": "assets/img/items/power_mummy.svg",
+      "blob_sha": "29761934ef5c16a826eab4b8f36862f062fb69fb",
+      "size_bytes": 960
+    },
+    {
+      "path": "assets/img/items/power_vampire.svg",
+      "blob_sha": "0db7dffef5871dd149433c623f7f157fedbc52c5",
+      "size_bytes": 947
+    },
+    {
+      "path": "assets/img/items/power_werewolf.svg",
+      "blob_sha": "3e641f988b45db2ce2ae025948a5309e3da06bbf",
+      "size_bytes": 947
+    },
+    {
+      "path": "assets/img/items/power_wraith.svg",
+      "blob_sha": "55d64a7c29d7fd5fe47b9bb7ca9757d9d698d481",
+      "size_bytes": 947
+    },
+    {
+      "path": "assets/img/items/rangedweapons.svg",
+      "blob_sha": "3a58eda710746db21cd8b63257962fc684379d40",
+      "size_bytes": 731
+    },
+    {
+      "path": "assets/img/items/ritual.svg",
+      "blob_sha": "f09bd956acf06e5b96eaf967a13b0f862833c9b4",
+      "size_bytes": 1357
+    },
+    {
+      "path": "assets/img/items/ritual_demon.svg",
+      "blob_sha": "999833c31e842402c62e5a1fa8e15057085847db",
+      "size_bytes": 1357
+    },
+    {
+      "path": "assets/img/items/ritual_vampire.svg",
+      "blob_sha": "c37f3f1c093f21ffaa4cde6cad6cc29f2c38cf19",
+      "size_bytes": 1357
+    },
+    {
+      "path": "assets/img/items/ritual_werewolf.svg",
+      "blob_sha": "e54f9961cc0b8b274fca37f8f42e4c5e26041362",
+      "size_bytes": 1357
+    },
+    {
+      "path": "assets/img/items/rote.svg",
+      "blob_sha": "aedfed6f09b0aec98b42fdc09c8f5682939fdbc9",
+      "size_bytes": 2566
+    },
+    {
+      "path": "assets/img/items/rote_mage.svg",
+      "blob_sha": "1171afd7d6bf0b69b6f9ead770e8961fe41043ef",
+      "size_bytes": 2569
+    },
+    {
+      "path": "assets/img/items/skills.svg",
+      "blob_sha": "31b2e89fef061138f664f60dd6a01759662e16f8",
+      "size_bytes": 1058
+    },
+    {
+      "path": "assets/img/items/weapon_onehand.svg",
+      "blob_sha": "4c3d2de1ac51cfa22ef909461ddecde1d92bcee6",
+      "size_bytes": 1479
+    },
+    {
+      "path": "assets/img/items/weapon_twohand.svg",
+      "blob_sha": "8f702183c5cba5c4fb22988517d84bc7d44e8ea7",
+      "size_bytes": 1070
+    },
+    {
+      "path": "assets/img/mage/prime.svg",
+      "blob_sha": "52850962139f1e543cdba29fd0fc5a7936a32235",
+      "size_bytes": 1410
+    },
+    {
+      "path": "assets/img/shapes/form_crinos.svg",
+      "blob_sha": "aa37a0da303bd309bb3f9856fa1ed221abf05637",
+      "size_bytes": 1891
+    },
+    {
+      "path": "assets/img/shapes/form_glabro.svg",
+      "blob_sha": "8ed221facf19682b9be1bfb279a103d116bee063",
+      "size_bytes": 2130
+    },
+    {
+      "path": "assets/img/shapes/form_hispo.svg",
+      "blob_sha": "30563cd0abfd3b55375787f6d9f6bb4055bf1cef",
+      "size_bytes": 1178
+    },
+    {
+      "path": "assets/img/shapes/form_homid.svg",
+      "blob_sha": "fecc6365f532b51ce6735a2773f324a8feecd9fc",
+      "size_bytes": 818
+    },
+    {
+      "path": "assets/img/shapes/form_lupus.svg",
+      "blob_sha": "7d3fbced8b24e2ea6e55cde060b05fe2f50e6312",
+      "size_bytes": 1262
+    },
+    {
+      "path": "assets/img/werewolf/form/five_forms.jpg",
+      "blob_sha": "58d18ad3fdab5c2b06eea1001e100a5d64e93eda",
+      "size_bytes": 124171
+    },
+    {
+      "path": "assets/img/werewolf/form/form_crinos.svg",
+      "blob_sha": "aa37a0da303bd309bb3f9856fa1ed221abf05637",
+      "size_bytes": 1891
+    },
+    {
+      "path": "assets/img/werewolf/form/form_glabro.svg",
+      "blob_sha": "8ed221facf19682b9be1bfb279a103d116bee063",
+      "size_bytes": 2130
+    },
+    {
+      "path": "assets/img/werewolf/form/form_hispo.svg",
+      "blob_sha": "30563cd0abfd3b55375787f6d9f6bb4055bf1cef",
+      "size_bytes": 1178
+    },
+    {
+      "path": "assets/img/werewolf/form/form_homid.svg",
+      "blob_sha": "fecc6365f532b51ce6735a2773f324a8feecd9fc",
+      "size_bytes": 818
+    },
+    {
+      "path": "assets/img/werewolf/form/form_lupus.svg",
+      "blob_sha": "7d3fbced8b24e2ea6e55cde060b05fe2f50e6312",
+      "size_bytes": 1262
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_ajaba.webp",
+      "blob_sha": "72159c1e95e47233445139aca4faf21380b6ccba",
+      "size_bytes": 111216
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_ananasi.webp",
+      "blob_sha": "e1191d0933482539d4671a8c9b0b684282c4929b",
+      "size_bytes": 212258
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_bastet.jpg",
+      "blob_sha": "92cdcab446b4451ed8416342b889249bf43bdfbe",
+      "size_bytes": 38535
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_corax.webp",
+      "blob_sha": "34d0c7f0c4644defc83b631f5c1060f61dc8e65f",
+      "size_bytes": 60134
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_gurahl.webp",
+      "blob_sha": "c08cdf5e38b9b351136a911430c2318efec45375",
+      "size_bytes": 205056
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_kitsune.webp",
+      "blob_sha": "d3d48eea9dce1579678e376fa514696a94b29a86",
+      "size_bytes": 86198
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_mokole.webp",
+      "blob_sha": "3f342c84aa333857331825b10823b413bca23613",
+      "size_bytes": 84282
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_nagah.webp",
+      "blob_sha": "ef8fd0cbd50b3524d09d76faeff7841c877d0c7c",
+      "size_bytes": 128256
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_nuwisha.webp",
+      "blob_sha": "8d3cb7abc01b61c59841183e726bd4ccfd649be2",
+      "size_bytes": 66834
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_ratkin.webp",
+      "blob_sha": "8a2bc4fa0cdc2cc5a8f59a433f70323a4af2c46f",
+      "size_bytes": 149730
+    },
+    {
+      "path": "assets/img/werewolf/form/forms_rokea.webp",
+      "blob_sha": "57ac1ecf74e158f57f2f26470deb9b0b0bf93786",
+      "size_bytes": 52258
+    },
+    {
+      "path": "css/changeling.css",
+      "blob_sha": "5dd51568fcd9ed2b8954b9a46b77f655705aa31a",
+      "size_bytes": 4375
+    },
+    {
+      "path": "css/chat.css",
+      "blob_sha": "ec7e03740202699e6d10d36368978c440c1c6e73",
+      "size_bytes": 3673
+    },
+    {
+      "path": "css/creature.css",
+      "blob_sha": "94fc74f27819924bee5a313b37422455e312d46d",
+      "size_bytes": 2301
+    },
+    {
+      "path": "css/darkmode.css",
+      "blob_sha": "2b26a88365a506e886cb548f4c6ff10aa5165f19",
+      "size_bytes": 8142
+    },
+    {
+      "path": "css/demon.css",
+      "blob_sha": "91f71ff50e9fab7683b1852ecff22a986093019e",
+      "size_bytes": 5840
+    },
+    {
+      "path": "css/exalted.css",
+      "blob_sha": "49b993527ebaed3c43e3156542d4e7d2b8eae724",
+      "size_bytes": 4034
+    },
+    {
+      "path": "css/hunter.css",
+      "blob_sha": "fc3f5608ea1b9919cff0a1daf9b1b10571e877ed",
+      "size_bytes": 3595
+    },
+    {
+      "path": "css/mage.css",
+      "blob_sha": "a37419954d59f4daa370ade5bd85a25293136e23",
+      "size_bytes": 9777
+    },
+    {
+      "path": "css/mortal.css",
+      "blob_sha": "d49e900c38d0f1798729110572fab3e926adf93d",
+      "size_bytes": 1813
+    },
+    {
+      "path": "css/mummy.css",
+      "blob_sha": "5b6ac8a0635d65390c65d6e80dcf6dd0b62d1470",
+      "size_bytes": 2634
+    },
+    {
+      "path": "css/responsive.css",
+      "blob_sha": "f0919b8be34794cb61b3261bf0a19fce6c29f19f",
+      "size_bytes": 8547
+    },
+    {
+      "path": "css/vampire.css",
+      "blob_sha": "4782379aec6b53a0592b8a47c67f7fa45a8d8289",
+      "size_bytes": 3169
+    },
+    {
+      "path": "css/werewolf.css",
+      "blob_sha": "4f909863aca3e7feb274f5af96da2f13f7a2a773",
+      "size_bytes": 6702
+    },
+    {
+      "path": "css/wod.css",
+      "blob_sha": "5b12f7bc84504c40070e94d55b907ad8fe76b08f",
+      "size_bytes": 66889
+    },
+    {
+      "path": "css/wraith.css",
+      "blob_sha": "e51985401fbabf0c0efacfd6b9dbddb2b7367db0",
+      "size_bytes": 2953
+    },
+    {
+      "path": "lang/de.json",
+      "blob_sha": "52aa50865cd8fc48a91fd7958c5ea714e11e1f3c",
+      "size_bytes": 81087
+    },
+    {
+      "path": "lang/en.json",
+      "blob_sha": "0f171d83ed3f83791982153abaf44be40dc82e43",
+      "size_bytes": 77928
+    },
+    {
+      "path": "lang/es.json",
+      "blob_sha": "63d86a8f540acbc105878bc614c69d29306c8cbb",
+      "size_bytes": 80980
+    },
+    {
+      "path": "lang/fr.json",
+      "blob_sha": "be91620ee8f5f3d1ec378d2fc01dd4b7324301d1",
+      "size_bytes": 80000
+    },
+    {
+      "path": "lang/it.json",
+      "blob_sha": "65fa47769659e517590b2383fdc7350ab943f7e6",
+      "size_bytes": 77383
+    },
+    {
+      "path": "lang/pt-BR.json",
+      "blob_sha": "e0900fe5cab418e1d775265b31b9bced3ccd5518",
+      "size_bytes": 81288
+    },
+    {
+      "path": "lang/uk.json",
+      "blob_sha": "39fd6db0649aba5cbedacee2b0d58e1ce8c6f974",
+      "size_bytes": 89266
+    },
+    {
+      "path": "lib/editor/editor.css",
+      "blob_sha": "1e3ae2fb8f289b2b0bcc91a429965559dc8e2cf9",
+      "size_bytes": 866
+    },
+    {
+      "path": "lib/koption/koptions.css",
+      "blob_sha": "7cb10983eafb0bdfa76f0d48ecc15dcb41e13981",
+      "size_bytes": 1148
+    },
+    {
+      "path": "module/actor/api-handler.js",
+      "blob_sha": "b51cd05b61383d129058a8dad27e1151fc6ec6d5",
+      "size_bytes": 25035
+    },
+    {
+      "path": "module/actor/data/wod-actor-base.js",
+      "blob_sha": "4996235d268c4d7eed02dff5ac9582ddbd624a8d",
+      "size_bytes": 96435
+    },
+    {
+      "path": "module/actor/datamodel/_module.js",
+      "blob_sha": "91fb0d0beab5a9e0e165bfc3a051e528b714b570",
+      "size_bytes": 64
+    },
+    {
+      "path": "module/actor/datamodel/base/actor_attributes.js",
+      "blob_sha": "b9e25d72a4558afba351866cfac9249a490f54c7",
+      "size_bytes": 10438
+    },
+    {
+      "path": "module/actor/datamodel/base/actor_health.js",
+      "blob_sha": "7c22604596ea8be49e76a4e6775f41528b575c6a",
+      "size_bytes": 4666
+    },
+    {
+      "path": "module/actor/datamodel/base/actor_settings.js",
+      "blob_sha": "403867fa82f6bc97a26c73809d1ecc268eefb2a7",
+      "size_bytes": 5140
+    },
+    {
+      "path": "module/actor/datamodel/base/actor_traits.js",
+      "blob_sha": "85bd880fbfb3e36456d191f326fd935f7e5fa72f",
+      "size_bytes": 725
+    },
+    {
+      "path": "module/actor/datamodel/pc-actor-datamodel.js",
+      "blob_sha": "3249731a4a212487b78e5a752889bf2d503991eb",
+      "size_bytes": 5710
+    },
+    {
+      "path": "module/actor/template/_module.js",
+      "blob_sha": "026048c4cdbf8cf9f382f7c0b3ce76fcfb0195e7",
+      "size_bytes": 961
+    },
+    {
+      "path": "module/actor/template/changeling-actor-sheet.js",
+      "blob_sha": "18cfd41471a09ce0c2f6cfb230804e4f54c115c8",
+      "size_bytes": 11997
+    },
+    {
+      "path": "module/actor/template/changingbreed-actor-sheet.js",
+      "blob_sha": "f90f2b71aa00d9037b0af50334f09e09441ad6e6",
+      "size_bytes": 5720
+    },
+    {
+      "path": "module/actor/template/creature-actor-sheet.js",
+      "blob_sha": "005ec6238f0de063e103c8edc848302d30d067b9",
+      "size_bytes": 4705
+    },
+    {
+      "path": "module/actor/template/demon-actor-sheet.js",
+      "blob_sha": "53884b16a4c775ed21cc64cef2d4bfbe7418b7a9",
+      "size_bytes": 5536
+    },
+    {
+      "path": "module/actor/template/exalted-actor-sheet.js",
+      "blob_sha": "e357983d2142bb855c407a9f55232ea093399111",
+      "size_bytes": 4994
+    },
+    {
+      "path": "module/actor/template/hunter-actor-sheet.js",
+      "blob_sha": "444001834ed49c9471ea89cf666b6851a693ad74",
+      "size_bytes": 4188
+    },
+    {
+      "path": "module/actor/template/mage-actor-sheet.js",
+      "blob_sha": "5b4a2f9fa60fcd4fc13ef504f40541e3f0085a25",
+      "size_bytes": 6640
+    },
+    {
+      "path": "module/actor/template/mortal-actor-sheet.js",
+      "blob_sha": "2aadb8a632d55c07c4a34e4444b4150ba6dc4f6f",
+      "size_bytes": 42844
+    },
+    {
+      "path": "module/actor/template/mummy-actor-sheet.js",
+      "blob_sha": "817ba4b3b3cde12071beaee0b90d7de09984abe0",
+      "size_bytes": 4174
+    },
+    {
+      "path": "module/actor/template/pc-actor-sheet.js",
+      "blob_sha": "a38d89b64b761d65cf8dd51778226916b78161cf",
+      "size_bytes": 59437
+    },
+    {
+      "path": "module/actor/template/vampire-actor-sheet.js",
+      "blob_sha": "d4d2b51614e67a487709f47bd487f6d3225c0588",
+      "size_bytes": 5987
+    },
+    {
+      "path": "module/actor/template/werewolf-actor-sheet.js",
+      "blob_sha": "8c6e66a555fabe6b7783e1ce4ca6ab0084808254",
+      "size_bytes": 6751
+    },
+    {
+      "path": "module/actor/template/wraith-actor-sheet.js",
+      "blob_sha": "a34eea49aec7d37fe477cf365040f47232a33a69",
+      "size_bytes": 8072
+    },
+    {
+      "path": "module/config.js",
+      "blob_sha": "96f8c1a64c0437f723fc3f73499ac86ee9307099",
+      "size_bytes": 10774
+    },
+    {
+      "path": "module/dialogs/dialog-aretecasting.js",
+      "blob_sha": "4814abc38bf509f7e94b3fa793f763f6e3950c33",
+      "size_bytes": 21288
+    },
+    {
+      "path": "module/dialogs/dialog-bonus.js",
+      "blob_sha": "1871cab6c33cb09617dd07ba526fa446c6c23921",
+      "size_bytes": 8532
+    },
+    {
+      "path": "module/dialogs/dialog-checkfrenzy.js",
+      "blob_sha": "96fb898d2682fac7ec31e5d99157e66a7fd25344",
+      "size_bytes": 12990
+    },
+    {
+      "path": "module/dialogs/dialog-edits.js",
+      "blob_sha": "5f767a3cf6b3c240744cc9efdd085c36d46373f4",
+      "size_bytes": 13240
+    },
+    {
+      "path": "module/dialogs/dialog-generalroll.js",
+      "blob_sha": "4db61c4f5241f53c0d85af5d7ddbcf6ab57e74ac",
+      "size_bytes": 29963
+    },
+    {
+      "path": "module/dialogs/dialog-item.js",
+      "blob_sha": "2ccc742367b69d656c6b9bf25b6a331cd87684fb",
+      "size_bytes": 15605
+    },
+    {
+      "path": "module/dialogs/dialog-power-selection.js",
+      "blob_sha": "9ef27ba84a87a959c6b497a68f861b512e93edab",
+      "size_bytes": 3712
+    },
+    {
+      "path": "module/dialogs/dialog-power.js",
+      "blob_sha": "52af0c3483bd3f535f40ef15bf75f367c802160d",
+      "size_bytes": 42757
+    },
+    {
+      "path": "module/dialogs/dialog-shapechange.js",
+      "blob_sha": "34a25f037401c574938b2c96997d941524c48829",
+      "size_bytes": 9699
+    },
+    {
+      "path": "module/dialogs/dialog-soak.js",
+      "blob_sha": "a37d5bbbdd485bf63d1d6d1514f41c0de3849e53",
+      "size_bytes": 11724
+    },
+    {
+      "path": "module/dialogs/dialog-sortpower.js",
+      "blob_sha": "5004b85000c1a3979a897c68c96f6a00ed2238de",
+      "size_bytes": 10982
+    },
+    {
+      "path": "module/dialogs/dialog-trait.js",
+      "blob_sha": "8ceb0fa2ab7bcc6616be4d5a8e955469b480d43c",
+      "size_bytes": 16375
+    },
+    {
+      "path": "module/dialogs/dialog-variant.js",
+      "blob_sha": "538a6d030b45aaabaf781ae709d085a9ab600cfb",
+      "size_bytes": 3987
+    },
+    {
+      "path": "module/dialogs/dialog-weapon.js",
+      "blob_sha": "d50408501b766fb133ff98a95a3c6ae1169a8a25",
+      "size_bytes": 28713
+    },
+    {
+      "path": "module/dialogs/dialog-weaponv2.js",
+      "blob_sha": "63ddb4f22eea41f54863fc625ee6c8d4f83336e5",
+      "size_bytes": 29561
+    },
+    {
+      "path": "module/functions.js",
+      "blob_sha": "57786bd44504160fb53c292344ffab5966048d47",
+      "size_bytes": 279
+    },
+    {
+      "path": "module/handlebars.js",
+      "blob_sha": "b3b9da83f44fc2a69495a89ca69423129ae7e5fe",
+      "size_bytes": 51565
+    },
+    {
+      "path": "module/hooks.js",
+      "blob_sha": "77b363f689b32f629f79c887c7b0dc616fdcea90",
+      "size_bytes": 17725
+    },
+    {
+      "path": "module/items/data/wod-item-base.js",
+      "blob_sha": "b35c469fa948d96a188a12972166072bff0a8800",
+      "size_bytes": 15426
+    },
+    {
+      "path": "module/items/datamodel/_module.js",
+      "blob_sha": "7c9cff4bd9841bba535b04e38131095ff367b59f",
+      "size_bytes": 358
+    },
+    {
+      "path": "module/items/datamodel/ability-item-datamodel.js",
+      "blob_sha": "198b7b405bce70ed57852ed146f09969cf0d9517",
+      "size_bytes": 2200
+    },
+    {
+      "path": "module/items/datamodel/advantage-item-datamodel.js",
+      "blob_sha": "0f7e2a89eba09e05f285b918affe7661d500b1da",
+      "size_bytes": 2519
+    },
+    {
+      "path": "module/items/datamodel/base/item_base_settings.js",
+      "blob_sha": "24ba610c09a8bd3688dcbad7fb3adb0a64c38bb7",
+      "size_bytes": 998
+    },
+    {
+      "path": "module/items/datamodel/realm-item-datamodel.js",
+      "blob_sha": "2ce308198177b27618670c22c265ac9a8ebaa2bf",
+      "size_bytes": 1671
+    },
+    {
+      "path": "module/items/datamodel/spalt-item-datamodel.js",
+      "blob_sha": "2b8a8910b0c2ab755c5372f01014fca2692de061",
+      "size_bytes": 4498
+    },
+    {
+      "path": "module/items/datamodel/sphere-item-datamodel.js",
+      "blob_sha": "9f38a4ae1df6e6a4166e9fd852de276bc49b86cf",
+      "size_bytes": 1675
+    },
+    {
+      "path": "module/items/template/_module.js",
+      "blob_sha": "e7f60093e5f7a0b8e7f6631285acff8834b04acb",
+      "size_bytes": 408
+    },
+    {
+      "path": "module/items/template/ability-item-sheet.js",
+      "blob_sha": "6df86cf6dfca5f66d9f109927998af1444eb3611",
+      "size_bytes": 2383
+    },
+    {
+      "path": "module/items/template/advantage-item-sheet.js",
+      "blob_sha": "dade55e8dec2e033c36266d2fe0d082672d215d1",
+      "size_bytes": 2178
+    },
+    {
+      "path": "module/items/template/item-sheet-v2.js",
+      "blob_sha": "1b533b770493f45bb76ffd35607db963b95aad96",
+      "size_bytes": 9822
+    },
+    {
+      "path": "module/items/template/item-sheet.js",
+      "blob_sha": "c88c7728531de3ef867cfe58f3bc5a1609c55537",
+      "size_bytes": 16081
+    },
+    {
+      "path": "module/items/template/realm-item-sheet.js",
+      "blob_sha": "28adf75a3b75d8dff0fdb961efecbaea20b0a5de",
+      "size_bytes": 2170
+    },
+    {
+      "path": "module/items/template/sphere-item-sheet.js",
+      "blob_sha": "ace555ea1462c5ee36854e81fbf613b4773f14ec",
+      "size_bytes": 2172
+    },
+    {
+      "path": "module/items/template/splat-item-sheet.js",
+      "blob_sha": "99f0c6e79602a4805b69bbc64ca9deb655de15dc",
+      "size_bytes": 28167
+    },
+    {
+      "path": "module/migration.js",
+      "blob_sha": "a4c11295cd3ad87d40fcbc6f251b4691c30233f5",
+      "size_bytes": 163747
+    },
+    {
+      "path": "module/scripts/ability-helpers.js",
+      "blob_sha": "243f279d6d97fea060f756e1cb3e17c1f7af9c74",
+      "size_bytes": 2633
+    },
+    {
+      "path": "module/scripts/action-helpers.js",
+      "blob_sha": "84b58a7107e3189d5345fddca44f4760800ce0e3",
+      "size_bytes": 66587
+    },
+    {
+      "path": "module/scripts/attribute-augmentation-helpers.js",
+      "blob_sha": "42e302e8934bdcdd4392a13428137bd066b6e786",
+      "size_bytes": 17090
+    },
+    {
+      "path": "module/scripts/attribute-helpers.js",
+      "blob_sha": "43acc623343108510110c5f9e8f17aba14e805b6",
+      "size_bytes": 372
+    },
+    {
+      "path": "module/scripts/bio-helpers.js",
+      "blob_sha": "5484a6e97209a606c86d7efea82090e809c73a02",
+      "size_bytes": 628
+    },
+    {
+      "path": "module/scripts/bio-visibility.js",
+      "blob_sha": "56fb59be63317cebc4659553b9bbb476d424a161",
+      "size_bytes": 1666
+    },
+    {
+      "path": "module/scripts/bonus-helpers.js",
+      "blob_sha": "aae4f0b5a560197539fc8fbe12bbe66f8b2242af",
+      "size_bytes": 56913
+    },
+    {
+      "path": "module/scripts/combat-helpers.js",
+      "blob_sha": "4548a3eea0954d26f3d1db5691e0250386bb9a0a",
+      "size_bytes": 10843
+    },
+    {
+      "path": "module/scripts/create-helpers.js",
+      "blob_sha": "325bbad68125a7278fe8ceb37d5399e4715b02ad",
+      "size_bytes": 104909
+    },
+    {
+      "path": "module/scripts/drop-helpers.js",
+      "blob_sha": "062e1b9e4cd2ea50f17ec5e6242dc7af28d49c30",
+      "size_bytes": 75599
+    },
+    {
+      "path": "module/scripts/health.js",
+      "blob_sha": "2510fb90c9bbdd7d87fa0708acb179c976158487",
+      "size_bytes": 7321
+    },
+    {
+      "path": "module/scripts/import-helpers.js",
+      "blob_sha": "5f3f945077b5b143b703c139f2cc04027f782ad1",
+      "size_bytes": 8522
+    },
+    {
+      "path": "module/scripts/item-actions.js",
+      "blob_sha": "52017e0b38e234fc1b34541b3270b915a42219c8",
+      "size_bytes": 2404
+    },
+    {
+      "path": "module/scripts/item-helpers.js",
+      "blob_sha": "f0dc43c9c64201f25270c8e32de2340c95fb7e47",
+      "size_bytes": 42525
+    },
+    {
+      "path": "module/scripts/message-helpers.js",
+      "blob_sha": "42861d6a656d23c26a3c8cd05e70938a53fa8451",
+      "size_bytes": 713
+    },
+    {
+      "path": "module/scripts/roll-dice.js",
+      "blob_sha": "fe2b12bd233af7b364c056848045ab78a02f9964",
+      "size_bytes": 19659
+    },
+    {
+      "path": "module/scripts/select-helpers.js",
+      "blob_sha": "dbf41867f348ac3960834abc0562c0f085c7813c",
+      "size_bytes": 59761
+    },
+    {
+      "path": "module/scripts/select/changeling.js",
+      "blob_sha": "297e80b2207c05147c98f5fed1ae05cce69970d3",
+      "size_bytes": 2755
+    },
+    {
+      "path": "module/scripts/select/changingbreed.js",
+      "blob_sha": "86fe03c41f64f13c19c7db8fa374263df233013d",
+      "size_bytes": 7162
+    },
+    {
+      "path": "module/scripts/select/demon.js",
+      "blob_sha": "0480f46cadb47e0aaf4297ef783eb218ec8b4682",
+      "size_bytes": 819
+    },
+    {
+      "path": "module/scripts/select/era.js",
+      "blob_sha": "95e71e6cb88821b103cb237bd10e7c947c7023cd",
+      "size_bytes": 2804
+    },
+    {
+      "path": "module/scripts/select/hunter.js",
+      "blob_sha": "0b6bb87e8725817bb4e9956f5783ef56d3b83b49",
+      "size_bytes": 976
+    },
+    {
+      "path": "module/scripts/select/mage.js",
+      "blob_sha": "a53e6a3dc14a2da596d7ec77afee2424f161efc2",
+      "size_bytes": 2342
+    },
+    {
+      "path": "module/scripts/select/numeric.js",
+      "blob_sha": "ec344c15d259afd96b6d924b30b274a993383dd1",
+      "size_bytes": 740
+    },
+    {
+      "path": "module/scripts/select/power-roll.js",
+      "blob_sha": "2aeb4a8c38a5f66da833a458b6e8af6dd11c94a4",
+      "size_bytes": 12057
+    },
+    {
+      "path": "module/scripts/select/utils.js",
+      "blob_sha": "acb43c74e30b11bc4cbabed2947c238788573df8",
+      "size_bytes": 787
+    },
+    {
+      "path": "module/scripts/select/vampire.js",
+      "blob_sha": "b503119376f9fae4ccc95f060d382c8da5b70b72",
+      "size_bytes": 3044
+    },
+    {
+      "path": "module/scripts/select/werewolf.js",
+      "blob_sha": "cb695442b4a1e770317d59ac26b998ad712c981f",
+      "size_bytes": 3567
+    },
+    {
+      "path": "module/scripts/spec-select.js",
+      "blob_sha": "eae25d20cd238b65cd0d01ff954feea821b54a6e",
+      "size_bytes": 4563
+    },
+    {
+      "path": "module/scripts/sphere-helpers.js",
+      "blob_sha": "4ce184594d387feaf0a554fdecd947d5b493ba83",
+      "size_bytes": 338
+    },
+    {
+      "path": "module/scripts/token-helpers.js",
+      "blob_sha": "2aaba56e3b270c58074a985aa2ad47489de2d873",
+      "size_bytes": 7905
+    },
+    {
+      "path": "module/scripts/totals.js",
+      "blob_sha": "4922bc4bcb7b6da817910487507c39f87d0adcf3",
+      "size_bytes": 44258
+    },
+    {
+      "path": "module/scripts/wodsetup.js",
+      "blob_sha": "caae155f5527db2312b7091df21c79feed158aca",
+      "size_bytes": 6623
+    },
+    {
+      "path": "module/settings.js",
+      "blob_sha": "43aff1910746b1e4fb02a220c3b4e4743e0dd5a4",
+      "size_bytes": 51277
+    },
+    {
+      "path": "module/templates.js",
+      "blob_sha": "baae6a964295c12b4f3130298ba9354787bd486b",
+      "size_bytes": 12409
+    },
+    {
+      "path": "module/ui/attribute-augmentation-popup.js",
+      "blob_sha": "eb1a3c927eee15d252bd1345d576abd405f4c570",
+      "size_bytes": 8943
+    },
+    {
+      "path": "module/ui/dialog-migration-wizard.js",
+      "blob_sha": "f18ae7fb89a6ca95dad899859b2975b736b2dde0",
+      "size_bytes": 3015
+    },
+    {
+      "path": "module/ui/icons.js",
+      "blob_sha": "a364b6b0766f026d0feefbadf56120128498b57c",
+      "size_bytes": 59243
+    },
+    {
+      "path": "module/ui/migration-wizard-helper.js",
+      "blob_sha": "a584f0fcc6cb2702e1351ce42c6060b8171210bd",
+      "size_bytes": 1531
+    },
+    {
+      "path": "module/ui/settings-sidebar.js",
+      "blob_sha": "cce0a224fab0ee19360477220d741b9290ed864c",
+      "size_bytes": 3368
+    },
+    {
+      "path": "package.json",
+      "blob_sha": "22a54037e914bafe084239b4601ef4888d8f8dea",
+      "size_bytes": 310
+    },
+    {
+      "path": "packs/abilities/CURRENT",
+      "blob_sha": "5d0fffb388756bcfd7a9678d1870ed253ccc5176",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/abilities/LOG",
+      "blob_sha": "1a9e69ed0fef7b579e17142c226480516b3116f1",
+      "size_bytes": 446
+    },
+    {
+      "path": "packs/abilities/LOG.old",
+      "blob_sha": "24ce562087da8e002eef58d128c8eee42018bd61",
+      "size_bytes": 142
+    },
+    {
+      "path": "packs/abilities/MANIFEST-000028",
+      "blob_sha": "3294459dc56c4c3d8b809c2047aeb98756007aae",
+      "size_bytes": 65
+    },
+    {
+      "path": "packs/abilityknowledge/000653.ldb",
+      "blob_sha": "d842ed5e023531abd2c1c37e5130de9381fa0eec",
+      "size_bytes": 8416
+    },
+    {
+      "path": "packs/abilityknowledge/000793.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/abilityknowledge/CURRENT",
+      "blob_sha": "8b9b3d983cba75ad74928d15f1483d38693f4e33",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/abilityknowledge/LOG",
+      "blob_sha": "d74a0bdeedcf6e7973b2f3f3a09e01956dee8819",
+      "size_bytes": 145
+    },
+    {
+      "path": "packs/abilityknowledge/LOG.old",
+      "blob_sha": "89d5d3995666db8fc7a0e34468fd3a0ff2ea42f2",
+      "size_bytes": 480
+    },
+    {
+      "path": "packs/abilityknowledge/MANIFEST-000792",
+      "blob_sha": "dadd741944597ef73e8f0d06998c3e7900da4d71",
+      "size_bytes": 157
+    },
+    {
+      "path": "packs/abilityskill/000542.ldb",
+      "blob_sha": "7a8acfce4fe256ff71dcbe9a59d7c2dae463e65a",
+      "size_bytes": 4821
+    },
+    {
+      "path": "packs/abilityskill/000624.ldb",
+      "blob_sha": "650a160d0c01fc75a9c11cfe34abdca436ea395a",
+      "size_bytes": 815
+    },
+    {
+      "path": "packs/abilityskill/000794.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/abilityskill/CURRENT",
+      "blob_sha": "22a69eb83cbb5e3a81384bc479053a8bf3a1dc59",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/abilityskill/LOG",
+      "blob_sha": "e8d5170501410f2dfe090a084636db04796967c0",
+      "size_bytes": 145
+    },
+    {
+      "path": "packs/abilityskill/LOG.old",
+      "blob_sha": "37f256963daf04a9e83e3e4cd900c6f62a1b228f",
+      "size_bytes": 480
+    },
+    {
+      "path": "packs/abilityskill/MANIFEST-000793",
+      "blob_sha": "6e7af255249a10df5bc8868dce6e108eb4dcf328",
+      "size_bytes": 226
+    },
+    {
+      "path": "packs/abilitytalent/000737.ldb",
+      "blob_sha": "e507cc6c9c94c1001a23d91c85e2543d4079ce01",
+      "size_bytes": 5670
+    },
+    {
+      "path": "packs/abilitytalent/000793.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/abilitytalent/CURRENT",
+      "blob_sha": "8b9b3d983cba75ad74928d15f1483d38693f4e33",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/abilitytalent/LOG",
+      "blob_sha": "6443cdf20b14b417b3fb95455513041ff2fd1ed4",
+      "size_bytes": 145
+    },
+    {
+      "path": "packs/abilitytalent/LOG.old",
+      "blob_sha": "94d6657532dfd063e5ae6097816652700e939dd5",
+      "size_bytes": 480
+    },
+    {
+      "path": "packs/abilitytalent/MANIFEST-000792",
+      "blob_sha": "45cf957fff6899dedbd3920eac19859329cab65d",
+      "size_bytes": 156
+    },
+    {
+      "path": "packs/advantages/000791.ldb",
+      "blob_sha": "a24d6503be3e975c59a6fb430f26b082dd2dccb9",
+      "size_bytes": 25979
+    },
+    {
+      "path": "packs/advantages/000847.log",
+      "blob_sha": "0842eb9aa676b5eea17f7e0c60d92a9e1cce67c2",
+      "size_bytes": 3114
+    },
+    {
+      "path": "packs/advantages/CURRENT",
+      "blob_sha": "29b4085ba3b9a2852b9a0c589f85d493aeaf27a9",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/advantages/LOG",
+      "blob_sha": "a7c63f89c2f293ef241921689a8b9d528f8b184b",
+      "size_bytes": 145
+    },
+    {
+      "path": "packs/advantages/LOG.old",
+      "blob_sha": "f9c8cc8ff57013d1dde2952745084c753f44f488",
+      "size_bytes": 482
+    },
+    {
+      "path": "packs/advantages/MANIFEST-000846",
+      "blob_sha": "afe5919829f90ed4e9e747af92fba28eccf40756",
+      "size_bytes": 160
+    },
+    {
+      "path": "packs/defileradadform/000109.ldb",
+      "blob_sha": "266bfaecd414320a5f412cba5667bc32b9e44995",
+      "size_bytes": 3281
+    },
+    {
+      "path": "packs/defileradadform/001195.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/defileradadform/CURRENT",
+      "blob_sha": "43312ab7a9181aa16e309463e111cc8c994ddff9",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/defileradadform/LOG",
+      "blob_sha": "f037241e79fcce6ffce6fbbf6387b4537c6304ff",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/defileradadform/LOG.old",
+      "blob_sha": "3f3c300921a16b29b8e089e321bb0cbb88d6e1d9",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/defileradadform/MANIFEST-001194",
+      "blob_sha": "11587e000694aa7033a2a2e6f7acf3539ba63ebc",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/defilerishharaform/000109.ldb",
+      "blob_sha": "ffb98a7eccc6d36e1bbf2d3432b7400ff7494033",
+      "size_bytes": 3466
+    },
+    {
+      "path": "packs/defilerishharaform/001195.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/defilerishharaform/CURRENT",
+      "blob_sha": "43312ab7a9181aa16e309463e111cc8c994ddff9",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/defilerishharaform/LOG",
+      "blob_sha": "345269344620ad6cfcc6164367fadba1242d2897",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/defilerishharaform/LOG.old",
+      "blob_sha": "4f2372801750e5f56e16c8708409dbebbee078c9",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/defilerishharaform/MANIFEST-001194",
+      "blob_sha": "f12d2429572559865c8d62edd9aff757eb9c6e78",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/defilermammetumform/000109.ldb",
+      "blob_sha": "7a1a4d5faffdbe09cfb53211a8fee4b66e557f69",
+      "size_bytes": 3580
+    },
+    {
+      "path": "packs/defilermammetumform/001195.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/defilermammetumform/CURRENT",
+      "blob_sha": "43312ab7a9181aa16e309463e111cc8c994ddff9",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/defilermammetumform/LOG",
+      "blob_sha": "49bdb277b4a1732506c4c01300079cc65e997242",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/defilermammetumform/LOG.old",
+      "blob_sha": "d21ea2ade39e9f5f0df2edebc9f87c463d138250",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/defilermammetumform/MANIFEST-001194",
+      "blob_sha": "9f90c33cc3f3daa5937badb09589eeeb84800de3",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/devilbelform/000140.ldb",
+      "blob_sha": "86adb60fd6d5abc8300184316505ba9edc1560ab",
+      "size_bytes": 3489
+    },
+    {
+      "path": "packs/devilbelform/001226.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/devilbelform/CURRENT",
+      "blob_sha": "2beee83e40d47e5d6a91c7892329ac85ff03f31d",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/devilbelform/LOG",
+      "blob_sha": "2f258eeae86b28d856f4a0e87b75183e8222caad",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/devilbelform/LOG.old",
+      "blob_sha": "671535f2e8844b83bcd7a0e97f434d4d97c47c05",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/devilbelform/MANIFEST-001225",
+      "blob_sha": "b18482dd99d37c98de203e49256ce2d56330c432",
+      "size_bytes": 190
+    },
+    {
+      "path": "packs/devilnuskuform/000139.ldb",
+      "blob_sha": "69a04f86aa52eb37e42760b6694b69aa6379bb2d",
+      "size_bytes": 3372
+    },
+    {
+      "path": "packs/devilnuskuform/001225.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/devilnuskuform/CURRENT",
+      "blob_sha": "5372366917502d05734b6eb9b0c0c728872ac8b0",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/devilnuskuform/LOG",
+      "blob_sha": "7f52e0bd62ecbeb1d6fb5f338d6d73c6b166c141",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/devilnuskuform/LOG.old",
+      "blob_sha": "c9019c989d01390897fc7e515a5920f03ec29b92",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/devilnuskuform/MANIFEST-001224",
+      "blob_sha": "33cbc9963e797654379bdc897e04ad5e1b00489d",
+      "size_bytes": 190
+    },
+    {
+      "path": "packs/devilqinguform/000139.ldb",
+      "blob_sha": "fe7ea0e93b4afece3c657d6a88fc66228f92faef",
+      "size_bytes": 3851
+    },
+    {
+      "path": "packs/devilqinguform/001225.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/devilqinguform/CURRENT",
+      "blob_sha": "5372366917502d05734b6eb9b0c0c728872ac8b0",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/devilqinguform/LOG",
+      "blob_sha": "70fd8b00742109ac125ee05ce409ed4a92dd137a",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/devilqinguform/LOG.old",
+      "blob_sha": "e5f5f692bdf5bf8f68bce9c21139ee99b3a59d69",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/devilqinguform/MANIFEST-001224",
+      "blob_sha": "76304f0b6e0be200cc3262b7b9eee9476005b785",
+      "size_bytes": 190
+    },
+    {
+      "path": "packs/devoureraruruform/000101.ldb",
+      "blob_sha": "989521c8df1a0db2517a6766eeae6d755a17c332",
+      "size_bytes": 3504
+    },
+    {
+      "path": "packs/devoureraruruform/001187.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/devoureraruruform/CURRENT",
+      "blob_sha": "993491062fa1aa4af2dd981cc2a6f10c31665521",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/devoureraruruform/LOG",
+      "blob_sha": "81980378f444c88381e59dc98dd06a95f8555f09",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/devoureraruruform/LOG.old",
+      "blob_sha": "d19670bbc95516b688a3fbefd0f8c79db6e8e1cc",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/devoureraruruform/MANIFEST-001186",
+      "blob_sha": "b4c14c8e5c4224cf212620a9d9280204cc48603e",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/devourerninurtuform/000101.ldb",
+      "blob_sha": "17f77f0e5b931c431d8e981e413abdbe1b274479",
+      "size_bytes": 4102
+    },
+    {
+      "path": "packs/devourerninurtuform/001187.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/devourerninurtuform/CURRENT",
+      "blob_sha": "993491062fa1aa4af2dd981cc2a6f10c31665521",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/devourerninurtuform/LOG",
+      "blob_sha": "280f2c30628896895579efc71363e87b98f45fe7",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/devourerninurtuform/LOG.old",
+      "blob_sha": "6bdf1b63cae208ba0463fcb9a90d0990e95f7ba6",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/devourerninurtuform/MANIFEST-001186",
+      "blob_sha": "3ed4d500704be65b0fef2cac0aca740fcc750c82",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/devourerzaltuform/000101.ldb",
+      "blob_sha": "3325872d723ad6b4bb38fa12d4f8b384c31eb05a",
+      "size_bytes": 3780
+    },
+    {
+      "path": "packs/devourerzaltuform/001187.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/devourerzaltuform/CURRENT",
+      "blob_sha": "993491062fa1aa4af2dd981cc2a6f10c31665521",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/devourerzaltuform/LOG",
+      "blob_sha": "129fee56ededa95d88b4c506d9db9ec71642106b",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/devourerzaltuform/LOG.old",
+      "blob_sha": "298c6c957314afa12d51ed40a62a5794a3d14caa",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/devourerzaltuform/MANIFEST-001186",
+      "blob_sha": "9a3685f7e42a7bb7240ef3e02e8775ebd83c9301",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/features/000713.ldb",
+      "blob_sha": "54c9b2cd4efa975f2b4b9f29b7a03181a52b9102",
+      "size_bytes": 78432
+    },
+    {
+      "path": "packs/features/000769.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/features/CURRENT",
+      "blob_sha": "4f0f48fef768ee839430cce962940f8f03e823c7",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/features/LOG",
+      "blob_sha": "a89a834eed372c14f4a6103a6dcb0d9d0e74bdea",
+      "size_bytes": 145
+    },
+    {
+      "path": "packs/features/LOG.old",
+      "blob_sha": "e50b64cc3baeffed1e3b29e112068f68dafadb72",
+      "size_bytes": 654
+    },
+    {
+      "path": "packs/features/MANIFEST-000768",
+      "blob_sha": "b3a0e13dd1835807769fff6ec192e345ddb8afe4",
+      "size_bytes": 194
+    },
+    {
+      "path": "packs/fiendneduform/000113.ldb",
+      "blob_sha": "629e97fc7b31fc58fc4d9487ffd41c96cef839a5",
+      "size_bytes": 3387
+    },
+    {
+      "path": "packs/fiendneduform/001199.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/fiendneduform/CURRENT",
+      "blob_sha": "c82c9c4988d9fbcd9932c432fdb87bd93c24d286",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/fiendneduform/LOG",
+      "blob_sha": "49071f7fd37529551ea66d80b96e95bd088dea66",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/fiendneduform/LOG.old",
+      "blob_sha": "ef413bff81bc53e4ab8023505b76c25dce012d42",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/fiendneduform/MANIFEST-001198",
+      "blob_sha": "497077c919913c76d7b5492f19dfcaf3b00d611a",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/fiendninsunform/000113.ldb",
+      "blob_sha": "2461c9cc61a164400fb42ae1fa9a92c9522329be",
+      "size_bytes": 3655
+    },
+    {
+      "path": "packs/fiendninsunform/001199.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/fiendninsunform/CURRENT",
+      "blob_sha": "c82c9c4988d9fbcd9932c432fdb87bd93c24d286",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/fiendninsunform/LOG",
+      "blob_sha": "fa8e917d2bd1a491d89cf817d18ecc1b514c0892",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/fiendninsunform/LOG.old",
+      "blob_sha": "81c6382bb7ef6cf301f03c28d90b4e9cb859de08",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/fiendninsunform/MANIFEST-001198",
+      "blob_sha": "82dee4bad68aadbf30cee37d83fd9a7bc5331fc5",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/fiendshamashform/000113.ldb",
+      "blob_sha": "c27f2d6647ed35aeaafb3877241575cff6713474",
+      "size_bytes": 3655
+    },
+    {
+      "path": "packs/fiendshamashform/001199.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/fiendshamashform/CURRENT",
+      "blob_sha": "c82c9c4988d9fbcd9932c432fdb87bd93c24d286",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/fiendshamashform/LOG",
+      "blob_sha": "b28eebf98d9ef258d7b04743b967e7805aac68a8",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/fiendshamashform/LOG.old",
+      "blob_sha": "f349858aabd8439b9e9e10f3ccb6ef8752f62434",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/fiendshamashform/MANIFEST-001198",
+      "blob_sha": "3761c73b0d24f7b63c99798a7376764aca72219d",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/infernalaspects/000151.ldb",
+      "blob_sha": "a955a56ba2cd4524c062759a35b4d8361c8328f8",
+      "size_bytes": 11456
+    },
+    {
+      "path": "packs/infernalaspects/001237.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/infernalaspects/CURRENT",
+      "blob_sha": "ae3aeb02981c17fc73d97a7e2f5f3ac3d96de000",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/infernalaspects/LOG",
+      "blob_sha": "cc91430903ef7b808db9d7bf78712924570f7bfe",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/infernalaspects/LOG.old",
+      "blob_sha": "d47e7bbaa4425c047d5de39a24bebdcddc0aa20f",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/infernalaspects/MANIFEST-001236",
+      "blob_sha": "a53a7e58f54f3872afa6cdab5e09c2bdae95a6b7",
+      "size_bytes": 190
+    },
+    {
+      "path": "packs/infernalshapeshifting/000147.ldb",
+      "blob_sha": "eefc1cd7107cf331a957bc89192356001f8908ed",
+      "size_bytes": 5600
+    },
+    {
+      "path": "packs/infernalshapeshifting/001233.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/infernalshapeshifting/CURRENT",
+      "blob_sha": "93563a78f4bd0c319dceea6778aad77da641815f",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/infernalshapeshifting/LOG",
+      "blob_sha": "cbe9bea44e32dcede9bce75b8145c61a6b12f769",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/infernalshapeshifting/LOG.old",
+      "blob_sha": "68f93a53a93a26d74086be151f8a3f29af093c2d",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/infernalshapeshifting/MANIFEST-001232",
+      "blob_sha": "34992aa66b95db4e09d2602070b52e63d5eccfff",
+      "size_bytes": 190
+    },
+    {
+      "path": "packs/lunaraspects/000151.ldb",
+      "blob_sha": "0218f55bee808cb01f79cb2a40180d9512df7a84",
+      "size_bytes": 10926
+    },
+    {
+      "path": "packs/lunaraspects/001237.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/lunaraspects/CURRENT",
+      "blob_sha": "ae3aeb02981c17fc73d97a7e2f5f3ac3d96de000",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/lunaraspects/LOG",
+      "blob_sha": "ba00cb9f3e8b34cb6b019c5a182649c5f71f9559",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/lunaraspects/LOG.old",
+      "blob_sha": "f5ffc0d0556bb86b23b6cbdb640beae22a997376",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/lunaraspects/MANIFEST-001236",
+      "blob_sha": "34a58757ad58d1047a127b44ba96c0ba7d4f1ba8",
+      "size_bytes": 190
+    },
+    {
+      "path": "packs/lunarshapeshifting/001280.ldb",
+      "blob_sha": "ebc8311b5241ce7504af9aaf36d59fa1a0b2d817",
+      "size_bytes": 4906
+    },
+    {
+      "path": "packs/lunarshapeshifting/001336.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/lunarshapeshifting/CURRENT",
+      "blob_sha": "a8c8eb8f056fe39f9604b1559801da4511a76cda",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/lunarshapeshifting/LOG",
+      "blob_sha": "4c6ea52154020f44cf201522edd3837f35e77e89",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/lunarshapeshifting/LOG.old",
+      "blob_sha": "e8895f09878a4bc50a07c733f8845aa60a5ab96f",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/lunarshapeshifting/MANIFEST-001335",
+      "blob_sha": "b8b062a2c7a1b0339c6058d07044a15ca63e195a",
+      "size_bytes": 190
+    },
+    {
+      "path": "packs/malefactorantuform/000123.ldb",
+      "blob_sha": "678c226a03bac63dc9598254eb0e0cf6b312662c",
+      "size_bytes": 3722
+    },
+    {
+      "path": "packs/malefactorantuform/001209.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/malefactorantuform/CURRENT",
+      "blob_sha": "fc98caa7c8b37649422d35f37d8c38c06a82e6ac",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/malefactorantuform/LOG",
+      "blob_sha": "2fb9e1b72a6fda74acf7cb75f2f68efb32ba061b",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/malefactorantuform/LOG.old",
+      "blob_sha": "c5b3db5dc1b9035bd2993adce442da523af2269b",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/malefactorantuform/MANIFEST-001208",
+      "blob_sha": "f96cec2f07423b8c765cf87fd72785e80b51e0f3",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/malefactorkisharform/000123.ldb",
+      "blob_sha": "728a320a10194a8a0ea686b7d29e8c867816e8f8",
+      "size_bytes": 3247
+    },
+    {
+      "path": "packs/malefactorkisharform/001209.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/malefactorkisharform/CURRENT",
+      "blob_sha": "fc98caa7c8b37649422d35f37d8c38c06a82e6ac",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/malefactorkisharform/LOG",
+      "blob_sha": "e6d5ad0904a7d4b04893d98a383f8a3ba80faf3f",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/malefactorkisharform/LOG.old",
+      "blob_sha": "aac78125397c58b9d07cdb6473dd79cabeb6efd4",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/malefactorkisharform/MANIFEST-001208",
+      "blob_sha": "c0fc5c447935997b18b5d443d166fff61923b494",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/malefactormummuform/000123.ldb",
+      "blob_sha": "fea36cbaa86f199d5bcbe928e3c22b5fc1e49b69",
+      "size_bytes": 3459
+    },
+    {
+      "path": "packs/malefactormummuform/001209.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/malefactormummuform/CURRENT",
+      "blob_sha": "fc98caa7c8b37649422d35f37d8c38c06a82e6ac",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/malefactormummuform/LOG",
+      "blob_sha": "376d283c1d37aaddeeb3c4873bc6dcdd5d62bda5",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/malefactormummuform/LOG.old",
+      "blob_sha": "d377838d716de7d451da509ed2f7dc5540e17b27",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/malefactormummuform/MANIFEST-001208",
+      "blob_sha": "be7933c15525b43480137639c303cc013a2f4c37",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/powers/000492.ldb",
+      "blob_sha": "e17e6033a069bdc06390ba7c850268a1060ea558",
+      "size_bytes": 3810
+    },
+    {
+      "path": "packs/powers/000662.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/powers/CURRENT",
+      "blob_sha": "30f76aa54ec8581df596247d8a7b57fd6efc96df",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/powers/LOG",
+      "blob_sha": "d8622e3f83d04049e50a2cdc6e859aa002b5be1e",
+      "size_bytes": 145
+    },
+    {
+      "path": "packs/powers/LOG.old",
+      "blob_sha": "cfa02a4dba4388f2ee3fa5e4dc1bf5606a32c7df",
+      "size_bytes": 482
+    },
+    {
+      "path": "packs/powers/MANIFEST-000661",
+      "blob_sha": "d245ae5cf3b8893100935bca569be27105a2d520",
+      "size_bytes": 158
+    },
+    {
+      "path": "packs/scourgeansharform/000131.ldb",
+      "blob_sha": "13d9319dde1f6a034dc81c5a3de4d0c8b86fd090",
+      "size_bytes": 3326
+    },
+    {
+      "path": "packs/scourgeansharform/001217.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/scourgeansharform/CURRENT",
+      "blob_sha": "e221a677e25bef675e50a63c390533196688125e",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/scourgeansharform/LOG",
+      "blob_sha": "112c053c4af4f42e1ada2d0ec1346fe1c343c962",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/scourgeansharform/LOG.old",
+      "blob_sha": "95b9f88284660b6c369ca8231f8a3f9d957bae49",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/scourgeansharform/MANIFEST-001216",
+      "blob_sha": "99ed3824ad38889a5d5a0db5a133b03b583c87a0",
+      "size_bytes": 190
+    },
+    {
+      "path": "packs/scourgedaganform/000131.ldb",
+      "blob_sha": "ab4c85963afb32465114d8f1db2a1665a2c8986d",
+      "size_bytes": 4205
+    },
+    {
+      "path": "packs/scourgedaganform/001217.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/scourgedaganform/CURRENT",
+      "blob_sha": "e221a677e25bef675e50a63c390533196688125e",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/scourgedaganform/LOG",
+      "blob_sha": "e2cf08b088ef6d323ad86e7c845363de612c776f",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/scourgedaganform/LOG.old",
+      "blob_sha": "d21a1ea663a3e93610ce685c4b882a9fd758ae3c",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/scourgedaganform/MANIFEST-001216",
+      "blob_sha": "b6b39fbca4169a5d6375ba829072fc295750e4c0",
+      "size_bytes": 190
+    },
+    {
+      "path": "packs/scourgeellilform/000131.ldb",
+      "blob_sha": "70b4536779d18d2d9cb1c8ad3687cd89b197be15",
+      "size_bytes": 3802
+    },
+    {
+      "path": "packs/scourgeellilform/001217.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/scourgeellilform/CURRENT",
+      "blob_sha": "e221a677e25bef675e50a63c390533196688125e",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/scourgeellilform/LOG",
+      "blob_sha": "4bba2403928a996720f4a0818354a984ee42cff1",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/scourgeellilform/LOG.old",
+      "blob_sha": "96cb35d33e0e9345bd0be128c5dd3f596bd11575",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/scourgeellilform/MANIFEST-001216",
+      "blob_sha": "cb64e288ae93cd58ace3b9cf07fb4b04cf0c4230",
+      "size_bytes": 190
+    },
+    {
+      "path": "packs/slayerereshkigalform/000097.ldb",
+      "blob_sha": "fc357baab1a4684fe7b0413c1e2de37c5c9ac24a",
+      "size_bytes": 3683
+    },
+    {
+      "path": "packs/slayerereshkigalform/001183.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/slayerereshkigalform/CURRENT",
+      "blob_sha": "90d079b93905a695ea444e3310dd48e3f7fc8f75",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/slayerereshkigalform/LOG",
+      "blob_sha": "11bbb895d21371b8b9291ad9e2414f510e64c82c",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/slayerereshkigalform/LOG.old",
+      "blob_sha": "6eb73e51d855670022a4164ea7fec0a7891d31c3",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/slayerereshkigalform/MANIFEST-001182",
+      "blob_sha": "6ede47b8408968bad0f648a08a298c9e39263952",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/slayernamtarform/000097.ldb",
+      "blob_sha": "df5a57c2e362370d18ff2b022e9e485397d04c44",
+      "size_bytes": 4077
+    },
+    {
+      "path": "packs/slayernamtarform/001183.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/slayernamtarform/CURRENT",
+      "blob_sha": "90d079b93905a695ea444e3310dd48e3f7fc8f75",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/slayernamtarform/LOG",
+      "blob_sha": "3d3af801f3f556c5abb5214bb7dd6d4348c449a3",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/slayernamtarform/LOG.old",
+      "blob_sha": "d3cce0ae04efb638ad4c78399b6e24502fc29250",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/slayernamtarform/MANIFEST-001182",
+      "blob_sha": "d69502318ac7ae7c2636894c52de94fda15a206c",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/slayernergalform/000097.ldb",
+      "blob_sha": "819ebd8e873cc213af05945c1f47b1eb2accdf7c",
+      "size_bytes": 3985
+    },
+    {
+      "path": "packs/slayernergalform/001183.log",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "packs/slayernergalform/CURRENT",
+      "blob_sha": "90d079b93905a695ea444e3310dd48e3f7fc8f75",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/slayernergalform/LOG",
+      "blob_sha": "cfc92e442c1fc0d555564eec5cdb22f083367d39",
+      "size_bytes": 148
+    },
+    {
+      "path": "packs/slayernergalform/LOG.old",
+      "blob_sha": "af7c2759b5d8a8c4b6aecd13941fd48f5d0d1973",
+      "size_bytes": 656
+    },
+    {
+      "path": "packs/slayernergalform/MANIFEST-001182",
+      "blob_sha": "c4dcb56d9c13d234d509da784b9fc62564505008",
+      "size_bytes": 189
+    },
+    {
+      "path": "packs/splats/000967.log",
+      "blob_sha": "3584738b72ded640f17c0f10e9c26e25ea157fd8",
+      "size_bytes": 1980712
+    },
+    {
+      "path": "packs/splats/000969.ldb",
+      "blob_sha": "437a227232ee2ebfc49909301ee53f0ddd28e582",
+      "size_bytes": 992710
+    },
+    {
+      "path": "packs/splats/CURRENT",
+      "blob_sha": "75621cd12f9521666f2c8016b140f652a8a7c4ed",
+      "size_bytes": 16
+    },
+    {
+      "path": "packs/splats/LOG",
+      "blob_sha": "d13d90396c2d3f994e74b286e0dfba1aaa53de00",
+      "size_bytes": 1750
+    },
+    {
+      "path": "packs/splats/LOG.old",
+      "blob_sha": "8ee7d87b1774a0bafd6d1768f6511576dc8e8e06",
+      "size_bytes": 654
+    },
+    {
+      "path": "packs/splats/MANIFEST-000959",
+      "blob_sha": "ed80f8ad950647cc1cfa8eb1d0bc1b5a9fa2d516",
+      "size_bytes": 860
+    },
+    {
+      "path": "system.json",
+      "blob_sha": "36f1b46b16bc736a302d49c83eedefd7d5fa29ba",
+      "size_bytes": 22682
+    },
+    {
+      "path": "template.json",
+      "blob_sha": "d864914fd24657fa9646f61421fdf0a29d21c9e5",
+      "size_bytes": 34119
+    },
+    {
+      "path": "templates/actor/changeling-sheet.html",
+      "blob_sha": "d9cc025e965b5e7f1975244513551a8fb738fdbd",
+      "size_bytes": 5659
+    },
+    {
+      "path": "templates/actor/changingbreed-sheet.html",
+      "blob_sha": "cab1607a8a65fc0b460264cf4403d8ee933e5b00",
+      "size_bytes": 11525
+    },
+    {
+      "path": "templates/actor/creature-sheet.html",
+      "blob_sha": "2c17d46c0615b2eda53a2e2f13e2d5a808189a32",
+      "size_bytes": 6562
+    },
+    {
+      "path": "templates/actor/demon-sheet.html",
+      "blob_sha": "6845b1ce31cd5015396b59c2f7f053dae0f1c6e9",
+      "size_bytes": 4872
+    },
+    {
+      "path": "templates/actor/exalted-sheet.html",
+      "blob_sha": "96f285dde441b70f21c3fd10cff8adf8823cb431",
+      "size_bytes": 2866
+    },
+    {
+      "path": "templates/actor/hunter-sheet.html",
+      "blob_sha": "1d88aa0e1e7b9b18509a371601096133f9ef030b",
+      "size_bytes": 4659
+    },
+    {
+      "path": "templates/actor/mage-sheet.html",
+      "blob_sha": "e17815dae0a12d274d7885f41674721f24cb06de",
+      "size_bytes": 5551
+    },
+    {
+      "path": "templates/actor/mortal-sheet.html",
+      "blob_sha": "fa879a4ff25a803c2780cd8b8aa8dc2b4d67bca7",
+      "size_bytes": 3137
+    },
+    {
+      "path": "templates/actor/mummy-sheet.html",
+      "blob_sha": "c240451590fa28c96965f8680d5c2f4149897c45",
+      "size_bytes": 2908
+    },
+    {
+      "path": "templates/actor/parts/abilities.html",
+      "blob_sha": "2acbb5290ce11cf44a54c94e745c259489065f8b",
+      "size_bytes": 10295
+    },
+    {
+      "path": "templates/actor/parts/attributes.html",
+      "blob_sha": "c908c6812e7655ade7da7347ffde63e87a77936f",
+      "size_bytes": 2927
+    },
+    {
+      "path": "templates/actor/parts/bio.hbs",
+      "blob_sha": "4e6c33e52005772900492118111d879ef37a334f",
+      "size_bytes": 6262
+    },
+    {
+      "path": "templates/actor/parts/bio.html",
+      "blob_sha": "bdbde1a93c21298ac5c4c2a7b721fc7bebb85871",
+      "size_bytes": 10070
+    },
+    {
+      "path": "templates/actor/parts/bio_splatboxes.hbs",
+      "blob_sha": "93d0a378fe5ff30ab31757d775a8edde83755754",
+      "size_bytes": 411
+    },
+    {
+      "path": "templates/actor/parts/bio_splatfields.hbs",
+      "blob_sha": "4f3e6c12f92f6fafe74cf461eaf89270aabbe8f5",
+      "size_bytes": 3396
+    },
+    {
+      "path": "templates/actor/parts/changeling/bio_changeling_background.html",
+      "blob_sha": "c69dbe7d3c0de1ade470897659e246d59de70393",
+      "size_bytes": 13637
+    },
+    {
+      "path": "templates/actor/parts/changeling/dreaming.html",
+      "blob_sha": "74828813f751a036bf7ce6266d55d740d0e6ef31",
+      "size_bytes": 8024
+    },
+    {
+      "path": "templates/actor/parts/combat.hbs",
+      "blob_sha": "ed8229e44d084373218333a3c39597bbf54cf3a5",
+      "size_bytes": 2614
+    },
+    {
+      "path": "templates/actor/parts/combat.html",
+      "blob_sha": "eb749cc391b8a3da59978149fbd8a781c916c9f0",
+      "size_bytes": 2131
+    },
+    {
+      "path": "templates/actor/parts/combat_armor.hbs",
+      "blob_sha": "da007422840c47b77e4e38ff35d7050f71158854",
+      "size_bytes": 6411
+    },
+    {
+      "path": "templates/actor/parts/combat_armor.html",
+      "blob_sha": "aa2e7b7c06619f6b400bcccdf70449fda59b4692",
+      "size_bytes": 7344
+    },
+    {
+      "path": "templates/actor/parts/combat_conditions.hbs",
+      "blob_sha": "34419d6058db1b0ebef952bd58bfd2e4dc06036c",
+      "size_bytes": 2578
+    },
+    {
+      "path": "templates/actor/parts/combat_melee.hbs",
+      "blob_sha": "75823a5659a5755b3498ace3e7a07c438c59c66a",
+      "size_bytes": 4918
+    },
+    {
+      "path": "templates/actor/parts/combat_melee.html",
+      "blob_sha": "301c766b06966e3970c73323f97c57386f5f2a1c",
+      "size_bytes": 5856
+    },
+    {
+      "path": "templates/actor/parts/combat_movement.hbs",
+      "blob_sha": "15e1ffe676d873a998e8b69a371068d3db6727ef",
+      "size_bytes": 1991
+    },
+    {
+      "path": "templates/actor/parts/combat_natural.hbs",
+      "blob_sha": "43a7bfbda62719b890eb5b90ad731f98f8feb6ee",
+      "size_bytes": 4196
+    },
+    {
+      "path": "templates/actor/parts/combat_natural.html",
+      "blob_sha": "404f61254fdbc531122c811d8ca4c270d6fbf81a",
+      "size_bytes": 5018
+    },
+    {
+      "path": "templates/actor/parts/combat_ranged.hbs",
+      "blob_sha": "46a907124413ac2623ddaf7348a45eb1740db7bf",
+      "size_bytes": 5308
+    },
+    {
+      "path": "templates/actor/parts/combat_ranged.html",
+      "blob_sha": "fac5a8e61a973c083b005c587a869082cb3d39be",
+      "size_bytes": 6197
+    },
+    {
+      "path": "templates/actor/parts/conditions.html",
+      "blob_sha": "d5d44907ba194273cf625539bab8369a1d0a4578",
+      "size_bytes": 2636
+    },
+    {
+      "path": "templates/actor/parts/creature/charms.html",
+      "blob_sha": "57e8baa380e75701e21688b8fe263a7e07ba92d7",
+      "size_bytes": 619
+    },
+    {
+      "path": "templates/actor/parts/creature/power.html",
+      "blob_sha": "dbe8019411b9c4865e1a1ee3e72464ebe93cd94e",
+      "size_bytes": 610
+    },
+    {
+      "path": "templates/actor/parts/creature/stats.html",
+      "blob_sha": "11580f6fd9a6723f92422966ea8d013650950566",
+      "size_bytes": 2558
+    },
+    {
+      "path": "templates/actor/parts/creature/stats_essence.html",
+      "blob_sha": "91ad4e6eb2bffb83d4fa0a8cdae69087b1c25184",
+      "size_bytes": 752
+    },
+    {
+      "path": "templates/actor/parts/demon/bio_demon_background.html",
+      "blob_sha": "a415914e583d833e658d5094d869804f476873de",
+      "size_bytes": 2026
+    },
+    {
+      "path": "templates/actor/parts/demon/forms.html",
+      "blob_sha": "a23e1a261108722892a50f9e80187358b4113749",
+      "size_bytes": 2489
+    },
+    {
+      "path": "templates/actor/parts/demon/lores.html",
+      "blob_sha": "bb9ea274a35d852b077a612de3ebddaf2d1c44f1",
+      "size_bytes": 2324
+    },
+    {
+      "path": "templates/actor/parts/description.hbs",
+      "blob_sha": "89d37afa58cbb2bca53c167801b816e7dad526bd",
+      "size_bytes": 551
+    },
+    {
+      "path": "templates/actor/parts/effect.html",
+      "blob_sha": "339d1cf43469b53244e8e89841644143e98bd9a2",
+      "size_bytes": 2300
+    },
+    {
+      "path": "templates/actor/parts/effects.hbs",
+      "blob_sha": "d41c16937b4fc69efd9ca28d5943b5e9fde3be09",
+      "size_bytes": 2845
+    },
+    {
+      "path": "templates/actor/parts/exalted/bio_exalted_background.html",
+      "blob_sha": "1b4a86bac359d5813b112f32693272675c82d4f3",
+      "size_bytes": 4529
+    },
+    {
+      "path": "templates/actor/parts/exalted/exalted_charms.html",
+      "blob_sha": "df74da0a1f8f95586c09682f1479f71480a0bf04",
+      "size_bytes": 1233
+    },
+    {
+      "path": "templates/actor/parts/feature.hbs",
+      "blob_sha": "908cc53c77602a6ac8db56476dfb7791dfbbf531",
+      "size_bytes": 8999
+    },
+    {
+      "path": "templates/actor/parts/feature_item.hbs",
+      "blob_sha": "b70b5a14188b93d657f534d75dd7857b3fb1d08d",
+      "size_bytes": 2754
+    },
+    {
+      "path": "templates/actor/parts/gear.hbs",
+      "blob_sha": "52c3b60f96b530d3f7b2a17fc802983ba26fa932",
+      "size_bytes": 9245
+    },
+    {
+      "path": "templates/actor/parts/gear.html",
+      "blob_sha": "f737202f4ec10aa88fc505c6e5e67311ca2fa6e5",
+      "size_bytes": 5963
+    },
+    {
+      "path": "templates/actor/parts/gifts.html",
+      "blob_sha": "3fa60d5c3ceb795b7e55b846f0cc3475adc486fb",
+      "size_bytes": 467
+    },
+    {
+      "path": "templates/actor/parts/hunter/bio_hunter_background.html",
+      "blob_sha": "90df2c7ffeca374040de5610f2a0be58bd08ce2d",
+      "size_bytes": 1552
+    },
+    {
+      "path": "templates/actor/parts/hunter/edges.html",
+      "blob_sha": "f35b2780d3ab3d19ed41e7af2373e50097d30cde",
+      "size_bytes": 1604
+    },
+    {
+      "path": "templates/actor/parts/hunter/stats_virtue.html",
+      "blob_sha": "5e16f0a92db711132285ecb5dfca548029d31c59",
+      "size_bytes": 4085
+    },
+    {
+      "path": "templates/actor/parts/list_icons.hbs",
+      "blob_sha": "e8a20660ac579f0045946f2c6bc5760e064e9578",
+      "size_bytes": 1160
+    },
+    {
+      "path": "templates/actor/parts/macro_icons.hbs",
+      "blob_sha": "cff858dc11ee3a78d2adfad2e35d8d7b1535f80b",
+      "size_bytes": 3663
+    },
+    {
+      "path": "templates/actor/parts/macro_icons.html",
+      "blob_sha": "4b9d3cf552c6b99be7040bf7460b824937e24e8e",
+      "size_bytes": 2933
+    },
+    {
+      "path": "templates/actor/parts/mage/bio_mage_background.html",
+      "blob_sha": "6c8dd5e4027602ab532947869d0bf8ec58c94b37",
+      "size_bytes": 4006
+    },
+    {
+      "path": "templates/actor/parts/mage/focus.html",
+      "blob_sha": "e49f1a12fad6610ec3c347e962d8172cd3ecfade",
+      "size_bytes": 1851
+    },
+    {
+      "path": "templates/actor/parts/mage/magic.html",
+      "blob_sha": "d058fb9448269965ceb989fe6a0b60614fa33433",
+      "size_bytes": 1583
+    },
+    {
+      "path": "templates/actor/parts/mage/resonance.html",
+      "blob_sha": "7ff50a67e5268405a1e9dece18af76da5a6c17ba",
+      "size_bytes": 1947
+    },
+    {
+      "path": "templates/actor/parts/mage/rotes.html",
+      "blob_sha": "a48ebaece44aeebb39fe4956b4d7a07009bbac58",
+      "size_bytes": 2455
+    },
+    {
+      "path": "templates/actor/parts/mage/spheres.html",
+      "blob_sha": "1b520e65fe1cfcf22410a799ef4992e1718a248c",
+      "size_bytes": 2047
+    },
+    {
+      "path": "templates/actor/parts/mage/stats_arete.html",
+      "blob_sha": "23b53178b8437aeecba600b03d9704fe9f5d8931",
+      "size_bytes": 608
+    },
+    {
+      "path": "templates/actor/parts/mage/stats_quintessence.html",
+      "blob_sha": "5a89fe1a8df7b0f13882f88111d2443a5b98df60",
+      "size_bytes": 5748
+    },
+    {
+      "path": "templates/actor/parts/mainpower_list.html",
+      "blob_sha": "9874f7c9993d3aef2c38baa45702dd954c81b2fd",
+      "size_bytes": 2880
+    },
+    {
+      "path": "templates/actor/parts/movement.html",
+      "blob_sha": "123e4877366b0fcc88ec28a2f9fc092657b79db6",
+      "size_bytes": 1812
+    },
+    {
+      "path": "templates/actor/parts/mummy/bio_mummy_background.html",
+      "blob_sha": "1c6fe26c3aff583278acf2c889cbfb10fb8f62dc",
+      "size_bytes": 2458
+    },
+    {
+      "path": "templates/actor/parts/navigation.hbs",
+      "blob_sha": "07efbc02393eefa2d61d061b2b835343b850b82b",
+      "size_bytes": 673
+    },
+    {
+      "path": "templates/actor/parts/navigation.html",
+      "blob_sha": "f2dc69226cf7d6a2252ed72178a90f5e256c496a",
+      "size_bytes": 6396
+    },
+    {
+      "path": "templates/actor/parts/navigation_lock.hbs",
+      "blob_sha": "f11d70a38a555735afa735f626f62dcf7e82fe1c",
+      "size_bytes": 377
+    },
+    {
+      "path": "templates/actor/parts/notes.html",
+      "blob_sha": "106aa2ba5e95db64670c6b3adf5f1fde6a4de36c",
+      "size_bytes": 8442
+    },
+    {
+      "path": "templates/actor/parts/power.html",
+      "blob_sha": "026db8d02e7473c4a4e9313c0cc83179d6bc7679",
+      "size_bytes": 8234
+    },
+    {
+      "path": "templates/actor/parts/power_apocalypticforms.hbs",
+      "blob_sha": "c0865947deede94a597820143bb38ec88ee0d6fd",
+      "size_bytes": 5560
+    },
+    {
+      "path": "templates/actor/parts/power_list.html",
+      "blob_sha": "77a2cec6823f06d5b3c06e9aa33f85723eb96ab6",
+      "size_bytes": 3938
+    },
+    {
+      "path": "templates/actor/parts/power_listmainpower.hbs",
+      "blob_sha": "0c71acf6155aa9fe4f36656763a7dfda1c42e900",
+      "size_bytes": 2221
+    },
+    {
+      "path": "templates/actor/parts/power_listpower.hbs",
+      "blob_sha": "e4ed6a854a551f65eb6b212e8338c254ee3935bf",
+      "size_bytes": 3535
+    },
+    {
+      "path": "templates/actor/parts/power_listpower.html",
+      "blob_sha": "47113579dfc90599c55fa8743a9892cfd7b5b42d",
+      "size_bytes": 3825
+    },
+    {
+      "path": "templates/actor/parts/power_listpowerdots.hbs",
+      "blob_sha": "0fb01e31a5dcce37b473e8547c22d56f470c877a",
+      "size_bytes": 4110
+    },
+    {
+      "path": "templates/actor/parts/power_realms.hbs",
+      "blob_sha": "5b9d6beb1e040f9bfb2e5e36aa09fd65e459a617",
+      "size_bytes": 1806
+    },
+    {
+      "path": "templates/actor/parts/power_shapes.hbs",
+      "blob_sha": "d131201921f82eba5586c728eec443e601aac4cc",
+      "size_bytes": 3981
+    },
+    {
+      "path": "templates/actor/parts/power_spheres.hbs",
+      "blob_sha": "70f984a31d3e180d7ef4abcd65367e8c0d4b10ad",
+      "size_bytes": 2272
+    },
+    {
+      "path": "templates/actor/parts/powers.hbs",
+      "blob_sha": "7873a3cfca2ce1185c4b77ba890178c50cde814c",
+      "size_bytes": 10320
+    },
+    {
+      "path": "templates/actor/parts/profile-img.html",
+      "blob_sha": "36568eb550400f5255df00faa169f3b53ba6a9d0",
+      "size_bytes": 319
+    },
+    {
+      "path": "templates/actor/parts/settings.hbs",
+      "blob_sha": "7d110c1a79f8d3d60ee9b374cb59c1258ddcc6ee",
+      "size_bytes": 43958
+    },
+    {
+      "path": "templates/actor/parts/settings.html",
+      "blob_sha": "42cc566e88e713357310f34e0c39b1946d0b8f46",
+      "size_bytes": 2229
+    },
+    {
+      "path": "templates/actor/parts/settings_abilities.html",
+      "blob_sha": "d9da26ade39e2903c6533a8a4c1b513f3cf886dd",
+      "size_bytes": 11891
+    },
+    {
+      "path": "templates/actor/parts/settings_attribute.html",
+      "blob_sha": "6680c31229745283ba5caad1b68920d28c5776ed",
+      "size_bytes": 23144
+    },
+    {
+      "path": "templates/actor/parts/settings_combat.html",
+      "blob_sha": "7ff0e768a0e223fca272990153ded586ac4eb8de",
+      "size_bytes": 18639
+    },
+    {
+      "path": "templates/actor/parts/settings_power.html",
+      "blob_sha": "d87e6d5d28708c90447e5d18cd0ea2dd376c7aee",
+      "size_bytes": 4776
+    },
+    {
+      "path": "templates/actor/parts/settings_sheet.html",
+      "blob_sha": "b22fff6b4af8eb73f15322936473021d7753eb33",
+      "size_bytes": 16663
+    },
+    {
+      "path": "templates/actor/parts/stat_value_dots.hbs",
+      "blob_sha": "145c624616b4600432d93f16465d84935f4d71a9",
+      "size_bytes": 319
+    },
+    {
+      "path": "templates/actor/parts/stats.hbs",
+      "blob_sha": "905f90c03878bbbe88cca5266a4516a37af4422b",
+      "size_bytes": 1356
+    },
+    {
+      "path": "templates/actor/parts/stats.html",
+      "blob_sha": "e58552ab939f896083be1e65505f6efedbdbd8e4",
+      "size_bytes": 4711
+    },
+    {
+      "path": "templates/actor/parts/stats_abilities.hbs",
+      "blob_sha": "82494b96f5580b17b263b5f21864e3fe989ab88f",
+      "size_bytes": 10224
+    },
+    {
+      "path": "templates/actor/parts/stats_advantages.hbs",
+      "blob_sha": "91423668cae79318e498673c49959e2b335323c7",
+      "size_bytes": 2124
+    },
+    {
+      "path": "templates/actor/parts/stats_attributes.hbs",
+      "blob_sha": "0416d0864ef9669333395fa88cdb734d9af8ed31",
+      "size_bytes": 3371
+    },
+    {
+      "path": "templates/actor/parts/stats_groupedadvantages.hbs",
+      "blob_sha": "1af8df08a80f4ca1f5fd8b03c00cd8a3141bd654",
+      "size_bytes": 340
+    },
+    {
+      "path": "templates/actor/parts/stats_health.hbs",
+      "blob_sha": "4711f712f32e25dfe995fca6e7f290343a32910e",
+      "size_bytes": 11105
+    },
+    {
+      "path": "templates/actor/parts/stats_health.html",
+      "blob_sha": "db8d6026fd8db4e86f49c18905a4fb1c8aefa6c6",
+      "size_bytes": 5209
+    },
+    {
+      "path": "templates/actor/parts/stats_health_old.html",
+      "blob_sha": "eb10ff4a3946137d48147bfe077ceeccfed17e26",
+      "size_bytes": 12013
+    },
+    {
+      "path": "templates/actor/parts/stats_quintessence.hbs",
+      "blob_sha": "02fc29f4c1938c72b0b52eabe3f51952488df6c8",
+      "size_bytes": 2852
+    },
+    {
+      "path": "templates/actor/parts/stats_renown.hbs",
+      "blob_sha": "b9ab332accdfe6d0aae869295d3e3e1931aa474c",
+      "size_bytes": 252
+    },
+    {
+      "path": "templates/actor/parts/stats_shadow.hbs",
+      "blob_sha": "4f81243235ffc8879626a2295cfbcaba51dfa330",
+      "size_bytes": 3020
+    },
+    {
+      "path": "templates/actor/parts/stats_virtue.hbs",
+      "blob_sha": "ac8b0332fd5fc11eff341fbf7235e3c53745c4d9",
+      "size_bytes": 964
+    },
+    {
+      "path": "templates/actor/parts/stats_virtue.html",
+      "blob_sha": "a2025dc55924e7ea6b583185df092ffc696badc4",
+      "size_bytes": 2038
+    },
+    {
+      "path": "templates/actor/parts/vampire/bio_vampire_background.html",
+      "blob_sha": "37a214bc18705431d252313612c715c749fe1800",
+      "size_bytes": 9122
+    },
+    {
+      "path": "templates/actor/parts/vampire/disciplines.html",
+      "blob_sha": "08d8aa1d545f4e99d7ce352b51a9bd6d74dd2419",
+      "size_bytes": 2856
+    },
+    {
+      "path": "templates/actor/parts/variant/bio_orpheus_background.html",
+      "blob_sha": "31e0e5f3faff31d78861e71736d131a69271d3ce",
+      "size_bytes": 1915
+    },
+    {
+      "path": "templates/actor/parts/variant/bio_sorcerer_background.html",
+      "blob_sha": "084be4627cf33021ea00f0bde80c0748cf21b8ab",
+      "size_bytes": 2084
+    },
+    {
+      "path": "templates/actor/parts/variant/stats_quintessence.html",
+      "blob_sha": "6135978afe978e6356d38369df68d6096b7b4b56",
+      "size_bytes": 793
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_ajaba_background.html",
+      "blob_sha": "8656fc299d76e0d824d49c06f1c5f620d0ef1cb7",
+      "size_bytes": 3642
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_ananasi_background.html",
+      "blob_sha": "49e1c2c86d624de865e75719120cdcbbf7604011",
+      "size_bytes": 1978
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_apis_background.html",
+      "blob_sha": "193562ef3564e6ac4e6bcc0f18b0a8e20188eabf",
+      "size_bytes": 1360
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_bastet_background.html",
+      "blob_sha": "028ed558a22c5c471bb67542d838d3957663e97d",
+      "size_bytes": 3697
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_camazotz_background.html",
+      "blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size_bytes": 0
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_corax_background.html",
+      "blob_sha": "ad1af250e4f4e90bece1f4bc8358c9550fd4c905",
+      "size_bytes": 1345
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_grondr_background.html",
+      "blob_sha": "3ad1ed06b8f490ff10f7b3c75c22e58bc0b9fec4",
+      "size_bytes": 732
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_gurahl_background.html",
+      "blob_sha": "1249a3b89902c778e4698f1bd23b7bc4a561c021",
+      "size_bytes": 1975
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_kitsune_background.html",
+      "blob_sha": "362a01df012cdf38d3099ca798b79361627ccade",
+      "size_bytes": 1354
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_mokole_background.html",
+      "blob_sha": "a829bf01fa18b549925f5a5a1986bf52838fdb1a",
+      "size_bytes": 1973
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_nagah_background.html",
+      "blob_sha": "8cb7319e6e2b4319046faf5a052ee0d07e01eb06",
+      "size_bytes": 1357
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_nuwisha_background.html",
+      "blob_sha": "653c97bd8a71c68fce0c53179b8d646b14550e00",
+      "size_bytes": 1320
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_ratkin_background.html",
+      "blob_sha": "e856ed7e16b1be94ff59d2902e5d0c94a5546239",
+      "size_bytes": 1356
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_rokea_background.html",
+      "blob_sha": "8cb7319e6e2b4319046faf5a052ee0d07e01eb06",
+      "size_bytes": 1357
+    },
+    {
+      "path": "templates/actor/parts/werewolf/bio_werewolf_background.html",
+      "blob_sha": "7a5dea06e23813132f24aaef48142cc36916161a",
+      "size_bytes": 4109
+    },
+    {
+      "path": "templates/actor/parts/werewolf/combat_active.html",
+      "blob_sha": "4f93b29a609c35a91a6bef7b5fa5bad651806899",
+      "size_bytes": 1342
+    },
+    {
+      "path": "templates/actor/parts/werewolf/gift.html",
+      "blob_sha": "ccdcbbc1548854592b7d49a37c1f881a32d52ef9",
+      "size_bytes": 978
+    },
+    {
+      "path": "templates/actor/parts/werewolf/rites.html",
+      "blob_sha": "0309e49a086225e1ebfbcd1dd02e59ddc7aecfd8",
+      "size_bytes": 472
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift.html",
+      "blob_sha": "d3dba3a63e918da760e3d0de83d78226e1293d3d",
+      "size_bytes": 5911
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_ajaba.html",
+      "blob_sha": "e313b4085466568a7ac10d7698934e5877fbd41a",
+      "size_bytes": 4705
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_ananasi.html",
+      "blob_sha": "f3aa957d6107c3a2f25b2532fdf4d313cdb2e248",
+      "size_bytes": 4087
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_apis.html",
+      "blob_sha": "ffbdce1f46cb0934f6dea66e485ed8836656ebd8",
+      "size_bytes": 2909
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_bastet.html",
+      "blob_sha": "2ec39b7792d1e34d2c5e4c553601fc28f31aa298",
+      "size_bytes": 24184
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_camazotz.html",
+      "blob_sha": "9634b9202d64223effcaa43827dd4698f3ee2cb6",
+      "size_bytes": 4359
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_corax.html",
+      "blob_sha": "b3819eae4c5a876f51a791dbd1c08cd7208dfcd9",
+      "size_bytes": 3151
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_grondr.html",
+      "blob_sha": "71e95f8d7aa07ad445700154a11c616b92a844b8",
+      "size_bytes": 4709
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_gurahl.html",
+      "blob_sha": "a88738d3ba25ce1651cd5010d51530af583a58e9",
+      "size_bytes": 4434
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_kitsune.html",
+      "blob_sha": "9a83ab3faba4ba0b80ebb6bbe67a85d170784fb2",
+      "size_bytes": 4504
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_mokole.html",
+      "blob_sha": "1a4a093e6b4258fb52da46379900437733c8940d",
+      "size_bytes": 7200
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_nagah.html",
+      "blob_sha": "9c46e9a59af05f5acf0706345e64d1e1516a007d",
+      "size_bytes": 4514
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_nuwisha.html",
+      "blob_sha": "77cd65aa6e3653189175ccb0ab5f9bb61a6fe4c3",
+      "size_bytes": 4369
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_ratkin.html",
+      "blob_sha": "1e18e0cf3feece8da83ad91028a3ce45ad1c7e74",
+      "size_bytes": 4021
+    },
+    {
+      "path": "templates/actor/parts/werewolf/shift_rokea.html",
+      "blob_sha": "7956a58ac50edaaeb2c0305bec2dd7d17238de87",
+      "size_bytes": 4529
+    },
+    {
+      "path": "templates/actor/parts/werewolf/stats_nagah_renown.html",
+      "blob_sha": "2d58a1022bc14cd5675f19c70c080174a1c636c8",
+      "size_bytes": 453
+    },
+    {
+      "path": "templates/actor/parts/wraith/bio_wraith_background.html",
+      "blob_sha": "5a256626ad161913b53f94fdef6ccfc7ccbc53f3",
+      "size_bytes": 2416
+    },
+    {
+      "path": "templates/actor/parts/wraith/death.html",
+      "blob_sha": "6939a73b34f4bb1769dd000be5ef893af65c410f",
+      "size_bytes": 7028
+    },
+    {
+      "path": "templates/actor/parts/wraith/shadow.html",
+      "blob_sha": "239eb58e779339edb93ad912608e9fc422e5c7f3",
+      "size_bytes": 7387
+    },
+    {
+      "path": "templates/actor/vampire-sheet.html",
+      "blob_sha": "1eff13624c925fb6420038f51f093ef14e19d0c0",
+      "size_bytes": 7179
+    },
+    {
+      "path": "templates/actor/werewolf-sheet.html",
+      "blob_sha": "7a9ecacac1726af0433fb282c6b14050406d9335",
+      "size_bytes": 7932
+    },
+    {
+      "path": "templates/actor/wraith-sheet.html",
+      "blob_sha": "6e2aef0877cfca338f1a330d9ed4b16ef97a7223",
+      "size_bytes": 5200
+    },
+    {
+      "path": "templates/dialogs/attribute-augmentation-popup.hbs",
+      "blob_sha": "85fafa4795887d0cb2f81f63b33dd050fb62af33",
+      "size_bytes": 2986
+    },
+    {
+      "path": "templates/dialogs/dialog-aretecasting.hbs",
+      "blob_sha": "7bd7506546d7e97f88f372e789bf866f5e43413a",
+      "size_bytes": 23697
+    },
+    {
+      "path": "templates/dialogs/dialog-attribute.hbs",
+      "blob_sha": "5f9463023bdabab7cc4ce7ae41feb79dbc1a917a",
+      "size_bytes": 3229
+    },
+    {
+      "path": "templates/dialogs/dialog-bonus.hbs",
+      "blob_sha": "651005e4e322e267d92e289318d968758cb1c3f8",
+      "size_bytes": 13211
+    },
+    {
+      "path": "templates/dialogs/dialog-checkfrenzy.hbs",
+      "blob_sha": "6a18425500fb98f6d04b47122565aa30221e40f3",
+      "size_bytes": 3434
+    },
+    {
+      "path": "templates/dialogs/dialog-generalroll.hbs",
+      "blob_sha": "82ffe4e4df4db74c26105b01a82f80b78962fa00",
+      "size_bytes": 16350
+    },
+    {
+      "path": "templates/dialogs/dialog-item.hbs",
+      "blob_sha": "29fddf7251f977a15424e350623e7ccce52e44bc",
+      "size_bytes": 3156
+    },
+    {
+      "path": "templates/dialogs/dialog-migration-wizard.hbs",
+      "blob_sha": "c0c20c2d14d7b58096d9cd097a1f54e2103ebb65",
+      "size_bytes": 2126
+    },
+    {
+      "path": "templates/dialogs/dialog-new-item.hbs",
+      "blob_sha": "f8f55c9ca40e38d1be3b2ca70efc3ed0f843b58b",
+      "size_bytes": 1321
+    },
+    {
+      "path": "templates/dialogs/dialog-power-selection.hbs",
+      "blob_sha": "432b7cfdc48961b55cab584ba4f2813c463606c4",
+      "size_bytes": 1050
+    },
+    {
+      "path": "templates/dialogs/dialog-power.hbs",
+      "blob_sha": "87602b56e35d01a2aa92d24ce420e2be53f9812c",
+      "size_bytes": 6799
+    },
+    {
+      "path": "templates/dialogs/dialog-settings-combat.hbs",
+      "blob_sha": "486c1d75af08a130b6e24ab54c7e3a58e1842d3b",
+      "size_bytes": 1314
+    },
+    {
+      "path": "templates/dialogs/dialog-settings-dice.hbs",
+      "blob_sha": "486c1d75af08a130b6e24ab54c7e3a58e1842d3b",
+      "size_bytes": 1314
+    },
+    {
+      "path": "templates/dialogs/dialog-settings-era.hbs",
+      "blob_sha": "486c1d75af08a130b6e24ab54c7e3a58e1842d3b",
+      "size_bytes": 1314
+    },
+    {
+      "path": "templates/dialogs/dialog-settings-rule.hbs",
+      "blob_sha": "0ec121431fb6ad1b0b6625c61cf10591baa585d1",
+      "size_bytes": 1516
+    },
+    {
+      "path": "templates/dialogs/dialog-shapechange.hbs",
+      "blob_sha": "bd249f7505b7de9febf03213983ac18a05af991a",
+      "size_bytes": 22767
+    },
+    {
+      "path": "templates/dialogs/dialog-soak.hbs",
+      "blob_sha": "40e798b4bb8e4a0af0c2a208e39eca23c0fc3947",
+      "size_bytes": 3652
+    },
+    {
+      "path": "templates/dialogs/dialog-sortpower.hbs",
+      "blob_sha": "e8718119dfe9597aece61f073fb664ec64f537f7",
+      "size_bytes": 1460
+    },
+    {
+      "path": "templates/dialogs/dialog-variant.hbs",
+      "blob_sha": "32e16e0a5f26f9ebe6cb117757c9e242380e98f8",
+      "size_bytes": 12164
+    },
+    {
+      "path": "templates/dialogs/dialog-weapon.hbs",
+      "blob_sha": "424c2fe5439b397185b5d700502b326a84910546",
+      "size_bytes": 9388
+    },
+    {
+      "path": "templates/dialogs/dialog-weaponv2.hbs",
+      "blob_sha": "a93514be3634f278718a1d8465a8316e69de264a",
+      "size_bytes": 9756
+    },
+    {
+      "path": "templates/dialogs/roll-template.hbs",
+      "blob_sha": "669096c59f94de84e545049a59fb0db7d4042268",
+      "size_bytes": 8858
+    },
+    {
+      "path": "templates/items/ability-sheet.hbs",
+      "blob_sha": "319830463a28819eff2d1bf14a84318861813a3b",
+      "size_bytes": 4308
+    },
+    {
+      "path": "templates/items/advantage-sheet.hbs",
+      "blob_sha": "2c30368e1cbca3b6087f015f7ffacec976560cfb",
+      "size_bytes": 5619
+    },
+    {
+      "path": "templates/items/bio-sheet.hbs",
+      "blob_sha": "49622d1ca5dce0ae53b95eb6bb534e08946989ef",
+      "size_bytes": 1255
+    },
+    {
+      "path": "templates/items/parts/description.hbs",
+      "blob_sha": "9f0c5a177485214aeb6751f2dcd571474bd4f85d",
+      "size_bytes": 236
+    },
+    {
+      "path": "templates/items/parts/header-sheet.hbs",
+      "blob_sha": "c0b0ffa9aedb82526692b058dea6bcdcb52f00dd",
+      "size_bytes": 2156
+    },
+    {
+      "path": "templates/items/parts/navigation.hbs",
+      "blob_sha": "0de3908dc51d991e43ed7789bad4d0c392dafaf0",
+      "size_bytes": 387
+    },
+    {
+      "path": "templates/items/parts/splat-abilities-sheet.hbs",
+      "blob_sha": "f0534b4b1f38ed235d60e2e37cdd732066893227",
+      "size_bytes": 3424
+    },
+    {
+      "path": "templates/items/parts/splat-bio-fields.hbs",
+      "blob_sha": "0a35078a66bcda9b97fd175fb8993c208a77285f",
+      "size_bytes": 9606
+    },
+    {
+      "path": "templates/items/parts/splat-bio-tab.hbs",
+      "blob_sha": "e0437ce4f2356b7e1a5ef9034d302f8cc867011b",
+      "size_bytes": 202
+    },
+    {
+      "path": "templates/items/parts/splat-features-sheet.hbs",
+      "blob_sha": "9f7e69671f846df948ee35c5d2bf078d553d6441",
+      "size_bytes": 14248
+    },
+    {
+      "path": "templates/items/realm-sheet.hbs",
+      "blob_sha": "022c45ee1bcc43366158f8cf1e8ca2a9c4cf2ad9",
+      "size_bytes": 1172
+    },
+    {
+      "path": "templates/items/sphere-sheet.hbs",
+      "blob_sha": "a74999c00f7b86569694e4dc0015d4762c2885ae",
+      "size_bytes": 2415
+    },
+    {
+      "path": "templates/items/splat-sheet.hbs",
+      "blob_sha": "59a0f24964a245f24b95baf59060cbe586214516",
+      "size_bytes": 2763
+    },
+    {
+      "path": "templates/sheets/armor-sheet.html",
+      "blob_sha": "25f985cfbb9b95552c668fb580e8af01ce2d0dac",
+      "size_bytes": 6413
+    },
+    {
+      "path": "templates/sheets/bonus-sheet.html",
+      "blob_sha": "37d26362b01df0eaec8fb3e86406cb6c78135c0d",
+      "size_bytes": 12056
+    },
+    {
+      "path": "templates/sheets/experience-sheet.html",
+      "blob_sha": "e9d937680cc17a5ffcea1fa78f4f4f51291521bc",
+      "size_bytes": 2476
+    },
+    {
+      "path": "templates/sheets/feature-sheet.html",
+      "blob_sha": "8dcc5291ddc95d40435afd0bfada50bad07408be",
+      "size_bytes": 4970
+    },
+    {
+      "path": "templates/sheets/fetish-sheet.html",
+      "blob_sha": "2820002551ba8c692bbe39e2212965803c7a1c07",
+      "size_bytes": 4223
+    },
+    {
+      "path": "templates/sheets/item-sheet.html",
+      "blob_sha": "32f83e092d458a05385ba5eaaea9a89c44115b09",
+      "size_bytes": 5474
+    },
+    {
+      "path": "templates/sheets/meleeweapon-sheet.html",
+      "blob_sha": "4bbec2627a031bb673cd53a9d038872d43a02852",
+      "size_bytes": 8492
+    },
+    {
+      "path": "templates/sheets/parts/item_bonus.html",
+      "blob_sha": "74d86d054c5a7b8b460fa4e5e1c9596302f87394",
+      "size_bytes": 5489
+    },
+    {
+      "path": "templates/sheets/parts/power_description.html",
+      "blob_sha": "1b87022a695a2b1090c8140913f05d0d22358fb7",
+      "size_bytes": 1238
+    },
+    {
+      "path": "templates/sheets/parts/power_rollable.html",
+      "blob_sha": "569d2ad475bc685474dc519464f74c705eca0211",
+      "size_bytes": 2265
+    },
+    {
+      "path": "templates/sheets/power-sheet.html",
+      "blob_sha": "630b5858d9c2a88f69f873907311fb8f5269ab6c",
+      "size_bytes": 18772
+    },
+    {
+      "path": "templates/sheets/rangedweapon-sheet.html",
+      "blob_sha": "b306704393b537b916f6413b4d39178d7fdb07b0",
+      "size_bytes": 10066
+    },
+    {
+      "path": "templates/sheets/rote-sheet.html",
+      "blob_sha": "056ed2d550825b1bd777da331e6cb11630299ce0",
+      "size_bytes": 11479
+    },
+    {
+      "path": "templates/sheets/trait-sheet.html",
+      "blob_sha": "9696e25a510c182066753bb5f23dd689c0277735",
+      "size_bytes": 11532
+    },
+    {
+      "path": "tests/README.md",
+      "blob_sha": "e2e88e05e8214c1ba0560b0b5c9c4e6cca43ede9",
+      "size_bytes": 7885
+    },
+    {
+      "path": "tests/attribute-augmentation-helpers.test.mjs",
+      "blob_sha": "b204b8de8af5ad10d23caac8143ab0fea668e636",
+      "size_bytes": 53599
+    },
+    {
+      "path": "tests/attribute-augmentation-popup.test.mjs",
+      "blob_sha": "ed2cf4c49a7546feea17761eb791fd0f3b59f8e4",
+      "size_bytes": 23691
+    },
+    {
+      "path": "tests/bio-visibility.test.mjs",
+      "blob_sha": "1f045912a93c8600351e0fa030d5d925e76b0eea",
+      "size_bytes": 2577
+    },
+    {
+      "path": "tests/bonus-helpers.test.mjs",
+      "blob_sha": "75920d0118b7deb37e60a3ea914b829ead86f87a",
+      "size_bytes": 7796
+    },
+    {
+      "path": "tests/combat-helpers.test.mjs",
+      "blob_sha": "2c31c6ef4e28763f7a1c6a41b61d9a0a5f009841",
+      "size_bytes": 6399
+    },
+    {
+      "path": "tests/dialog-generalroll.test.mjs",
+      "blob_sha": "ce38bda49881e69553b82dbc6c4157a80980217b",
+      "size_bytes": 4741
+    },
+    {
+      "path": "tests/dice-roll.test.mjs",
+      "blob_sha": "33787b2155374e11fe633cb9a8723bd3ed540712",
+      "size_bytes": 12879
+    },
+    {
+      "path": "tests/health.test.mjs",
+      "blob_sha": "ff9b940e920c2f1b518dc4b8c1c4fa3d132fb76e",
+      "size_bytes": 3857
+    },
+    {
+      "path": "tests/helpers/fake-actor.mjs",
+      "blob_sha": "5b0892b7ed20482eb2401d9f0a61c19a7354a5f3",
+      "size_bytes": 5849
+    },
+    {
+      "path": "tests/helpers/foundry-env.mjs",
+      "blob_sha": "be878fb212c295a2373492ff006b374d2b8a730e",
+      "size_bytes": 3254
+    },
+    {
+      "path": "tests/helpers/scripted-roll.mjs",
+      "blob_sha": "55388941479461a6ef61ba7960681f16ab91132a",
+      "size_bytes": 1025
+    },
+    {
+      "path": "tests/migration-version.test.mjs",
+      "blob_sha": "b9cb4ece76ff030e6a180e2289a653b4f0c5a0c8",
+      "size_bytes": 2184
+    },
+    {
+      "path": "tests/release.test.mjs",
+      "blob_sha": "124341fd2c13bfe33728339c92b7ab8a26eb5f6b",
+      "size_bytes": 12489
+    },
+    {
+      "path": "tests/spirit-weapon-pools.test.mjs",
+      "blob_sha": "93dab8c411040842beaa4d64e5828dccd4e4db4f",
+      "size_bytes": 2868
+    },
+    {
+      "path": "tests/totals.test.mjs",
+      "blob_sha": "a1ee1dd16cb427b572b44ec92109292ecd2ab3ed",
+      "size_bytes": 7735
+    },
+    {
+      "path": "tours/bonus-tour.json",
+      "blob_sha": "c9420a5aa27fd9239c2d83164be40d76cf81b478",
+      "size_bytes": 4178
+    },
+    {
+      "path": "tours/data/actor-pc-tour.json",
+      "blob_sha": "a88ae0e23db55fd9b89aa4b66dfefe30c5297b9d",
+      "size_bytes": 9768
+    },
+    {
+      "path": "tours/data/werewolf.json",
+      "blob_sha": "e423e90f7b42daaad73e31e94dcbd86a9fc5a341",
+      "size_bytes": 38908
+    },
+    {
+      "path": "tours/pc-template-tour.json",
+      "blob_sha": "81d16bc5b4983f8656dd7020cac17f191f285214",
+      "size_bytes": 3346
+    },
+    {
+      "path": "tours/settings-tour.json",
+      "blob_sha": "26e6b9b4653877aa199df5c07d9b4c1a4982548b",
+      "size_bytes": 1435
+    },
+    {
+      "path": "tours/tour.js",
+      "blob_sha": "5bc92adad02c6aa4c5a2a6ef9244a9f6e978923d",
+      "size_bytes": 11198
+    },
+    {
+      "path": "tours/toursetup.js",
+      "blob_sha": "8c8f8ee8adc9e75a9c7ac12da5369d41c3b99f50",
+      "size_bytes": 984
+    },
+    {
+      "path": "wod.js",
+      "blob_sha": "617ac1878a581ff44c81406af99a036993256222",
+      "size_bytes": 22472
+    }
+  ]
+}
