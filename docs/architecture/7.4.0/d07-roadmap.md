@@ -24,6 +24,11 @@ Skala: S = do ~20 linii kodu + test; M = kilka plików; L = nowy mechanizm. Ryzy
 | **PR-007** | jedna linia `drop-helpers.js:770` (`powers.defaultmaxvalue`) | brak | niska dziś (utajone) | — | S | PC z własnym Splatem | niskie | Node instalacji | czy to pomyłka (Q-06) | pełna |
 | **PR-008** | Savage Age: rozpoznanie linii w regułach specjalnych | brak | średnia dla Savage Age | `getSplat`/`variantsheet` | M | Werewolf, Fera (Savage) | średnie: zmiana danych paku albo warunków + migracja aktorów | REG-015 | czy `settings.id` ma kodować epokę (Q-07) | dane: wymaga migracji |
 
+## Stan realizacji
+| ID | Stan | Gdzie |
+| --- | --- | --- |
+| PR-001 | PRZYGOTOWANY na forku (bez PR do upstream, zgodnie z decyzją Mandora z 28.11.2026) | gałąź `fix/splat-replacement`, commit `16c817a`, baza `v7.4.0`. Test `tests/drop-splat.test.mjs`: bez poprawki 1 FAIL (`ReferenceError`), z poprawką 3/3 PASS. Pełne `npm test` 209/209 PASS. Odbiór Foundry: NOT TESTED |
+
 ## Kolejność
 1. **PR-001.** Nie zależy od decyzji zasad. Zgłoszenie defektu, jeśli Johan go chce (Q-01).
 2. **Pytania Q-02–Q-07 do Johana w jednej wiadomości**, bo każde odblokowuje osobny, mały PR.

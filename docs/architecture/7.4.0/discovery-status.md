@@ -40,7 +40,7 @@ Pełne rekordy faz z wejściami/wyjściami/kryteriami/dowodami są w discovery.j
 Po pomyślnych próbach Node środowisko terminalowe ponownie stało się niedostępne. Zebrane wyniki pozostają ważne dla wykonanych prób. Nie ma odbioru Foundry, UI, compendiów ani wielu klientów. Trwały zapis dokumentacji jest kontynuowany przez repozytorium.
 
 ## Następny konkretny odbiór
-Iteracja 2: decyzja Mandora o PR-001 i wysłanie Q-01–Q-09 do Johana; równolegle runtime NEXT-002 (Splat w Foundry).
+Iteracja 2: PR-001 przygotowany na forku (`fix/splat-replacement`, `16c817a`), czeka na ręczny odbiór w Foundry; następnie i wysłanie Q-01–Q-09 do Johana; równolegle runtime NEXT-002 (Splat w Foundry).
 
 Poprzednio (Charon):
 NEXT-001/002: pełny snapshot i kontrole wydania; następnie instalacja/wymiana/reset Splat w Foundry, z kontrolą usuwanych Itemów i anulowania. Nie rozpoczynać implementacji #941 jako skutku samego istnienia resetu.
